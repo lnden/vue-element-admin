@@ -6,11 +6,10 @@ Vue.use(Router);
 import Layout from '@/views/layout/Layout'
 
 export const constantRouterMap = [
-    {   
-        path: '',
-        component: Layout,
-        redirect: 'home',
-        hidden: true
+    { 
+        path: '/login',
+        component: () => import('@/views/login/Login'), 
+        hidden: true 
     }
 ]
 

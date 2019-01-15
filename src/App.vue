@@ -1,6 +1,6 @@
 <template>
   <section>
-    <vuexdemo />  
+    <router-view></router-view>
   </section>
 </template>
 

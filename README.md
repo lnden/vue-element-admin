@@ -121,3 +121,47 @@ new Vue({
 npm install axios -S
 ```
 
+#### 安装使用scss
+```
+npm install node-sass -D  
+npm install sass-loader -D 
+```
+1.修改配置文件 build\vue-loader.conf.js
+```
+rules: [
+    {
+        test: /\.sass$/,
+        loaders: ['style', 'css', 'sass']
+    }
+]
+```
+2.vue页面使用
+
+```
+<style rel="stylesheet/scss" lang="scss" scoped>
+    @import ".."
+    .login{
+        .container{ }
+    }
+</style>
+```
+
+#### 安装使用ElementUI
+该流程可以按照[ElemenUI](http://element-cn.eleme.io/#/zh-CN)来使用安装
+```
+npm install element-ui -S
+
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+```
+
+#### 安装使用normalize
+```
+npm install normalize.css --S
+```
+
+**注释**：
+--save-dev  ==>  -D
+--save      ==>  -S
+install     ==>  i
