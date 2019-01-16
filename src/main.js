@@ -11,6 +11,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
 import 'normalize.css'
+import '@/styles/public/index.scss'
+import './icons/index.js'
 
 Vue.config.productionTip = false
 

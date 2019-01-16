@@ -39,7 +39,7 @@ build:{
 }
 ```
 
-### 配置
+### 安装
 
 #### 安装使用vuex
 
@@ -160,8 +160,85 @@ Vue.use(ElementUI);
 ```
 npm install normalize.css --S
 ```
+1.在main.js中i直接引入重置样式
+```
+import 'normalize.css'
+```
+
+
+### 配置
+
+&emsp;&emsp;配置一些全局的信息，比如styles、request、icons、一些开发规范等文档内容！
+
+#### 全局styles
+1.src目录下新建style文件夹
+
+内建public目录，存放响全局样式、过度动画和elementui重置信息等。
+
+可内建对应页面scss文件进行样式抽离，如果UI改动不大可在当前页面添加
+
+#### 全局icons
+
+1.在components文件内创建全局svg-icon组件
+
+2.在src目录下创建icons文件存放icon图标且编写svg-sprite-loader检索.svg输出
+
+3.安装webpack-loader
+```
+npm install svg-sprite-loader -D
+```
+
+3.修改配置文件 build\vue-loader.conf.js
+```
+rules: [   
+    {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+        include: [resolve('src/icons')],
+        options: {
+            symbolId: 'icon-[name]'
+        }
+    },
+    {
+        loader: 'url-loader',
+        exclude: [resolve('src/icons')]  //重点
+    }
+]
+```
+
+### 目标
+基础功能
+- [ ] 登录/登出
+- [ ] Dashboard
+- [ ] 404/401
+- [ ] 面包屑导航
+- [ ] Tag标签导航
+- [ ] 图表
+- [ ] 表单
+- [ ] 表格
+- [ ] Tab选项卡
+- [ ] 图片拖拽/裁剪上传
+- [ ] 权限测试
+- [ ] 个人中心
+- [ ] 消息中心
+
+辅助功能
+- [ ] 收缩侧边栏
+- [ ] 换皮肤
+- [ ] 全屏展示
+- [ ] 多语言切换
+
+扩展功能
+- [ ] 富文本编辑器
+- [ ] Markdown编辑器
+
+### 目录结构
+
 
 **注释**：
+
 --save-dev  ==>  -D
+
 --save      ==>  -S
+
 install     ==>  i

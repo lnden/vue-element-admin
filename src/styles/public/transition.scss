@@ -1,10 +1,55 @@
-.login{
-    width:600px;
-    height:600px;
-    border:1px solid #f00;
-    .contents{
-        width:100px;
-        height:100px;
-        border:1px solid #f00;
-    }
+//globl transition css
+
+/*fade*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+/*fade-transform*/
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all .5s;
+}
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/*breadcrumb transition*/
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all .5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.breadcrumb-move {
+  transition: all .5s;
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}
+
+/*form transition*/
+.form-fade-enter-active, .form-fade-leave-active {
+    transition: all 1s;
+}
+.form-fade-enter, .form-fade-leave-active {
+    transform: translate3d(0, -50px, 0);
+    opacity: 0;
 }
