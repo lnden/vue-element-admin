@@ -25,7 +25,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 &emsp;&emsp;该项目使用 vue cli 构建生成简单的目录结构
 
-vue2.0 + elementui + vuex + vue-router + ES6/7 + axios + svg 
+vue2.0 + elementui + vuex + vue-router + ES6/7 + axios + svg
 
 [预览地址]('https://lnden.github.io/vue-element-admin')
 
@@ -50,13 +50,13 @@ vuex我们按照官方推荐方式书写
 
 1.首先在src目录创建store文件夹
 
-2.在文件内创建 
--  actions   
+2.在文件内创建
+-  actions
 -  getters
 -  mutations
 -  mutation-types
 -  state
--  store(index) 
+-  store(index)
 
 3.在main.js内引入store并且应用
 
@@ -86,7 +86,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const constantRouterMap = [
-    { 
+    {
         path:'',
         component:()=>import('@/views/login/Login'),
         name:'home',
@@ -123,8 +123,8 @@ npm install axios -S
 
 #### 安装使用scss
 ```
-npm install node-sass -D  
-npm install sass-loader -D 
+npm install node-sass -D
+npm install sass-loader -D
 ```
 1.修改配置文件 build\vue-loader.conf.js
 ```
@@ -190,7 +190,7 @@ npm install svg-sprite-loader -D
 
 3.修改配置文件 build\vue-loader.conf.js
 ```
-rules: [   
+rules: [
     {
         test: /\.svg$/,
         loader: 'svg-sprite-loader',
@@ -208,7 +208,7 @@ rules: [
 
 ### 目标
 基础功能
-- [ ] 登录/登出
+- [x] 登录/登出
 - [ ] Dashboard
 - [ ] 404/401
 - [ ] 面包屑导航
