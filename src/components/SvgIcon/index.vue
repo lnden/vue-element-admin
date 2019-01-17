@@ -18,11 +18,9 @@
         },
         computed: {
             iconName() {
-                console.log(this.iconClass)
                 return `#icon-${this.iconClass}`
             },
             svgClass() {
-                console.log(this.className)
                 if (this.className) {
                     return 'svg-icon ' + this.className
                 } else {

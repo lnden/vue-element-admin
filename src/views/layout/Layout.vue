@@ -1,17 +1,24 @@
 <template>
-    <section class="layout">
-        测试数据
-        <div>
-            {{name}}
-        </div>
+    <section>
+        <Headerbar />
+        <Sidebar />
+        <ContentMain />
     </section>
 </template>
 
 <script>
+    import { Headerbar,Sidebar,ContentMain} from './components'
     export default {
-        name:"layou",
+        name:"layout",
         data(){
-            name:'布局'
+            return {
+                name:'布局'
+            }
+        },
+        components:{
+            Headerbar,
+            Sidebar,
+            ContentMain
         }
     }
 </script>

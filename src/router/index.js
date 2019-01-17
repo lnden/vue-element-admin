@@ -10,6 +10,11 @@ export const constantRouterMap = [
         path: '/login',
         component: () => import('@/views/login/Login'), 
         hidden: true 
+    },
+    { 
+        path: '/home',
+        component: () => import('@/views/layout/Layout'), 
+        hidden: true 
     }
 ]
 

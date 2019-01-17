@@ -14,10 +14,10 @@
                     <span class="svg-container" :class="passwordstate?'svg-container_password':''">
                         <svg-icon icon-class="login-password" />
                     </span>
-                    <el-input name="password" type="password" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on" placeholder="请输入密码" @focus="focus('password')" @blur="blurs('password')"/>
-                    <!--<span class="svg-container" :class="passwordstate?'svg-container_password':''">-->
-                        <!--<svg-icon icon-class="login-password" />-->
-                    <!--</span>-->
+                    <el-input name="password" :type="passwordType" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on" placeholder="请输入密码" @focus="focus('password')" @blur="blurs('password')"/>
+                    <span class="show-pwd" @click="showPwd">
+                        <svg-icon :icon-class="passwordType?'login-hide':'login-show'" />
+                    </span>
                 </el-form-item>
                 <el-button class="login-tbn" type="primary" :loading="loading" @click.native.prevent="handleLogin">登录</el-button>
             </el-form>
@@ -43,20 +43,34 @@
                 },
                 userstate:false,
                 passwordstate:false,
-                loading:false
+                loading:false,
+                passwordType:'password'
             }
         },
         methods:{
+            showPwd(){
+                if (this.passwordType === 'password') {
+                    this.passwordType = ''
+                } else {
+                    this.passwordType = 'password'
+                }
+            },
             handleLogin(){
               this.loading = true;
                 this.$refs.loginForm.validate(valid => {
                     if (valid) {
-                        alert('可以登录')
+                        this.$router.push({ path: '/home' })
                     } else {
                         console.log('error submit!!');
                         return false
                     }
                 })
+            },
+            focus(val){
+                val == 'user' ? this.userstate = true:this.passwordstate = true
+            },
+            blurs(val){
+                val == 'user' ? this.userstate = false:this.passwordstate = false
             }
         },
         mounted(){
@@ -80,9 +94,9 @@ $cursor: #fff;
         position: absolute;
         left: 50%;
         top: 50%;
-        margin-left: -200px;
-        margin-top: -200px;
-        width: 330px;
+        margin-left: -190px;
+        margin-top: -190px;
+        width: 300px;
         height: 300px;
         padding: 40px;
         background:#fff;
@@ -112,6 +126,16 @@ $cursor: #fff;
         }
         .login-tbn{
             width:100%;
+            margin-top:20px;
+        }
+        .show-pwd{
+            position: absolute;
+            right: 10px;
+            top: 7px;
+            font-size: 16px;
+            color: #889aa4;
+            cursor: pointer;
+            user-select: none;
         }
     }
 }
@@ -119,9 +143,7 @@ $cursor: #fff;
 </style>
 <style res="stylesheet/scss" lang="scss">
   $bg:#283443;
-  $dark_gray:#889aa4;
-  $light_gray:#283443;
-  $cursor: #000;
+  $cursor: #fff;
   /* reset element-ui css */
   .login-container {
     .el-input {
@@ -134,12 +156,11 @@ $cursor: #fff;
         -webkit-appearance: none;
         border-radius: 0px;
         padding: 12px 5px 12px 15px;
-        color: $light_gray;
+        color: $bg;
         height: 47px;
-        caret-color: $cursor;
         &:-webkit-autofill {
-          -webkit-box-shadow: 0 0 0px 1000px $bg inset !important;
-          -webkit-text-fill-color: $cursor !important;
+          -webkit-box-shadow: 0 0 0px 1000px $cursor inset !important;
+          -webkit-text-fill-color: $bg !important;
         }
       }
     }
