@@ -63,7 +63,7 @@
         width:100%;
         height:60px;
         line-height: 60px;
-        border-bottom: 2px solid #f00;
+        border-bottom: 2px solid #E9F1F3;
         .header-item{
             float:right;
             .right-menu-item {
