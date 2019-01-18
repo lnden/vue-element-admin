@@ -12,7 +12,9 @@ Vue.use(ElementUI);
 
 import 'normalize.css'
 import '@/styles/public/index.scss'
-import './icons/index.js'
+import './icons'
+import './permission'
+import './mock'
 
 Vue.config.productionTip = false
 

@@ -164,7 +164,11 @@ npm install normalize.css --S
 ```
 import 'normalize.css'
 ```
-
+#### 安装使用mockjs
+```
+npm install mockjs -S
+```
+1.使用mockjs模拟请求数据
 
 ### 配置
 
@@ -205,6 +209,13 @@ rules: [
     }
 ]
 ```
+
+#### 全局nprogress
+1.路由跳转全局添加进度条
+```
+npm install nprogress -S
+```
+#### 全局
 
 ### 目标
 基础功能

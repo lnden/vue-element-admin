@@ -21,7 +21,6 @@
         },
         methods: {
             handleSetSize(size) {
-                this.$ELEMENT.size = size
                 this.$store.dispatch('setSize', size)
                 this.refreshView()
                 this.$message({
@@ -31,11 +30,10 @@
             },
             refreshView() {
                 // In order to make the cached page re-rendered
-                // this.$store.dispatch('delAllCachedViews', this.$route)
                 const { fullPath } = this.$route
                 this.$nextTick(() => {
                     this.$router.replace({
-                        path: fullPath
+                         path: '/redirect' + fullPath
                     })
                 })
             }

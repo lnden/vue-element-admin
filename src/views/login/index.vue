@@ -56,10 +56,16 @@
                 }
             },
             handleLogin(){
-              this.loading = true;
                 this.$refs.loginForm.validate(valid => {
                     if (valid) {
-                        this.$router.push({ path: '/home' })
+                        this.loading = true;
+                        this.$store.dispatch('LoginByUsername', this.loginForm).then(() => {
+                            this.loading = false
+                            this.$router.push({ path: '/' })
+                        }).catch(() => {
+                            this.loading = false
+                        })
+                        
                     } else {
                         console.log('error submit!!');
                         return false
