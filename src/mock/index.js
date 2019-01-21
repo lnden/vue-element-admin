@@ -20,5 +20,4 @@ Mock.mock(/\/login\/login/, 'post', loginAPI.loginByUsername)
 Mock.mock(/\/login\/logout/, 'post', loginAPI.logout)
 
 
-console.log(loginAPI)
 export default Mock

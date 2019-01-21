@@ -2,7 +2,7 @@
     <section class="login-container">
          <transition name="form-fade" mode="in-out">
              <el-form class="login-form" autoComplete="on" :model="loginForm" :rules="rules" ref="loginForm" label-position="left" v-show="showLogin">
-               <h3 class="login-title">Login Form</h3>
+               <h3 class="login-title">{{ $t('login.title') }}</h3>
                <el-form-item prop="username">
                     <span class="svg-container" :class="userstate?'svg-container_user':''">
                         <svg-icon icon-class="login-user"/>

@@ -14,12 +14,10 @@ service.interceptors.request.use(config => {
     }
     return config
 },error => {
-    console.log(error)
     Promise.reject(error)
 })
 
 service.interceptors.response.use(response => {
-    console.log(response)
     return response
 },error => {
     return Promise.reject(error)
