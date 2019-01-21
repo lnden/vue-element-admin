@@ -1,17 +1,20 @@
 <template>
     <section class="headerbar-container">
         <section class="header-item">
-            <el-tooltip content="全屏" effect="dark" placement="bottom">
+            <el-tooltip :content="$t('navbar.screenfull')" effect="dark" placement="bottom">
                 <screen-full class="right-menu-item"/>
             </el-tooltip>
 
-            <el-tooltip content="大小" effect="dark" placement="bottom">
+            <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom">
                 <size-select class="right-menu-item"/>
             </el-tooltip>
 
-            <lang-select class="right-menu-item"/>
+            <el-tooltip :content="$t('navbar.lang')" effect="dark" placement="bottom">
+                 <lang-select class="right-menu-item"/>
+            </el-tooltip>
+           
 
-            <el-tooltip content="皮肤" effect="dark" placement="bottom">
+            <el-tooltip :content="$t('navbar.theme')" effect="dark" placement="bottom">
                 <theme-picker class="right-menu-item"/>
             </el-tooltip>
             
@@ -22,13 +25,13 @@
                 </div>
                 <el-dropdown-menu slot="dropdown">
                     <router-link to="/">
-                        <el-dropdown-item>zhuye </el-dropdown-item>
+                        <el-dropdown-item>{{$t('navbar.dashboard')}}</el-dropdown-item>
                     </router-link>
-                    <a target="_blank" href="https://github.com/PanJiaChen/vue-element-admin/">
-                        <el-dropdown-item>Github</el-dropdown-item>
+                    <a target="_blank" href="https://github.com/lnden/vue-element-admin/">
+                        <el-dropdown-item>{{$t('navbar.github')}}</el-dropdown-item>
                     </a>
                     <el-dropdown-item divided>
-                        <span style="display:block;" @click="logout">登出</span>
+                        <span style="display:block;" @click="logout">{{$t('navbar.logout')}}</span>
                     </el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
@@ -66,9 +69,12 @@
         border-bottom: 2px solid #E9F1F3;
         .header-item{
             float:right;
+            margin-right: 10px;
             .right-menu-item {
                 display: inline-block;
                 margin: 0 8px;
+                height: 60px;
+                line-height: 60px;
             }
             .avatar-container{
                 height:60px;

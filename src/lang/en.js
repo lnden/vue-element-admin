@@ -5,11 +5,13 @@ export default {
         components: 'Components'
     },
     navbar: {
-        logOut: 'Log Out',
-        dashboard: 'Dashboard',
         screenfull: 'Screenfull',
+        size: 'Global Size',
+        lang: 'Language',
         theme: 'Theme',
-        size: 'Global Size'
+        dashboard: 'Dashboard',
+        github: 'Github',
+        logout: 'Logout'
     },
     login: {
         title: 'Login Form',

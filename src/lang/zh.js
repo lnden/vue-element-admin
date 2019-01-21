@@ -5,11 +5,13 @@ export default {
         components: '组件'
     },
     navbar: {
-        logOut: '退出登录',
-        dashboard: '首页',
         screenfull: '全屏',
-        theme: '换肤',
-        size: '布局大小'
+        size: '布局大小',
+        lang: '语言切换',
+        theme: '更换主题',
+        dashboard: '首页',
+        github: '项目地址',
+        logout: '退出登录'
     },
     login: {
         title: '系统登录',

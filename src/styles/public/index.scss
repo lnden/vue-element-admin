@@ -2,3 +2,10 @@
 @import 'transition';
 @import 'element-ui';
 @import 'button';
+
+*:focus {
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
