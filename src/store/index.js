@@ -7,11 +7,15 @@ import state from './state'
 import getters from './getters'
 import mutations from './mutations'
 import actions from './actions'
+import app from './modules/app'
 import user from './modules/user'
+import permission from './modules/permission'
 
 export default new Vuex.Store ({
     modules:{
-        user
+        app,
+        user,
+        permission
     },
     state,
     getters,
