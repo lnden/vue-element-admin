@@ -21,18 +21,17 @@
                 if (typeof val !== 'string') return
                 const themeCluster = this.getThemeCluster(val.replace('#', ''))
                 const originalCluster = this.getThemeCluster(oldVal.replace('#', ''))
-                console.log(themeCluster, originalCluster)
                 const getHandler = (variable, id) => {
                     return () => {
-                    const originalCluster = this.getThemeCluster(ORIGINAL_THEME.replace('#', ''))
-                    const newStyle = this.updateStyle(this[variable], originalCluster, themeCluster)
-                    let styleTag = document.getElementById(id)
-                    if (!styleTag) {
-                        styleTag = document.createElement('style')
-                        styleTag.setAttribute('id', id)
-                        document.head.appendChild(styleTag)
-                    }
-                    styleTag.innerText = newStyle
+                        const originalCluster = this.getThemeCluster(ORIGINAL_THEME.replace('#', ''))
+                        const newStyle = this.updateStyle(this[variable], originalCluster, themeCluster)
+                        let styleTag = document.getElementById(id)
+                        if (!styleTag) {
+                            styleTag = document.createElement('style')
+                            styleTag.setAttribute('id', id)
+                            document.head.appendChild(styleTag)
+                        }
+                        styleTag.innerText = newStyle
                     }
                 }
                 const chalkHandler = getHandler('chalk', 'chalk-style')
@@ -53,7 +52,7 @@
                     style.innerText = this.updateStyle(innerText, originalCluster, themeCluster)
                 })
                 this.$message({
-                    message: '换肤成功',
+                    message: 'Switch Theme Success',
                     type: 'success'
                 })
             }
@@ -71,10 +70,10 @@
                 xhr.onreadystatechange = () => {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                     this[variable] = xhr.responseText.replace(/@font-face{[^}]+}/, '')
-                    callback()
+                        callback()
                     }
                 }
-                xhr.open('GET', url)
+                xhr.open('GET', url,true)
                 xhr.send()
             },
             getThemeCluster(theme) {
@@ -83,15 +82,15 @@
                     let green = parseInt(color.slice(2, 4), 16)
                     let blue = parseInt(color.slice(4, 6), 16)
                     if (tint === 0) { // when primary color is in its rgb space
-                    return [red, green, blue].join(',')
+                        return [red, green, blue].join(',')
                     } else {
-                    red += Math.round(tint * (255 - red))
-                    green += Math.round(tint * (255 - green))
-                    blue += Math.round(tint * (255 - blue))
-                    red = red.toString(16)
-                    green = green.toString(16)
-                    blue = blue.toString(16)
-                    return `#${red}${green}${blue}`
+                        red += Math.round(tint * (255 - red))
+                        green += Math.round(tint * (255 - green))
+                        blue += Math.round(tint * (255 - blue))
+                        red = red.toString(16)
+                        green = green.toString(16)
+                        blue = blue.toString(16)
+                        return `#${red}${green}${blue}`
                     }
                 }
                 const shadeColor = (color, shade) => {
@@ -119,9 +118,9 @@
 
 <style>
 .theme-picker .el-color-picker__trigger {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 .theme-picker-dropdown .el-color-dropdown__link-btn {
-  display: none;
+    display: none;
 }
 </style>
