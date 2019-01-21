@@ -49,7 +49,9 @@
         name:'headerbar',
         methods:{
             logout(){
-                console.log('登出')
+                this.$store.dispatch('FedLogOut').then(() => {
+                    location.reload()
+                })
             }
         },
         components:{
