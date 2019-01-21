@@ -1,7 +1,7 @@
 <template>
     <section class="container">
         <Headerbar />
-        <section>
+        <section class="main-container">
             <Sidebar class="sidebar-container"/>
             <ContentMain />
         </section>
@@ -27,18 +27,19 @@
 
 <style ref="stylesheet" lang="scss">
 $sideBarWidth: 180px;
-     // 侧边栏 Sidebar container
-  .sidebar-container {
+.main-container{
     transition: width 0.28s;
-    width: $sideBarWidth !important;
-    height: 100%;
+    width: $sideBarWidth;
     position: fixed;
     font-size: 0px;
-    top: 100px;
+    top: 62px;
     bottom: 0;
     left: 0;
-    z-index: 1001;
+    z-index: 99;
     overflow: hidden;
+        // 侧边栏 Sidebar container
+  .sidebar-container {
+    //  height:100%;
 
     //reset element-ui css
     .horizontal-collapse-transition {
@@ -81,5 +82,7 @@ $sideBarWidth: 180px;
       color: #f4f4f5 !important;
     }
   }
+}
+ 
     
 </style>
