@@ -33,8 +33,8 @@
 
 <style scoped>
     .sidebar-container .svg-icon {
-        margin-right:3px;
-        /*margin-left:10px;*/
+        margin-right:10px;
+        /* margin-left:10px; */
     }
     .svg-icon {
         width: 20px;
