@@ -4,6 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 import Layout from '@/views/layout/Layout'
+import componentsRouter from './modules/components'
 
 export const constantRouterMap = [
     { path: '/login', component: () => import('@/views/login/index'), hidden: true},
@@ -33,7 +34,8 @@ export const constantRouterMap = [
             meta: { title: 'dashboard', icon: 'nav-dashboard', noCache: true }
           }
         ]
-      },
+    },
+    componentsRouter
 ]
 
 export default new Router({

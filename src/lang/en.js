@@ -6,11 +6,12 @@ export default {
     },
     navbar: {
         screenfull: 'Screenfull',
-        size: 'Global Size',
+        size: 'Globalsize',
         lang: 'Language',
         theme: 'Theme',
         dashboard: 'Dashboard',
         github: 'Github',
+        user: 'Mycenter',
         logout: 'Logout'
     },
     login: {

@@ -105,7 +105,7 @@ $cursor: #fff;
         width: 300px;
         height: 300px;
         padding: 40px;
-        background:#fff;
+        background:#f6f8fa;
         border-radius:5px;
         text-align: center;
         .login-title{

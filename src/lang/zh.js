@@ -11,6 +11,7 @@ export default {
         theme: '更换主题',
         dashboard: '首页',
         github: '项目地址',
+        user: '个人中心',
         logout: '退出登录'
     },
     login: {
