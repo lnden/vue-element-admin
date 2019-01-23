@@ -42,7 +42,13 @@ const componentsRouter = {
             component: () => import('@/views/components-demo/avatarUpload'),
             name: 'AvatarUploadDemo',
             meta: { title: 'avatarUpload' }
-        }
+        },
+        {
+            path: 'back-to-top',
+            component: () => import('@/views/components-demo/backToTop'),
+            name: 'BackToTopDemo',
+            meta: { title: 'backToTop' }
+          }
     ]
 }
 

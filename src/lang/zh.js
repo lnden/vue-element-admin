@@ -2,7 +2,9 @@ export default {
     route: {
         dashboard: '首页',
         icons: '图标',
-        components: '组件'
+        components: '组件',
+        backToTop: '返回顶部',
+        tinymce: '富文本编辑器'
     },
     navbar: {
         screenfull: '全屏',
@@ -19,5 +21,10 @@ export default {
         logIn: '登录',
         username: '账号',
         password: '密码'
+    },
+    components: {
+        backToTopTips1: '页面滚动到指定位置会在右下角出现返回顶部按钮',
+        backToTopTips2: '可自定义按钮的样式、show/hide、出现的高度、返回的位置 如需文字提示，可在外部使用Element的el-tooltip元素',
+        prompt: '回到顶部'
     }
 }

@@ -21,6 +21,7 @@
         },
         methods: {
             handleSetSize(size) {
+                this.$ELEMENT.size = size
                 this.$store.dispatch('setSize', size)
                 this.refreshView()
                 this.$message({

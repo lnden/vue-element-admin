@@ -1,6 +1,6 @@
 <template>
     <section>
-        我是主页面内容
+        <el-button>我是Element按钮样式</el-button>
     </section>
 </template>
 

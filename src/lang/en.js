@@ -2,7 +2,9 @@ export default {
     route: {
         dashboard: 'Dashboard',
         icons: 'Icons',
-        components: 'Components'
+        components: 'Components',
+        backToTop: 'BackToTop',
+        tinymce: 'Tinymce'
     },
     navbar: {
         screenfull: 'Screenfull',
@@ -19,5 +21,10 @@ export default {
         logIn: 'Log in',
         username: 'Username',
         password: 'Password',
+    },
+    components: {
+        backToTopTips1: 'When the page is scrolled to the specified position, the Back to Top button appears in the lower right corner',
+        backToTopTips2: 'You can customize the style of the button, show / hide, height of appearance, height of the return. If you need a text prompt, you can use element-ui el-tooltip elements externally',
+        prompt: 'tooltip'
     }
 }
