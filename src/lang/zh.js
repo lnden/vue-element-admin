@@ -4,7 +4,8 @@ export default {
         icons: '图标',
         components: '组件',
         backToTop: '返回顶部',
-        tinymce: '富文本编辑器'
+        tinymce: '富文本编辑器',
+        markdown: 'Markdown'
     },
     navbar: {
         screenfull: '全屏',

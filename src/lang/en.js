@@ -4,7 +4,8 @@ export default {
         icons: 'Icons',
         components: 'Components',
         backToTop: 'BackToTop',
-        tinymce: 'Tinymce'
+        tinymce: 'Tinymce',
+        markdown: 'Markdown'
     },
     navbar: {
         screenfull: 'Screenfull',
