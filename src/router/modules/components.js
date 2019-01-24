@@ -79,6 +79,12 @@ const componentsRouter = {
             component: () => import('@/views/components-demo/stickyTop'),
             name: 'StickyDemo',
             meta: { title: 'sticky' }
+        },
+        {
+            path: 'count-to',
+            component: () => import('@/views/components-demo/countTo'),
+            name: 'CountToDemo',
+            meta: { title: 'countTo' }
         }
     ]
 }
