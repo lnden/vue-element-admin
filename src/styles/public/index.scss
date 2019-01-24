@@ -10,6 +10,8 @@ a {
     text-decoration: none;
 }
 
+
+// code标签默认样式
 code {
     background: #eef1f6;
     padding: 15px 16px;
@@ -18,13 +20,34 @@ code {
     line-height: 36px;
     font-size: 15px;
     font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-
     a {
         color: #337ab7;
         cursor: pointer;
-
         &:hover {
-        color: rgb(32, 160, 255);
+            color: rgb(32, 160, 255);
         }
     }
 }
+
+
+// 吸顶默认样式过度背景
+.sub-navbar {
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    transition: 600ms ease position;
+    background: linear-gradient(90deg, rgb(14, 192, 216) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+    .subtitle {
+        font-size: 20px;
+        color: #fff;
+    }
+    &.draft {
+        background: #d0d0d0;
+    }
+    &.deleted {
+        background: #d0d0d0;
+    }
+  }

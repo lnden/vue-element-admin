@@ -6,7 +6,8 @@ export default {
         backToTop: 'BackToTop',
         tinymce: 'Tinymce',
         markdown: 'Markdown',
-        clipboard: 'Clipboard'
+        clipboard: 'Clipboard',
+        sticky: 'StickyTop'
     },
     navbar: {
         screenfull: 'Screenfull',
@@ -27,7 +28,8 @@ export default {
     components: {
         backToTopTips1: 'When the page is scrolled to the specified position, the Back to Top button appears in the lower right corner',
         backToTopTips2: 'You can customize the style of the button, show / hide, height of appearance, height of the return. If you need a text prompt, you can use element-ui el-tooltip elements externally',
-        prompt: 'tooltip'
+        prompt: 'tooltip',
+        stickyTips: 'when the page is scrolled to the preset position will be sticky on the top.'
     },
     guide: {
         description: 'The guide page is useful for some people who entered the project for the first time. You can briefly introduce the features of the project. Demo is based on ',

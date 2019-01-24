@@ -73,6 +73,12 @@ const componentsRouter = {
             component: () => import('@/views/clipboard'),
             name: 'clipboard',
             meta: { title: 'clipboard' }
+        },
+        {
+            path: 'sticky',
+            component: () => import('@/views/components-demo/stickyTop'),
+            name: 'StickyDemo',
+            meta: { title: 'sticky' }
         }
     ]
 }
