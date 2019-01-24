@@ -5,7 +5,8 @@ export default {
         components: 'Components',
         backToTop: 'BackToTop',
         tinymce: 'Tinymce',
-        markdown: 'Markdown'
+        markdown: 'Markdown',
+        clipboard: 'Clipboard'
     },
     navbar: {
         screenfull: 'Screenfull',
@@ -46,5 +47,9 @@ export default {
         clickbtn: 'Click to download PDF',
         tipstwo: 'Here we use jspdf and html2canvas to implement the feature of downloading pdf.',
         downloadPdf: 'Html to PDF'
+    },
+    clipboard: {
+        tipsone: 'use clipboard directly',
+        tipstwo: 'use clipboard by v-directive'
     }
 }

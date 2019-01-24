@@ -5,7 +5,8 @@ export default {
         components: '组件',
         backToTop: '返回顶部',
         tinymce: '富文本编辑器',
-        markdown: 'Markdown'
+        markdown: 'Markdown',
+        clipboard: '剪贴板'
     },
     navbar: {
         screenfull: '全屏',
@@ -46,5 +47,9 @@ export default {
         clickbtn: '点击下载PDF',
         tipstwo: '这里使用  jspdf and html2canvas 来实现下载pdf的功能',
         downloadPdf: '页面转换PDF'
+    },
+    clipboard: {
+        tipsone: '使用directly剪切板功能',
+        tipstwo: '使用v-directly剪切板功能'
     }
 }

@@ -53,7 +53,7 @@ const componentsRouter = {
             path: 'guide',
             component: () => import('@/views/guide'),
             name: 'guide',
-            meta: { title: 'guide' }
+            meta: { title: 'Guide' }
         },
         {
             path: 'pdf',
@@ -67,6 +67,12 @@ const componentsRouter = {
             name: 'download',
             meta: { title: 'download' },
             hidden: true
+        },
+        {
+            path: 'clipboard',
+            component: () => import('@/views/clipboard'),
+            name: 'clipboard',
+            meta: { title: 'clipboard' }
         }
     ]
 }
