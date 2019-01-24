@@ -54,6 +54,19 @@ const componentsRouter = {
             component: () => import('@/views/guide'),
             name: 'guide',
             meta: { title: 'guide' }
+        },
+        {
+            path: 'pdf',
+            component: () => import('@/views/pdf'),
+            name: 'pdf',
+            meta: { title: 'PDF' }
+        },
+        {
+            path: 'download',
+            component: () => import('@/views/pdf/download'),
+            name: 'download',
+            meta: { title: 'download' },
+            hidden: true
         }
     ]
 }

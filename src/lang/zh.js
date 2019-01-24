@@ -31,5 +31,20 @@ export default {
     guide: {
         description: '引导页对于一些第一次进入项目的人很有用，你可以简单介绍下项目的功能。本 Demo 是基于',
         button: '打开引导'
+    },  
+    excel: {
+        export: '导出',
+        selectedExport: '导出已选择项',
+        placeholder: '请输入文件名(默认excel-list)'
+    },
+    zip: {
+        export: '导出',
+        placeholder: '请输入文件名(默认file)'
+    },
+    pdf: {
+        tipsone: '这里使用  window.print() 来实现下载pdf的功能',
+        clickbtn: '点击下载PDF',
+        tipstwo: '这里使用  jspdf and html2canvas 来实现下载pdf的功能',
+        downloadPdf: '页面转换PDF'
     }
 }

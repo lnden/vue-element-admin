@@ -31,5 +31,20 @@ export default {
     guide: {
         description: 'The guide page is useful for some people who entered the project for the first time. You can briefly introduce the features of the project. Demo is based on ',
         button: 'Show Guide'
+    },
+    excel: {
+        export: 'Export',
+        selectedExport: 'Export Selected Items',
+        placeholder: 'Please enter the file name(default excel-list)'
+    },
+    zip: {
+        export: 'Export',
+        placeholder: 'Please enter the file name(default file)'
+    },
+    pdf: {
+        tipsone: 'Here we use window.print() to implement the feature of downloading pdf.',
+        clickbtn: 'Click to download PDF',
+        tipstwo: 'Here we use jspdf and html2canvas to implement the feature of downloading pdf.',
+        downloadPdf: 'Html to PDF'
     }
 }

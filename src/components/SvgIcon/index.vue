@@ -21,7 +21,6 @@
                 return `#icon-${this.iconClass}`
             },
             svgClass() {
-                console.log(this.className,1111111111111111)
                 if (this.className) {
                     return 'svg-icon ' + this.className
                 } else {
