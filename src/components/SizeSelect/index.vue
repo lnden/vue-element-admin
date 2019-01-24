@@ -1,7 +1,7 @@
 <template>
     <el-dropdown trigger="click" @command="handleSetSize">
-        <div class="sizeselect-svg">
-            <svg-icon icon-class="head-size" />
+        <div>
+            <svg-icon className="sizeselect-icon" icon-class="head-size" />
         </div>
         <el-dropdown-menu slot="dropdown">
             <el-dropdown-item :disabled="size==='medium'" command="medium">Medium</el-dropdown-item>
@@ -43,7 +43,7 @@
 </script>
 
 <style ref="stylesheet" lang="scss" scoped>
-    .sizeselect-svg {
+    .sizeselect-icon {
         display: inline-block;
         cursor: pointer;
         color: #606266;

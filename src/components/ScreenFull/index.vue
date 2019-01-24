@@ -1,6 +1,6 @@
 <template>
-    <div class="screenfull-svg" @click="screenfull">
-         <svg-icon :icon-class="isFullscreen" />
+    <div @click="screenfull">
+         <svg-icon className="screenfull-icon" :icon-class="isFullscreen" />
     </div>
 </template>
 
@@ -52,7 +52,7 @@
 </script>
 
 <style ref="stylesheet" lang="scss" scoped>
-    .screenfull-svg {
+    .screenfull-icon {
         display: inline-block;
         cursor: pointer;
         color: #606266;

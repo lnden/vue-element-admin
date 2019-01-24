@@ -48,7 +48,13 @@ const componentsRouter = {
             component: () => import('@/views/components-demo/backToTop'),
             name: 'BackToTopDemo',
             meta: { title: 'backToTop' }
-          }
+        },
+        {
+            path: 'guide',
+            component: () => import('@/views/guide'),
+            name: 'guide',
+            meta: { title: 'guide' }
+        }
     ]
 }
 

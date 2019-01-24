@@ -27,5 +27,9 @@ export default {
         backToTopTips1: '页面滚动到指定位置会在右下角出现返回顶部按钮',
         backToTopTips2: '可自定义按钮的样式、show/hide、出现的高度、返回的位置 如需文字提示，可在外部使用Element的el-tooltip元素',
         prompt: '回到顶部'
+    },
+    guide: {
+        description: '引导页对于一些第一次进入项目的人很有用，你可以简单介绍下项目的功能。本 Demo 是基于',
+        button: '打开引导'
     }
 }
