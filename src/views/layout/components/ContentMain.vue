@@ -1,9 +1,11 @@
 <template>
-    <transition name="fade-transform" mode="out-in">
-        <!-- <keep-alive :include="cachedViews"> -->
-            <router-view :key="key"/>
-        <!-- </keep-alive> -->
-    </transition>
+    <main class="al-mainInner">
+        <transition name="fade-transform" mode="out-in">
+          <!-- <keep-alive :include="cachedViews"> -->
+          <router-view :key="key"/>
+          <!-- </keep-alive> -->
+        </transition>
+    </main>
 </template>
 
 <script>
@@ -18,5 +20,5 @@
 </script>
 
 <style ref="stylesheet" lang="scss" scoped>
-    
+
 </style>

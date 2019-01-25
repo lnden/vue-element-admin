@@ -1,5 +1,5 @@
 <template>
-    <section class="headerbar-container">
+    <header class="headerbar-container al-headerInner">
         <section class="header-item">
             <el-tooltip :content="$t('navbar.screenfull')" effect="dark" placement="bottom">
                 <screen-full class="right-menu-item"/>
@@ -12,12 +12,12 @@
             <el-tooltip :content="$t('navbar.lang')" effect="dark" placement="bottom">
                  <lang-select class="right-menu-item"/>
             </el-tooltip>
-           
+
 
             <el-tooltip :content="$t('navbar.theme')" effect="dark" placement="bottom">
                 <theme-picker class="right-menu-item"/>
             </el-tooltip>
-            
+
             <el-dropdown class="avatar-container right-menu-item" trigger="click">
                 <div class="avatar-wrapper">
                     <img src="http://5b0988e595225.cdn.sohucs.com/images/20180809/1cd9fc6d6da740a18371340e77e3af11.jpeg" class="user-avatar">
@@ -39,8 +39,8 @@
                 </el-dropdown-menu>
             </el-dropdown>
         </section>
-        
-    </section>
+
+    </header>
 </template>
 
 <script>
@@ -92,7 +92,7 @@
                         height: 40px;
                         vertical-align: middle;
                         border-radius: 10px;
-                    }  
+                    }
                     .el-icon-caret-bottom {
                         cursor: pointer;
                         position: absolute;
@@ -101,7 +101,7 @@
                         font-size: 12px;
                     }
                 }
-                
+
             }
         }
     }
