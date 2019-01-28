@@ -53,7 +53,7 @@ const componentsRouter = {
             path: 'guide',
             component: () => import('@/views/guide'),
             name: 'guide',
-            meta: { title: 'Guide' }
+            meta: { title: 'guide' }
         },
         {
             path: 'pdf',
