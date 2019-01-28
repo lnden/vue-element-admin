@@ -8,7 +8,8 @@ export default {
         markdown: 'Markdown',
         clipboard: 'Clipboard',
         sticky: 'StickyTop',
-        error: 'Error'
+        error: 'Error',
+        guide: 'Guide'
     },
     navbar: {
         screenfull: 'Screenfull',
@@ -54,5 +55,10 @@ export default {
     clipboard: {
         tipsone: 'use clipboard directly',
         tipstwo: 'use clipboard by v-directive'
+    },
+    public: {
+        delete: 'Delete',
+        cancel: 'Cancel',
+        confirm: 'Confirm'
     }
 }

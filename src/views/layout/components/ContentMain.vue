@@ -1,10 +1,10 @@
 <template>
     <main class="app-main"> 
-    <transition name="fade-transform" mode="out-in">
-        <!-- <keep-alive :include="cachedViews"> -->
-        <router-view :key="key"/>
-        <!-- </keep-alive> -->
-    </transition>
+        <transition name="fade-transform" mode="out-in">
+            <!-- <keep-alive :include="cachedViews"> -->
+            <router-view :key="key"/>
+            <!-- </keep-alive> -->
+        </transition>
     </main>
 </template>
 

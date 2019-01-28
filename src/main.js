@@ -10,7 +10,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 
 import Cookies from 'js-cookie'
-import 'normalize.css'
+import 'normalize.css' 
 import '@/styles/public/index.scss'
 import './icons'
 import './permission'

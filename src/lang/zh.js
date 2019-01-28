@@ -8,7 +8,8 @@ export default {
         markdown: 'Markdown',
         clipboard: '剪贴板',
         sticky: '粘贴顶部',
-        error: '错误页面'
+        error: '错误页面',
+        guide: '引导页'
     },
     navbar: {
         screenfull: '全屏',
@@ -54,5 +55,10 @@ export default {
     clipboard: {
         tipsone: '使用directly剪切板功能',
         tipstwo: '使用v-directly剪切板功能'
+    },
+    public: {
+        delete: '删除',
+        cancel: '取 消',
+        confirm: '确 定'
     }
 }
