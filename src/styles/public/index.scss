@@ -2,6 +2,7 @@
 @import 'transition';
 @import 'element-ui';
 @import 'button';
+@import 'sidebar';
 
 *:focus {
     outline: none;
@@ -10,7 +11,15 @@ a {
     text-decoration: none;
 }
 
-
+*,
+*:before,
+*:after {
+  box-sizing: initial;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
 // code标签默认样式
 code {
     background: #eef1f6;

@@ -5,6 +5,7 @@ Vue.use(Router);
 
 import Layout from '@/views/layout/Layout'
 import componentsRouter from './modules/components'
+import errorsRouter from './modules/errors'
 
 export const constantRouterMap = [
     { path: '/login', component: () => import('@/views/login/index'), hidden: true},
@@ -35,7 +36,8 @@ export const constantRouterMap = [
           }
         ]
     },
-    componentsRouter
+    componentsRouter,
+    errorsRouter
 ]
 
 export default new Router({

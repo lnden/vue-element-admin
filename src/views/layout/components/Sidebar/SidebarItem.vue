@@ -1,7 +1,6 @@
 <template>
-    <section  v-if="!item.hidden&&item.children" >
-
-        <el-submenu index="1">
+    <section  v-if="!item.hidden&&item.children"  class="menu-wrapper">
+        <!-- <el-submenu index="1">
             <template slot="title">
                 <i class="el-icon-location"></i>
                 <span>dashboard</span>
@@ -37,7 +36,7 @@
         <el-menu-item index="4">
             <i class="el-icon-setting"></i>
             <span slot="title">导航四</span>
-        </el-menu-item>
+        </el-menu-item> -->
 
         <template v-if="hasOneShowingChild(item.children,item) && (!onlyOneChild.children||onlyOneChild.noShowingChildren)&&!item.alwaysShow">
             <app-link :to="resolvePath(onlyOneChild.path)">

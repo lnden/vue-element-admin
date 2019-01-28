@@ -7,7 +7,8 @@ export default {
         tinymce: 'Tinymce',
         markdown: 'Markdown',
         clipboard: 'Clipboard',
-        sticky: 'StickyTop'
+        sticky: 'StickyTop',
+        error: 'Error'
     },
     navbar: {
         screenfull: 'Screenfull',

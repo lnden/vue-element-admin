@@ -7,7 +7,8 @@ export default {
         tinymce: '富文本编辑器',
         markdown: 'Markdown',
         clipboard: '剪贴板',
-        sticky: '粘贴顶部'
+        sticky: '粘贴顶部',
+        error: '错误页面'
     },
     navbar: {
         screenfull: '全屏',
