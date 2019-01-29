@@ -12,7 +12,7 @@
 
                 <el-form-item prop="password">
                     <span class="svg-container" :class="passwordstate?'svg-container_password':''">
-                        <svg-icon icon-class="login-password1" />
+                        <svg-icon icon-class="login-password" />
                     </span>
                     <el-input name="password" :type="passwordType" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on" placeholder="请输入密码" @focus="focus('password')" @blur="blurs('password')"/>
                     <span class="show-pwd" @click="showPwd">
@@ -65,7 +65,7 @@
                         }).catch(() => {
                             this.loading = false
                         })
-                        
+
                     } else {
                         console.log('error submit!!');
                         return false

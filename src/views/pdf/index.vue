@@ -4,6 +4,7 @@
         <router-link target="_blank" to="download">
             <el-button type="primary">{{$t('pdf.clickbtn')}}</el-button>
         </router-link>
+        <!-- 该方法使用npm包进行处理webto -->
         <!-- <code class="distance">{{$t('pdf.tipstwo')}}</code> -->
         <!-- <el-button type="primary">{{$t('pdf.downloadPdf')}}</el-button> -->
     </section>
