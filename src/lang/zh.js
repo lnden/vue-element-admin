@@ -11,6 +11,8 @@ export default {
         error: '错误页面',
         guide: '引导页',
         errorinfo: '错误信息',
+        401:'401页面',
+        404:'404页面'
     },
     navbar: {
         screenfull: '全屏',
