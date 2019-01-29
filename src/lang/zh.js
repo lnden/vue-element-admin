@@ -10,7 +10,7 @@ export default {
         sticky: '粘贴顶部',
         error: '错误页面',
         guide: '引导页',
-        errorinfo: '错误信息',
+        log: '错误日志',
         401: '401页面',
         404: '404页面',
         systemset: '系统设置',

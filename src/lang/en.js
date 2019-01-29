@@ -10,12 +10,12 @@ export default {
         sticky: 'StickyTop',
         error: 'Error',
         guide: 'Guide',
-        errorinfo: 'Errorinfo',
-        401:'401Page',
-        404:'404Page',
-        systemset: 'SystemSetting',
-        user: 'Mycenter',
-        userManage: 'UserManage'
+        log: 'Error Log',
+        401:'401 Page',
+        404:'404 Page',
+        systemset: 'System Setting',
+        user: 'My Center',
+        userManage: 'User Manage'
     },
     navbar: {
         screenfull: 'Screenfull',

@@ -24,10 +24,10 @@ const errorsRouter = {
             meta: { title: '404', noCache: true }
         },
         {
-            path: 'info',
+            path: 'log',
             component: () => import('@/views/error/401'),
-            name: 'PageInfo',
-            meta: { title: 'errorinfo', noCache: true }
+            name: 'log',
+            meta: { title: 'log', noCache: true }
         },
     ]
 }
