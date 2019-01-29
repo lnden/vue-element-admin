@@ -37,9 +37,9 @@
         /* margin-left:10px; */
     }
     .svg-icon {
-        width: 20px;
-        height: 20px;
-        vertical-align: -0.3em;
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
         fill: currentColor;
         overflow: hidden;
         /*vertical-align: middle;*/

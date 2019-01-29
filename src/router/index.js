@@ -48,6 +48,18 @@ export const constantRouterMap = [
             }
         ]
     },
+    {
+        path: '/icon',
+        component: Layout,
+        children: [
+            {
+                path: 'index',
+                component: () => import('@/views/svg-icons'),
+                name: 'Icons',
+                meta: { title: 'icons', icon: 'nav-icon', noCache: true }
+            }
+        ]
+    },
     componentsRouter,
     errorsRouter,
     {

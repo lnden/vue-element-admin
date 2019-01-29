@@ -119,10 +119,11 @@ code {
 
 /* reset a link init && active style
  * <a target="_blank" class="link-type" href="http://">在线文档</a>
+ * top <code> 内也带 link-type style
  */
 
 .link-type, .link-type:focus {
-    color: #f00;
+    color: #337ab7;
     cursor: pointer;
     &:hover {
         color: rgb(32, 160, 255);
