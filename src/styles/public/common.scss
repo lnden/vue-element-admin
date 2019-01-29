@@ -1,0 +1,44 @@
+// common style,simple class name
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.clearfix {
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+
+.pr-5 {
+    padding-right: 5px;
+}
+
+.pl-5 {
+    padding-left: 5px;
+}
+
+.block {
+    display: block;
+}
+
+.inlineBlock {
+    display: block;
+}
+
+.text-center {
+    text-align: center
+}
+
+.pointer {
+    cursor: pointer;
+}

@@ -36,14 +36,14 @@ export const constantRouterMap = [
         ]
     },
     {
-        path: '',
+        path: '/guide',
         component: Layout,
         redirect: 'dashboard',
         children: [
             {
-                path: 'guide',
+                path: '',
                 component: () => import('@/views/guide'),
-                name: 'Dashboard',
+                name: 'guide',
                 meta: { title: 'guide', icon: 'nav-guide', noCache: true }
             }
         ]
@@ -51,15 +51,26 @@ export const constantRouterMap = [
     componentsRouter,
     errorsRouter,
     {
-        path: '',
+        path: '/setting',
         component: Layout,
         redirect: 'setting',
+        name:'setting',
+        meta: {
+            title:'systemset',
+            icon: 'nav-setting'
+        },
         children: [
             {
-                path: 'setting',
-                component: () => import('@/views/guide'),
-                name: 'setting',
-                meta: { title: 'systemset', icon: 'nav-setting', noCache: true }
+                path: 'user',
+                component: () => import('@/views/home/Home'),
+                name: 'user',
+                meta: { title: 'user' }
+            },
+            {
+                path: 'manageuser',
+                component: () => import('@/views/home/Home'),
+                name: 'userManage',
+                meta: { title: 'userManage' }
             }
         ]
     }

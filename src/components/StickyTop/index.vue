@@ -25,7 +25,7 @@
                 default: ''
             }
         },
-        data(){
+        data() {
             return {
                 active: false,
                 position: '',
@@ -55,7 +55,7 @@
                 this.isSticky = true;
             },
             reset(){
-                if(!this.active) return 
+                if(!this.active) return
                 this.position = '';
                 this.width = 'auto';
                 this.active = false;

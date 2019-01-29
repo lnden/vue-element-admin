@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="app-container">
         <el-button>我是Element按钮样式</el-button>
     </section>
 </template>
@@ -11,5 +11,5 @@ export default {
 </script>
 
 <style ref="stylesheet" lang="scss" scoped>
-    
+
 </style>

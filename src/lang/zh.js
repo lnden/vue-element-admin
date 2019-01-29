@@ -13,7 +13,9 @@ export default {
         errorinfo: '错误信息',
         401: '401页面',
         404: '404页面',
-        systemset: '系统设置'
+        systemset: '系统设置',
+        user: '个人中心',
+        userManage: '用户管理'
     },
     navbar: {
         screenfull: '全屏',
@@ -36,6 +38,8 @@ export default {
         backToTopTips2: '可自定义按钮的样式、show/hide、出现的高度、返回的位置 如需文字提示，可在外部使用Element的el-tooltip元素',
         prompt: '回到顶部',
         stickyTips: '当页面滚动到预设的位置会吸附在顶部',
+        documentation: '文档',
+        tinymceTips: '富文本是管理后台一个核心的功能，但同时又是一个有很多坑的地方。在选择富文本的过程中我也走了不少的弯路，市面上常见的富文本都基本用过了，最终权衡了一下选择了Tinymce。更详细的富文本比较和介绍见'
     },
     guide: {
         description: '引导页对于一些第一次进入项目的人很有用，你可以简单介绍下项目的功能。本 Demo 是基于',

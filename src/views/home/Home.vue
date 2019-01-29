@@ -1,7 +1,7 @@
 <template>
-    <section class="home-container">
+    <section class="app-container">
         {{name}}
-        <Loading />  
+        <Loading />
     </section>
 </template>
 
@@ -21,7 +21,5 @@
 </script>
 
 <style ref="stylesheet" lang="scss" scoped>
-    .home-container{
-        border:1px solid #f00;
-    }
+
 </style>

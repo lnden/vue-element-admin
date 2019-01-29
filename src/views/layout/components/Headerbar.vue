@@ -27,7 +27,7 @@
                     <router-link to="/">
                         <el-dropdown-item>{{$t('navbar.dashboard')}}</el-dropdown-item>
                     </router-link>
-                    <router-link to="/user">
+                    <router-link to="/setting/user">
                         <el-dropdown-item>{{$t('navbar.user')}}</el-dropdown-item>
                     </router-link>
                     <a target="_blank" href="https://github.com/lnden/vue-element-admin/">
