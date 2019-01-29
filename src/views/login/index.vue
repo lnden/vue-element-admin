@@ -101,7 +101,7 @@ $cursor: #fff;
         left: 50%;
         top: 50%;
         margin-left: -170px;
-        margin-top: -170px;
+        margin-top: -180px;
         width: 360px;
         height: 360px;
         padding: 40px;
