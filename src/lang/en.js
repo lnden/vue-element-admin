@@ -9,7 +9,8 @@ export default {
         clipboard: 'Clipboard',
         sticky: 'StickyTop',
         error: 'Error',
-        guide: 'Guide'
+        guide: 'Guide',
+        errorinfo: 'Errorinfo',
     },
     navbar: {
         screenfull: 'Screenfull',

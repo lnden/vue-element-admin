@@ -10,7 +10,7 @@ const componentsRouter = {
     name: 'ComponentDemo',
     meta: {
         title:'components',
-        icon: 'discover'
+        icon: 'nav-component'
     },
     children: [
         {

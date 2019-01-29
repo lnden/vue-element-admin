@@ -8,7 +8,7 @@ const errorsRouter = {
     name: 'Error',
     meta: {
         title: 'error',
-        icon: '404'
+        icon: 'nav-error'
     },
     children: [
         {
@@ -22,7 +22,13 @@ const errorsRouter = {
             component: () => import('@/views/error/404'),
             name: 'Page404',
             meta: { title: '404', noCache: true }
-        }
+        },
+        {
+            path: 'info',
+            component: () => import('@/views/error/401'),
+            name: 'PageInfo',
+            meta: { title: 'errorinfo', noCache: true }
+        },
     ]
 }
 
