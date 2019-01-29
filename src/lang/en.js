@@ -12,7 +12,8 @@ export default {
         guide: 'Guide',
         errorinfo: 'Errorinfo',
         401:'401Page',
-        404:'404Page'
+        404:'404Page',
+        systemset: 'SystemSetting'
     },
     navbar: {
         screenfull: 'Screenfull',

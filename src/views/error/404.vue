@@ -53,7 +53,7 @@
         position: relative;
         float: left;
         width: 600px;
-        padding: 150px 0;
+        padding: 100px 0;
         overflow: hidden;
         &__parent {
             width: 100%;

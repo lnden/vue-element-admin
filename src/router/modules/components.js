@@ -44,18 +44,6 @@ const componentsRouter = {
             meta: { title: 'avatarUpload' }
         },
         {
-            path: 'back-to-top',
-            component: () => import('@/views/components-demo/backToTop'),
-            name: 'BackToTopDemo',
-            meta: { title: 'backToTop' }
-        },
-        {
-            path: 'guide',
-            component: () => import('@/views/guide'),
-            name: 'guide',
-            meta: { title: 'guide' }
-        },
-        {
             path: 'pdf',
             component: () => import('@/views/pdf'),
             name: 'pdf',
@@ -79,6 +67,12 @@ const componentsRouter = {
             component: () => import('@/views/components-demo/stickyTop'),
             name: 'StickyDemo',
             meta: { title: 'sticky' }
+        },
+        {
+            path: 'back-to-top',
+            component: () => import('@/views/components-demo/backToTop'),
+            name: 'BackToTopDemo',
+            meta: { title: 'backToTop' }
         },
         {
             path: 'count-to',

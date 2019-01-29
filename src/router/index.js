@@ -22,7 +22,6 @@ export const constantRouterMap = [
           }
         ]
     },
-
     {
         path: '',
         component: Layout,
@@ -36,8 +35,34 @@ export const constantRouterMap = [
           }
         ]
     },
+    {
+        path: '',
+        component: Layout,
+        redirect: 'dashboard',
+        children: [
+            {
+                path: 'guide',
+                component: () => import('@/views/guide'),
+                name: 'Dashboard',
+                meta: { title: 'guide', icon: 'nav-guide', noCache: true }
+            }
+        ]
+    },
     componentsRouter,
-    errorsRouter
+    errorsRouter,
+    {
+        path: '',
+        component: Layout,
+        redirect: 'setting',
+        children: [
+            {
+                path: 'setting',
+                component: () => import('@/views/guide'),
+                name: 'setting',
+                meta: { title: 'systemset', icon: 'nav-setting', noCache: true }
+            }
+        ]
+    }
 ]
 
 export default new Router({

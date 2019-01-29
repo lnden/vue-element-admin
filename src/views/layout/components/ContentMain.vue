@@ -1,5 +1,5 @@
 <template>
-    <main class="app-main"> 
+    <main class="app-main">
         <transition name="fade-transform" mode="out-in">
             <!-- <keep-alive :include="cachedViews"> -->
             <router-view :key="key"/>
@@ -22,10 +22,10 @@
 <style ref="stylesheet" lang="scss" scoped>
     .app-main {
         /*84 = navbar + tags-view = 50 +34 */
-        min-height: calc(100vh - 60px);
+        min-height: calc(100vh - 62px);
         position: relative;
         width: 100%;
-        /* 隐藏width滚动条 */ 
+        /* 隐藏width滚动条 */
         overflow: hidden;
     }
 </style>

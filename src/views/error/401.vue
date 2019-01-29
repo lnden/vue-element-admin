@@ -59,7 +59,7 @@
 <style rel="stylesheet/scss" lang="scss" scoped>
 .errPage-container {
     width: 800px;
-    margin: 100px auto;
+    margin: 60px auto;
     .pan-back-btn {
         background: #008489;
         color: #fff;
