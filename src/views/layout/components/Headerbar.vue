@@ -1,5 +1,6 @@
 <template>
-    <header class="headerbar-container al-headerInner">
+    <header class="al-headerInner">
+        <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container"/>
         <section class="header-item">
             <el-tooltip :content="$t('navbar.screenfull')" effect="dark" placement="bottom">
                 <screen-full class="right-menu-item"/>
@@ -48,30 +49,45 @@
     import SizeSelect from '@/components/SizeSelect'
     import LangSelect from '@/components/LangSelect'
     import ThemePicker from '@/components/ThemePicker'
+    import Hamburger from '@/components/Hamburger'
+    import { mapGetters } from 'vuex'
     export default {
         name:'headerbar',
-        methods:{
-            logout(){
-                this.$store.dispatch('FedLogOut').then(() => {
-                    location.reload()
-                })
-            }
+        computed: {
+            ...mapGetters(['sidebar'])
         },
         components:{
             ScreenFull,
             SizeSelect,
             LangSelect,
-            ThemePicker
+            ThemePicker,
+            Hamburger
+        },
+        methods:{
+            logout(){
+                this.$store.dispatch('FedLogOut').then(() => {
+                    location.reload()
+                })
+            },
+            toggleSideBar() {
+                this.$store.dispatch('toggleSideBar')
+            }
         }
     }
 </script>
 
 <style ref="stylesheet" lang="scss" scoped>
-    .headerbar-container{
+    .al-headerInner{
         width:100%;
         height:60px;
         line-height: 60px;
         border-bottom: 2px solid #E9F1F3;
+        font-size: 0;
+        /*user-select:none;*/
+        .hamburger-container {
+            float: left;
+            padding: 0 10px;
+        }
         .header-item{
             float:right;
             margin-right: 10px;
@@ -80,6 +96,7 @@
                 margin: 0 8px;
                 height: 60px;
                 line-height: 60px;
+                font-size: 0;
             }
             .avatar-container{
                 height:60px;
