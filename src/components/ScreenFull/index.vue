@@ -32,9 +32,9 @@
             }
         },
         mounted(){
-            // methods detects changes in window size,**fullscreen Esc is exit 
+            // methods detects changes in window size,**fullscreen Esc is exit
             let _this = this;
-            window.onresize = function(){  
+            window.onresize = function(){
                 if(!checkFull()){
                     console.log(11111111111)
                 }else{
@@ -56,5 +56,8 @@
         display: inline-block;
         cursor: pointer;
         color: #606266;
+        width:20px;
+        height:20px;
+        vertical-align: -5px;
     }
 </style>

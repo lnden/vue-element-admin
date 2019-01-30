@@ -36,6 +36,9 @@
     .international-icon {
         font-size: 20px;
         cursor: pointer;
-        vertical-align: -5px!important;
+        color: #606266;
+        width:20px;
+        height:20px;
+        vertical-align: -5px;
     }
 </style>
