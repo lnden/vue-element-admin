@@ -234,7 +234,7 @@ npm install nprogress -S
 - [ ] 消息中心
 
 辅助功能
-- [ ] 收缩侧边栏
+- [x] 收缩侧边栏
 - [x] 换皮肤
 - [x] 全屏展示
 - [x] 多语言切换
@@ -244,6 +244,43 @@ npm install nprogress -S
 - [x] Markdown编辑器
 
 ### 目录结构
+src:
+│  App.vue
+│  main.js
+│  permission.js
+│  
+├─api
+│      
+├─assets
+│      
+├─components      
+│              
+├─directive
+│          
+├─icons
+│          
+├─lang
+│      
+├─mock
+│   
+├─router
+│          
+├─store
+│          
+├─styles
+│ 
+├─utils
+│          
+└─views
+    │      
+    ├─dashboard
+    │      
+    ├─layout
+    │              
+    │─login
+    │     
+    └─components-demo
+         
 
 
 **注释**：
