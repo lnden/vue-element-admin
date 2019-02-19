@@ -85,6 +85,12 @@ const componentsRouter = {
             component: () => import('@/views/components-demo/dragKanban'),
             name: 'DragKanbanDemo',
             meta: { title: 'dragKanban' }
+        },
+        {
+            path: 'drag-select',
+            component: () => import('@/views/components-demo/dragSelect'),
+            name: 'DragSelectDemo',
+            meta: { title: 'dragSelect' }
         }
     ]
 }
