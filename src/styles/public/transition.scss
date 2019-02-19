@@ -53,3 +53,12 @@
     transform: translate3d(0, -50px, 0);
     opacity: 0;
 }
+
+
+/*vuedraggable*/
+.flip-list-move {
+    transition: transform 0.5s;
+}
+.no-move {
+    transition: transform 0s;
+}

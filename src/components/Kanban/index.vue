@@ -9,9 +9,12 @@
             :options="options"
             :move="getdata"
             @update="datadragEnd">
-            <div v-for="element in list" :key="element.id" class="board-item">
-                {{element.name}} - {{element.id}}
-            </div>
+            <!--<transition-group class="groupspan" :name="'flip-list'">-->
+            <transition-group class="groupspan">
+                <div v-for="element in list" :key="element.id" class="board-item">
+                    {{element.name}} - {{element.id}}
+                </div>
+            </transition-group>
         </draggable>
     </section>
 </template>
@@ -90,8 +93,13 @@
             align-items: center;
             /*border:1px solid #f00;*/
 
+            .groupspan{
+                display: block;
+                width:100%;
+            }
             .board-item {
-                cursor: pointer;
+                /*cursor: pointer;*/
+                cursor: move;
                 width: 100%;
                 height: 64px;
                 margin: 5px 0;
