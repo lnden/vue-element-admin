@@ -6,7 +6,9 @@
         <draggable
             class="board-column-content"
             :list="list"
-            :options="options">
+            :options="options"
+            :move="getdata"
+            @update="datadragEnd">
             <div v-for="element in list" :key="element.id" class="board-item">
                 {{element.name}} - {{element.id}}
             </div>
@@ -39,10 +41,67 @@
         },
         components: {
             draggable
+        },
+        methods: {
+            getdata (evt) {
+                console.log(evt.draggedContext.element.id)
+            },
+            datadragEnd (evt) {
+                console.log('拖动前的索引 :' + evt.oldIndex)
+                console.log('拖动后的索引 :' + evt.newIndex)
+                console.log(this.tags)
+            }
         }
     }
 </script>
 
 <style rel="stylesheet/scss" lang="scss">
 
+</style>
+<style lang="scss">
+    .board-column {
+        min-width: 300px;
+        min-height: 100px;
+        height: auto;
+        overflow: hidden;
+        background: #f0f0f0;
+        border-radius: 3px;
+        /*border:1px solid #f00;*/
+
+        .board-column-header {
+            height: 50px;
+            line-height: 50px;
+            overflow: hidden;
+            padding: 0 20px;
+            text-align: center;
+            background: #333;
+            color: #fff;
+            /*border:1px solid #f00;*/
+        }
+
+        .board-column-content {
+            height: auto;
+            overflow: hidden;
+            border: 10px solid transparent;
+            min-height: 60px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            /*border:1px solid #f00;*/
+
+            .board-item {
+                cursor: pointer;
+                width: 100%;
+                height: 64px;
+                margin: 5px 0;
+                background-color: #fff;
+                text-align: left;
+                line-height: 54px;
+                padding: 5px 10px;
+                box-sizing: border-box;
+                box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+            }
+        }
+    }
 </style>
