@@ -25,7 +25,16 @@
 </template>
 
 <script>
-   import Kanban from '@/components/Kanban'
+    /**
+     * @author  lnden
+     * @date    2019/2/19
+     * @desc    该拖动组件使用 vuedraggable
+     *          cnpm install vuedraggable -S
+     *          待完善 <transition-group>
+     * @param   options、event
+     *          address：https://blog.csdn.net/zjiang1994/article/details/79809687
+     */
+    import Kanban from '@/components/Kanban'
 
     export default {
         name: "dragKanban",
