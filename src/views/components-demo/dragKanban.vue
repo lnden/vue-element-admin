@@ -33,6 +33,8 @@
      *          待完善 <transition-group>
      * @param   options、event
      *          address：https://blog.csdn.net/zjiang1994/article/details/79809687
+     *          github：https://github.com/SortableJS/Sortable
+     *          clone：git clone https://github.com/SortableJS/Sortable.git
      */
     import Kanban from '@/components/Kanban'
 
@@ -44,10 +46,12 @@
         data(){
             return {
                 options:{
-                    sort:true,         //是否可以组内拖拽排序
+                    sort:true,          //是否可以组内拖拽排序
                     group: 'mission',   //是否可以跨组拖拽
                     // delay:10,
-                    // animation:10,
+                    // animation:150,      //切换动画，可使用transition-group代替
+                    // handle: '.handle',  //选择移动的元素
+                    // ilter: '.filtered', //指定类名的元素不允许拖动
                 },
                 list1:[
                     {name:'Mission',id:1},
