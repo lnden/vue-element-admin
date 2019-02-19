@@ -79,6 +79,12 @@ const componentsRouter = {
             component: () => import('@/views/components-demo/countTo'),
             name: 'CountToDemo',
             meta: { title: 'countTo' }
+        },
+        {
+            path: 'drag-kanban',
+            component: () => import('@/views/components-demo/dragKanban'),
+            name: 'DragKanbanDemo',
+            meta: { title: 'dragKanban' }
         }
     ]
 }
