@@ -15,7 +15,8 @@ export default {
         404:'404 Page',
         systemset: 'System Setting',
         user: 'My Center',
-        userManage: 'User Manage'
+        userManage: 'User Manage',
+        dragKanban:'dragKanban'
     },
     navbar: {
         screenfull: 'Screenfull',

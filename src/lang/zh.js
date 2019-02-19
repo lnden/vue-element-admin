@@ -15,7 +15,8 @@ export default {
         404: '404页面',
         systemset: '系统设置',
         user: '个人中心',
-        userManage: '用户管理'
+        userManage: '用户管理',
+        dragKanban:'拖拽看板'
     },
     navbar: {
         screenfull: '全屏',
