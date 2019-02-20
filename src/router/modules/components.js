@@ -91,6 +91,12 @@ const componentsRouter = {
             component: () => import('@/views/components-demo/dragSelect'),
             name: 'DragSelectDemo',
             meta: { title: 'dragSelect' }
+        },
+        {
+            path: 'drag-dialog',
+            component: () => import('@/views/components-demo/dragDialog'),
+            name: 'DragDialogDemo',
+            meta: { title: 'dragDialog' }
         }
     ]
 }
