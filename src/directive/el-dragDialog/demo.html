@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background:#080;
+            cursor:pointer;
+        }
+        p{
+            background:#f00;
+        }
+    </style>
+</head>
+<body>
+    <div id="dragDom">
+        <p id="dragEle">拖拽区</p>
+        可以拖拽的DIV
+    </div>
+
+    <script>
+        const dialoEle= document.getElementById('dragEle');
+        const dragDom = document.getElementById('dragDom');
+        dialoEle.style.cssText += ';cursor:move;';
+    </script>
+</body>
+</html>
