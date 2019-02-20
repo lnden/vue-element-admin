@@ -16,7 +16,8 @@ export default {
         systemset: '系统设置',
         user: '个人中心',
         userManage: '用户管理',
-        dragKanban:'拖拽看板'
+        dragKanban:'拖拽看板',
+        dragSelect:'拖拽选择'
     },
     navbar: {
         screenfull: '全屏',

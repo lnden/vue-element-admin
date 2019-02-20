@@ -1,5 +1,5 @@
 <template>
-    <section class="backtotop">
+    <section class="components-container backtotop">
         <div>description</div>
         <code>&emsp;&emsp;{{ $t('components.backToTopTips1') }}</code>
         <code>&emsp;&emsp;{{ $t('components.backToTopTips2') }}</code>

@@ -57,6 +57,12 @@ const componentsRouter = {
             hidden: true
         },
         {
+            path: 'count-to',
+            component: () => import('@/views/components-demo/countTo'),
+            name: 'CountToDemo',
+            meta: { title: 'countTo' }
+        },
+        {
             path: 'clipboard',
             component: () => import('@/views/clipboard'),
             name: 'clipboard',
@@ -73,12 +79,6 @@ const componentsRouter = {
             component: () => import('@/views/components-demo/backToTop'),
             name: 'BackToTopDemo',
             meta: { title: 'backToTop' }
-        },
-        {
-            path: 'count-to',
-            component: () => import('@/views/components-demo/countTo'),
-            name: 'CountToDemo',
-            meta: { title: 'countTo' }
         },
         {
             path: 'drag-kanban',

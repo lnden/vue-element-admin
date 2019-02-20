@@ -16,7 +16,8 @@ export default {
         systemset: 'System Setting',
         user: 'My Center',
         userManage: 'User Manage',
-        dragKanban:'dragKanban'
+        dragKanban:'dragKanban',
+        dragSelect:'dragSelect'
     },
     navbar: {
         screenfull: 'Screenfull',
