@@ -82,8 +82,8 @@
         height:60px;
         line-height: 60px;
         border-bottom: 2px solid #E9F1F3;
-        font-size: 0;
-        /*user-select:none;*/
+        /*font-size: 0;*/
+        user-select:none;
         .hamburger-container {
             float: left;
             padding: 0 10px;
@@ -96,7 +96,8 @@
                 margin: 0 8px;
                 height: 60px;
                 line-height: 60px;
-                font-size: 0;
+                font-size:20px;
+                /*font-size: 0;*/
             }
             .avatar-container{
                 height:60px;
