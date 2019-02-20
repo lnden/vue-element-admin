@@ -49,7 +49,7 @@
                     sort:true,          //是否可以组内拖拽排序
                     group: 'mission',   //是否可以跨组拖拽
                     // delay:10,
-                    // animation:150,      //切换动画，可使用transition-group代替
+                    animation:150,      //切换动画，可使用transition-group代替
                     // handle: '.handle',  //选择移动的元素
                     // ilter: '.filtered', //指定类名的元素不允许拖动
                 },

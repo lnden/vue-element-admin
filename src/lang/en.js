@@ -17,7 +17,8 @@ export default {
         user: 'My Center',
         userManage: 'User Manage',
         dragKanban:'dragKanban',
-        dragSelect:'dragSelect'
+        dragSelect:'dragSelect',
+        dragDialog: 'dragDialog'
     },
     navbar: {
         screenfull: 'Screenfull',
