@@ -41,16 +41,16 @@
                 <!--</el-card>-->
             <!--</el-col>-->
 
-            <!--<el-col :span="6">-->
-                <!--<el-card class="box-card">-->
-                    <!--<div slot="header" class="clearfix">-->
-                        <!--<span>hover text</span>-->
-                    <!--</div>-->
-                    <!--<div class="component-item">-->
-                        <!--<mallki class-name="mallki-text" text="vue-element-admin"/>-->
-                    <!--</div>-->
-                <!--</el-card>-->
-            <!--</el-col>-->
+            <el-col :span="6">
+                <el-card class="box-card">
+                    <div slot="header" class="clearfix">
+                        <span>hover text</span>
+                    </div>
+                    <div class="component-item">
+                        <mallki class-name="mallki-text" text="vue-element-admin"/>
+                    </div>
+                </el-card>
+            </el-col>
         </el-row>
 
         <el-row :gutter="20" style="margin-top:50px;">
@@ -79,7 +79,7 @@
     // import MdInput from '@/components/MDinput'
     import PanThumb from '@/components/PanThumb'
     // import waves from '@/directive/waves/index.js' // 水波纹指令
-    // import Mallki from '@/components/TextHoverEffect/Mallki'
+    import Mallki from '@/components/TextHoverEffect/Mallki'
     import DropdownMenu from '@/components/Share/dropdownMenu'
     export default {
         name: "mixin",
@@ -97,7 +97,7 @@
         components: {
             // MdInput,
             PanThumb,
-            // Mallki,
+            Mallki,
             DropdownMenu
         },
         directives: {
@@ -111,5 +111,8 @@
         background-color: #f0f2f5;
         padding: 30px;
         min-height: calc(100vh - 84px);
+    }
+    .component-item{
+        min-height: 100px;
     }
 </style>
