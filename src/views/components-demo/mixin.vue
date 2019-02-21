@@ -1,20 +1,20 @@
 <template>
     <section class="mixin-components-container">
         <el-row :gutter="20" style="margin-top:50px;">
-            <!--<el-col :span="6">-->
-                <!--<el-card class="box-card">-->
-                    <!--<div slot="header" class="clearfix">-->
-                        <!--<span>Material Design 的input</span>-->
-                    <!--</div>-->
-                    <!--<div style="height:100px;">-->
-                        <!--<el-form :model="demo" :rules="demoRules">-->
-                            <!--<el-form-item prop="title">-->
-                                <!--<md-input v-model="demo.title" icon="search" name="title" placeholder="输入标题">标题</md-input>-->
-                            <!--</el-form-item>-->
-                        <!--</el-form>-->
-                    <!--</div>-->
-                <!--</el-card>-->
-            <!--</el-col>-->
+            <el-col :span="6">
+                <el-card class="box-card">
+                    <div slot="header" class="clearfix">
+                        <span>Material Design 的input</span>
+                    </div>
+                    <div style="height:100px;">
+                        <el-form :model="demo" :rules="demoRules">
+                            <el-form-item prop="title">
+                                <md-input v-model="demo.title" type="number" icon="search" name="title" placeholder="输入标题">标题</md-input>
+                            </el-form-item>
+                        </el-form>
+                    </div>
+                </el-card>
+            </el-col>
 
             <el-col :span="6">
                 <el-card class="box-card">
@@ -76,7 +76,7 @@
      * @param {Object} [title]  - 参数说明
      */
 
-    // import MdInput from '@/components/MDinput'
+    import MdInput from '@/components/MDinput'
     import PanThumb from '@/components/PanThumb'
     // import waves from '@/directive/waves/index.js' // 水波纹指令
     import Mallki from '@/components/TextHoverEffect/Mallki'
@@ -84,7 +84,20 @@
     export default {
         name: "mixin",
         data() {
+            const validate = (rule, value, callback) => {
+                if (value.length !== 6) {
+                    callback(new Error('请输入六个字符'))
+                } else {
+                    callback()
+                }
+            }
             return {
+                demo: {
+                    title: ''
+                },
+                demoRules: {
+                    title: [{ required: true, trigger: 'change', validator: validate }]
+                },
                 articleList: [
                     { title: 'Dashboard', href: 'https://juejin.im/post/59097cd7a22b9d20065fb61d2' },
                     { title: 'Github地址', href: 'https://juejin.im/post/591aa14f570c335006961acac' },
@@ -95,7 +108,7 @@
             }
         },
         components: {
-            // MdInput,
+            MdInput,
             PanThumb,
             Mallki,
             DropdownMenu
