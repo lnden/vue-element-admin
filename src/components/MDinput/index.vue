@@ -3,6 +3,57 @@
         <div :class="{iconClass:icon}">
             <i v-if="icon" :class="['el-icon-' + icon]" class="el-input__icon material-input__icon"/>
             <input
+                v-if="type === 'text'"
+                :name="name"
+                :placeholder="fillPlaceHolder"
+                v-model="currentValue"
+                :readonly="readonly"
+                :disabled="disabled"
+                :autoComplete="autoComplete"
+                :minlength="minlength"
+                :maxlength="maxlength"
+                :required="required"
+                type="text"
+                class="material-input"
+                @focus="handleMdFocus"
+                @blur="handleMdBlur"
+                @input="handleModelInput">
+            <input
+                v-if="type === 'password'"
+                :name="name"
+                :placeholder="fillPlaceHolder"
+                v-model="currentValue"
+                :readonly="readonly"
+                :disabled="disabled"
+                :autoComplete="autoComplete"
+                :max="max"
+                :min="min"
+                :required="required"
+                type="password"
+                class="material-input"
+                @focus="handleMdFocus"
+                @blur="handleMdBlur"
+                @input="handleModelInput">
+            <input
+                v-if="type === 'number'"
+                :name="name"
+                :placeholder="fillPlaceHolder"
+                v-model="currentValue"
+                :step="step"
+                :readonly="readonly"
+                :disabled="disabled"
+                :autoComplete="autoComplete"
+                :max="max"
+                :min="min"
+                :minlength="minlength"
+                :maxlength="maxlength"
+                :required="required"
+                type="number"
+                class="material-input"
+                @focus="handleMdFocus"
+                @blur="handleMdBlur"
+                @input="handleModelInput">
+            <input
                 v-if="type === 'email'"
                 :name="name"
                 :placeholder="fillPlaceHolder"
@@ -31,41 +82,6 @@
                 @blur="handleMdBlur"
                 @input="handleModelInput">
             <input
-                v-if="type === 'number'"
-                :name="name"
-                :placeholder="fillPlaceHolder"
-                v-model="currentValue"
-                :step="step"
-                :readonly="readonly"
-                :disabled="disabled"
-                :autoComplete="autoComplete"
-                :max="max"
-                :min="min"
-                :minlength="minlength"
-                :maxlength="maxlength"
-                :required="required"
-                type="number"
-                class="material-input"
-                @focus="handleMdFocus"
-                @blur="handleMdBlur"
-                @input="handleModelInput">
-            <input
-                v-if="type === 'password'"
-                :name="name"
-                :placeholder="fillPlaceHolder"
-                v-model="currentValue"
-                :readonly="readonly"
-                :disabled="disabled"
-                :autoComplete="autoComplete"
-                :max="max"
-                :min="min"
-                :required="required"
-                type="password"
-                class="material-input"
-                @focus="handleMdFocus"
-                @blur="handleMdBlur"
-                @input="handleModelInput">
-            <input
                 v-if="type === 'tel'"
                 :name="name"
                 :placeholder="fillPlaceHolder"
@@ -79,22 +95,7 @@
                 @focus="handleMdFocus"
                 @blur="handleMdBlur"
                 @input="handleModelInput">
-            <input
-                v-if="type === 'text'"
-                :name="name"
-                :placeholder="fillPlaceHolder"
-                v-model="currentValue"
-                :readonly="readonly"
-                :disabled="disabled"
-                :autoComplete="autoComplete"
-                :minlength="minlength"
-                :maxlength="maxlength"
-                :required="required"
-                type="text"
-                class="material-input"
-                @focus="handleMdFocus"
-                @blur="handleMdBlur"
-                @input="handleModelInput">
+
             <span class="material-input-bar"/>
             <label class="material-label">
                 <slot/>
@@ -105,6 +106,22 @@
 
 <script>
     // source:https://github.com/wemake-services/vue-material-input/blob/master/src/components/MaterialInput.vue
+    /**
+     * @param:
+     *      icon：为 ElementUi 官方：http://element.eleme.io/#/zh-CN/component/icon
+     *      name：为 input 表单 name 值
+     *      type：为 input 表单类型，text/password/number/email/url/tel
+     *      placeholder：为 input 表单原生值  提示信息
+     *      readonly：为 input 表单原生值  是否可读 Boolean
+     *      disabled：为 input 表单原生值  是否可点击 Boolean
+     *      min: 为 input 表单原生值 String,
+     *      max: 为 input 表单原生值 String,
+     *      step: 为 input 表单原生值 String,
+     *      minlength: 为 input 表单原生值 Number,
+     *      maxlength: 为 input 表单原生值 Number,
+     *      autoComplete：为 input 表单原生值 默认为 Boolean
+     *
+     */
 
     export default {
         name: 'MdInput',

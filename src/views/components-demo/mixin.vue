@@ -30,16 +30,16 @@
                 </el-card>
             </el-col>
 
-            <!--<el-col :span="6">-->
-                <!--<el-card class="box-card">-->
-                    <!--<div slot="header" class="clearfix">-->
-                        <!--<span>水波纹 waves v-directive</span>-->
-                    <!--</div>-->
-                    <!--<div class="component-item">-->
-                        <!--<el-button v-waves type="primary">水波纹效果</el-button>-->
-                    <!--</div>-->
-                <!--</el-card>-->
-            <!--</el-col>-->
+            <el-col :span="6">
+                <el-card class="box-card">
+                    <div slot="header" class="clearfix">
+                        <span>水波纹 waves v-directive</span>
+                    </div>
+                    <div class="component-item">
+                        <el-button v-waves type="primary">水波纹效果</el-button>
+                    </div>
+                </el-card>
+            </el-col>
 
             <el-col :span="6">
                 <el-card class="box-card">
@@ -78,7 +78,7 @@
 
     import MdInput from '@/components/MDinput'
     import PanThumb from '@/components/PanThumb'
-    // import waves from '@/directive/waves/index.js' // 水波纹指令
+    import waves from '@/directive/waves/index.js' // 水波纹指令
     import Mallki from '@/components/TextHoverEffect/Mallki'
     import DropdownMenu from '@/components/Share/dropdownMenu'
     export default {
@@ -114,7 +114,7 @@
             DropdownMenu
         },
         directives: {
-            // waves
+            waves
         }
     }
 </script>
