@@ -4,27 +4,117 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        div{
+        .main-box {
+            width:1000px;
+            height:400px;
+            border:1px solid #f00;
+            position: relative;
+        }
+        #dragDom{
             width:100px;
             height:100px;
             background:#080;
             cursor:pointer;
+            position: absolute;
         }
-        p{
+        #dragEle{
             background:#f00;
+            margin:0;
+            padding:0;
         }
     </style>
 </head>
 <body>
-    <div id="dragDom">
-        <p id="dragEle">拖拽区</p>
-        可以拖拽的DIV
-    </div>
+    <section class="main-box">
+        <div id="dragDom">
+            <p id="dragEle">拖拽区</p>
+            可以拖拽的DIV
+        </div>
+    </section>
+
 
     <script>
         const dialoEle= document.getElementById('dragEle');
         const dragDom = document.getElementById('dragDom');
         dialoEle.style.cssText += ';cursor:move;';
+        dragDom.style.cssText += ';top:0px;';
+
+        // 获取原有属性 ie dom元素.currentStyle 火狐谷歌 window.getComputedStyle(dom元素, null);
+        const getStyle = (function() {
+            if (window.document.currentStyle) {
+                console.log('存在')
+                return (dom, attr) => dom.currentStyle[attr]
+            } else {
+                console.log('不存在')
+                return (dom, attr) => getComputedStyle(dom, false)[attr]
+            }
+        })();
+
+        dialoEle.onmousedown = (e) => {
+            // 获取鼠标点击的(x,y)坐标 = 屏幕的x,y值 - 元素距离屏幕左侧x,y值
+            const disX = e.clientX - dialoEle.offsetLeft;
+            const disY = e.clientY - dialoEle.offsetTop;
+
+            // 移动元素距离父元素的宽和高
+            const dragDomWidth = dragDom.offsetWidth;
+            const dragDomHeight = dragDom.offsetHeight;
+
+            // 元素占屏幕的宽和高
+            //  1350 100 固定值
+            const screenWidth = document.body.clientWidth;
+            const screenHeight = document.body.clientHeight;
+
+            // 8 1242 固定值
+            const minDragDomLeft = dragDom.offsetLeft;
+            const maxDragDomLeft = screenWidth - dragDom.offsetLeft - dragDomWidth;
+
+            // 16 -16 固定值
+            const minDragDomTop = dragDom.offsetTop;
+            const maxDragDomTop = screenHeight - dragDom.offsetTop - dragDomHeight;
+
+            // 获取到的值带px 正则匹配替换
+            let styL = getStyle(dragDom, 'left');
+            let styT = getStyle(dragDom, 'top');
+
+            if (styL.includes('%')) {
+                styL = +document.body.clientWidth * (+styL.replace(/\%/g, '') / 100);
+                styT = +document.body.clientHeight * (+styT.replace(/\%/g, '') / 100);
+            } else {
+                styL = +styL.replace(/\px/g, '');
+                styT = +styT.replace(/\px/g, '');
+            }
+
+            // console.log(styL,styT)
+            document.onmousemove = function(e) {
+                // 通过事件委托，计算移动的距离
+                let left = e.clientX - disX;
+                let top = e.clientY - disY;
+
+                // 边界处理
+                /** left可以是负数也是正数，负数就是左侧，正数就是右侧-(-15) = 15 minDragDomLeft==0 maxDragDomLeft==屏幕宽*/
+                if (-(left) > minDragDomLeft) {
+                    left = -minDragDomLeft
+                } else if (left > maxDragDomLeft) {
+                    left = maxDragDomLeft
+                }
+
+                if (-(top) > minDragDomTop) {
+                    top = -minDragDomTop
+                } else if (top > maxDragDomTop) {
+                    top = maxDragDomTop
+                }
+
+                // 移动当前元素
+                dragDom.style.cssText += `;left:${left + styL}px;top:${top + styT}px;`;
+            };
+
+            // 释放事件
+            document.onmouseup = function(e) {
+                document.onmousemove = null;
+                document.onmouseup = null;
+            }
+
+        }
     </script>
 </body>
 </html>
