@@ -50,6 +50,12 @@ const componentsRouter = {
             meta: { title: 'PDF' }
         },
         {
+            path: 'mixin',
+            component: () => import('@/views/components-demo/mixin'),
+            name: 'mixin',
+            meta: { title: 'mixin' }
+        },
+        {
             path: 'download',
             component: () => import('@/views/pdf/download'),
             name: 'download',

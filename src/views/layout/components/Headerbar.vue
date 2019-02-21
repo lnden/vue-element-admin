@@ -91,6 +91,7 @@
         .header-item{
             float:right;
             margin-right: 10px;
+            height:60px;
             .right-menu-item {
                 display: inline-block;
                 margin: 0 8px;
