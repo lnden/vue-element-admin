@@ -36,7 +36,7 @@
                         <span>水波纹 waves v-directive</span>
                     </div>
                     <div class="component-item">
-                        <el-button v-waves type="primary">水波纹效果</el-button>
+                        <el-button v-waves="{type:'hit'}" type="primary">水波纹效果</el-button>
                     </div>
                 </el-card>
             </el-col>

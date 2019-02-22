@@ -18,7 +18,8 @@ export default {
         userManage: '用户管理',
         dragKanban: '拖拽看板',
         dragSelect: '拖拽选择',
-        dragDialog: '拖拽弹框'
+        dragDialog: '拖拽弹框',
+        mixin:'Mixin'
     },
     navbar: {
         screenfull: '全屏',

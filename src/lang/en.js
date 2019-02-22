@@ -18,7 +18,8 @@ export default {
         userManage: 'User Manage',
         dragKanban:'dragKanban',
         dragSelect:'dragSelect',
-        dragDialog: 'dragDialog'
+        dragDialog: 'dragDialog',
+        mixin:'Mixin'
     },
     navbar: {
         screenfull: 'Screenfull',
