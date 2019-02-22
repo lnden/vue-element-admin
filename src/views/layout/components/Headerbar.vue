@@ -2,6 +2,7 @@
     <header class="al-headerInner">
         <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container"/>
         <section class="header-item">
+            <header-search class="right-menu-item"/>
             <el-tooltip :content="$t('navbar.screenfull')" effect="dark" placement="bottom">
                 <screen-full class="right-menu-item"/>
             </el-tooltip>
@@ -45,6 +46,7 @@
 </template>
 
 <script>
+    import HeaderSearch from '@/components/HeaderSearch'
     import ScreenFull from '@/components/ScreenFull'
     import SizeSelect from '@/components/SizeSelect'
     import LangSelect from '@/components/LangSelect'
@@ -57,6 +59,7 @@
             ...mapGetters(['sidebar'])
         },
         components:{
+            HeaderSearch,
             ScreenFull,
             SizeSelect,
             LangSelect,
@@ -79,37 +82,38 @@
 <style ref="stylesheet" lang="scss" scoped>
     .al-headerInner{
         width:100%;
-        height:60px;
-        line-height: 60px;
-        border-bottom: 2px solid #E9F1F3;
+        height:50px;
+        line-height: 50px;
+        border-bottom: 1px solid #E9F1F3;
         /*font-size: 0;*/
         user-select:none;
         .hamburger-container {
             float: left;
-            padding: 0 10px;
+            padding: 0 15px;
         }
         .header-item{
             float:right;
             margin-right: 10px;
-            height:60px;
+            height:50px;
             .right-menu-item {
                 display: inline-block;
-                margin: 0 8px;
-                height: 60px;
-                line-height: 60px;
+                margin: 0 6px;
+                height: 50px;
+                line-height: 50px;
                 font-size:20px;
                 /*font-size: 0;*/
+                vertical-align: text-bottom;
             }
             .avatar-container{
-                height:60px;
                 .avatar-wrapper{
-                    // margin-right: 30px;
+                    margin-right: 10px;
                     position: relative;
+                    padding-top:5px;
+                    height:50px;
                     .user-avatar {
                         cursor: pointer;
                         width: 40px;
                         height: 40px;
-                        vertical-align: middle;
                         border-radius: 10px;
                     }
                     .el-icon-caret-bottom {

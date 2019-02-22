@@ -22,7 +22,7 @@
 <style ref="stylesheet" lang="scss" scoped>
     .app-main {
         /*84 = navbar + tags-view = 50 +34 */
-        min-height: calc(100vh - 62px);
+        min-height: calc(100vh - 50px);
         position: relative;
         width: 100%;
         /* 隐藏width滚动条 */
