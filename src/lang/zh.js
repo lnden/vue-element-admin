@@ -19,7 +19,11 @@ export default {
         dragKanban: '拖拽看板',
         dragSelect: '拖拽选择',
         dragDialog: '拖拽弹框',
-        mixin:'Mixin'
+        mixin:'Mixin',
+        PDF:'PDF',
+        avatarUpload:'Avatar Upload',
+        countTo:'Count To'
+
     },
     navbar: {
         screenfull: '全屏',

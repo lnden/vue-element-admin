@@ -19,7 +19,10 @@ export default {
         dragKanban:'dragKanban',
         dragSelect:'dragSelect',
         dragDialog: 'dragDialog',
-        mixin:'Mixin'
+        mixin:'Mixin',
+        PDF:'PDF',
+        avatarUpload:'Avatar Upload',
+        countTo:'Count To'
     },
     navbar: {
         screenfull: 'Screenfull',
