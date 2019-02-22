@@ -26,18 +26,6 @@ const componentsRouter = {
             meta: { title: 'markdown' }
         },
         {
-            path: 'json-editor',
-            component: () => import('@/views/components-demo/jsonEditor'),
-            name: 'JsonEditorDemo',
-            meta: { title: 'jsonEditor' }
-        },
-        {
-            path: 'splitpane',
-            component: () => import('@/views/components-demo/splitpane'),
-            name: 'SplitpaneDemo',
-            meta: { title: 'splitPane' }
-        },
-        {
             path: 'avatar-upload',
             component: () => import('@/views/components-demo/avatarUpload'),
             name: 'AvatarUploadDemo',
