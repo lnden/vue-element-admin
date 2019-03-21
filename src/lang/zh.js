@@ -22,8 +22,11 @@ export default {
         mixin:'Mixin',
         PDF:'PDF',
         avatarUpload:'Avatar Upload',
-        countTo:'Count To'
-
+        countTo:'Count To',
+        excel: 'Excel',
+        exportExcel: 'Export Excel',
+        selectExcel: 'Export Selected',
+        uploadExcel: 'Upload Excel'
     },
     navbar: {
         screenfull: '全屏',

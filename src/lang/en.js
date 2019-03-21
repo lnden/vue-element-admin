@@ -16,13 +16,17 @@ export default {
         systemset: 'System Setting',
         user: 'My Center',
         userManage: 'User Manage',
-        dragKanban:'dragKanban',
-        dragSelect:'dragSelect',
+        dragKanban: 'dragKanban',
+        dragSelect: 'dragSelect',
         dragDialog: 'dragDialog',
-        mixin:'Mixin',
-        PDF:'PDF',
-        avatarUpload:'Avatar Upload',
-        countTo:'Count To'
+        mixin: 'Mixin',
+        PDF: 'PDF',
+        avatarUpload: 'Avatar Upload',
+        countTo: 'Count To',
+        excel: 'Excel',
+        exportExcel: 'Export Excel',
+        selectExcel: 'Export Selected',
+        uploadExcel: 'Upload Excel'
     },
     navbar: {
         screenfull: 'Screenfull',

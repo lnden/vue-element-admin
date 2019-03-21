@@ -63,6 +63,36 @@ export const constantRouterMap = [
     componentsRouter,
     errorsRouter,
     {
+        path: '/excel',
+        component: Layout,
+        redirect: '/excel/export-excel',
+        name:'Excel',
+        meta: {
+            title:'excel',
+            icon: 'nav-excel'
+        },
+        children: [
+            {
+                path: 'export-excel',
+                component: () => import('@/views/excel/exportExcel'),
+                name: 'ExportExcel',
+                meta: { title: 'exportExcel' }
+            },
+            {
+                path: 'select-excel',
+                component: () => import('@/views/excel/selectExcel'),
+                name: 'SelectExcel',
+                meta: { title: 'selectExcel' }
+            },
+            {
+                path: 'upload-excel',
+                component: () => import('@/views/excel/uploadExcel'),
+                name: 'UploadExcel',
+                meta: { title: 'uploadExcel' }
+            }
+        ]
+    },
+    {
         path: '/setting',
         component: Layout,
         redirect: 'setting',
