@@ -159,9 +159,29 @@
   }
 
 .el-menu--vertical {
-  &>.el-menu {
-    .svg-icon {
-      margin-right: 16px;
+    &>.el-menu {
+        .svg-icon {
+            margin-right: 16px;
+        }
     }
-  }
+    //lnden： the scroll bar appears when the subMenu is too long
+    >.el-menu--popup {
+        max-height: 100vh;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar-track-piece {
+            background: #d3dce6;
+        }
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #99a9bf;
+            border-radius: 20px;
+        }
+    }
 }
+
+
