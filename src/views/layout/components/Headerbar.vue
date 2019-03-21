@@ -48,6 +48,7 @@
 <script>
     import HeaderSearch from '@/components/HeaderSearch'
     import ScreenFull from '@/components/ScreenFull'
+    // import ScreenFull from '@/components/ScreenFull/other'
     import SizeSelect from '@/components/SizeSelect'
     import LangSelect from '@/components/LangSelect'
     import ThemePicker from '@/components/ThemePicker'
