@@ -40,7 +40,7 @@
             <el-table-column prop="date" label="Date" align="center" width="220">
                 <template slot-scope="scope">
                     <i class="el-icon-time"/>
-                    <span>{{ scope.row.timestamp }}</span>
+                    <span>{{ scope.row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
                 </template>
             </el-table-column>
         </el-table>
@@ -93,7 +93,7 @@
                     setTimeout(()=>{
                         this.list = response.data.items;
                         this.listLoading = false
-                        console.log('请求列表数据：',this.list)
+                        // console.log('请求列表数据：',this.list)
                     },1000)
                 })
             }
