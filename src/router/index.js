@@ -6,6 +6,7 @@ Vue.use(Router);
 import Layout from '@/views/layout/Layout'
 import componentsRouter from './modules/components'
 import errorsRouter from './modules/errors'
+import tableRouter from './modules/table'
 
 export const constantRouterMap = [
     { path: '/login', component: () => import('@/views/login/index'), hidden: true},
@@ -62,6 +63,7 @@ export const constantRouterMap = [
     },
     componentsRouter,
     errorsRouter,
+    tableRouter,
     {
         path: '/excel',
         component: Layout,
