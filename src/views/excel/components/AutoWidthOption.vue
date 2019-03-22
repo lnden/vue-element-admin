@@ -1,7 +1,10 @@
 <template>
-    <section class="FileNameOption">
-        <label class="radio-label" style="padding-left:0;">Filename: </label>
-        <el-input :placeholder="$t('excel.placeholder')" v-model="filename" style="width:340px;" prefix-icon="el-icon-document"/>
+    <section class="AutoWidthOption">
+        <label class="radio-label">Cell Auto-Width: </label>
+        <el-radio-group v-model="autoWidth">
+            <el-radio :label="true" border>True</el-radio>
+            <el-radio :label="false" border>False</el-radio>
+        </el-radio-group>
     </section>
 </template>
 
@@ -12,17 +15,16 @@
      * @desc 组件描述
      * @param {Object} [title]  - 参数说明
      */
-
     export default {
-        name: "FileNameOption",
+        name: "AutoWidthOption",
         props: {
             value: {
-                type: String,
-                default: ''
+                type: Boolean,
+                default: true
             }
         },
         computed: {
-            filename: {
+            autoWidth: {
                 get() {
                     return this.value
                 },
@@ -35,11 +37,14 @@
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-    .FileNameOption{
+    .AutoWidthOption{
         display: inline-block;
         padding-left:30px;
         .radio-label{
             color:#666
+        }
+        .el-radio{
+            margin:0px;
         }
     }
 </style>

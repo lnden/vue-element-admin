@@ -216,6 +216,14 @@ rules: [
 npm install nprogress -S
 ```
 
+#### 安装  xlsx
+
+```js
+cnpm install xlsx -S
+```
+xlsx依赖 file-saver -S  and  script-loader -D
+
+
 ### 目标
 基础功能
 - [x] 登录/登出
@@ -247,39 +255,39 @@ src:
 │  App.vue
 │  main.js
 │  permission.js
-│  
+│
 ├─api
-│      
+│
 ├─assets
-│      
-├─components      
-│        
+│
+├─components
+│
 ├─directive
-│          
+│
 ├─icons
-│          
+│
 ├─lang
-│      
+│
 ├─mock
-│   
+│
 ├─router
-│          
+│
 ├─store
-│          
+│
 ├─styles
 │
 ├─utils
-│          
+│
 └─views
-    │      
+    │
     ├─dashboard
-    │      
+    │
     ├─layout
     │
     │─login
-    │     
+    │
     └─components-demo
-         
+
 
 
 **注释**：

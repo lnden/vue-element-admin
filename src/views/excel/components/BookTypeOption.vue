@@ -48,6 +48,9 @@
 <style rel="stylesheet/scss" lang="scss" scoped>
     .BookTypeOption{
         display: inline-block;
-        padding-left:20px;
+        padding-left:30px;
+        .radio-label{
+            color:#666
+        }
     }
 </style>

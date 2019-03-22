@@ -2,8 +2,9 @@
     <section class="app-container">
         <header>
             <FileNameOption v-model="filename" />
+            <AutoWidthOption v-model="autoWidth" />
             <BookTypeOption v-model="bookType" />
-            <el-button :loading="downloadLoading" type="primary" @click="handleDownload" style="margin-left:20px;">{{ $t('excel.export') }} Excel</el-button>
+            <el-button :loading="downloadLoading" type="primary" @click="handleDownload" style="float:right;margin:30px auto">{{ $t('excel.export') }} Excel</el-button>
         </header>
 
         <el-table
@@ -13,31 +14,31 @@
             border
             fit
             highlight-current-row>
-            <el-table-column prop="id" label="Id" align="center"  width="95">
+            <el-table-column label="Id" align="center"  width="95">
                 <template slot-scope="scope">
                     {{ scope.$index+1 }}
                 </template>
             </el-table-column>
 
-            <el-table-column props="title" label="Title">
+            <el-table-column label="Title">
                 <template slot-scope="scope">
                     {{ scope.row.title }}
                 </template>
             </el-table-column>
 
-            <el-table-column prop="author" label="Author" width="110" align="center">
+            <el-table-column label="Author" width="110" align="center">
                 <template slot-scope="scope">
                     <el-tag>{{ scope.row.author }}</el-tag>
                 </template>
             </el-table-column>
 
-            <el-table-column prop="readings" label="Readings" width="115" align="center">
+            <el-table-column label="Readings" width="115" align="center">
                 <template slot-scope="scope">
                     {{ scope.row.pageviews }}
                 </template>
             </el-table-column>
 
-            <el-table-column prop="date" label="Date" align="center" width="220">
+            <el-table-column label="Date" align="center" width="220">
                 <template slot-scope="scope">
                     <i class="el-icon-time"/>
                     <span>{{ scope.row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
@@ -55,6 +56,7 @@
      * @param {Object} [title]  - 参数说明
      */
     import FileNameOption from './components/FileNameOption'
+    import AutoWidthOption from './components/AutoWidthOption'
     import BookTypeOption from './components/BookTypeOption'
     import { fetchList } from '@/api/article'
     import { parseTime } from '@/utils'
@@ -64,7 +66,8 @@
         data() {
             return {
                 filename: '',       //  导出文件名称
-                bookType: '',       //  导出文件类型
+                autoWidth: true,    //  导出文件表格宽度
+                bookType: 'xlsx',   //  导出文件类型
                 downloadLoading: false,     //  导出等待loading
                 listLoading:true,           //  table请求 loading效果
                 requestParams:{
@@ -81,11 +84,37 @@
         },
         components: {
             FileNameOption,
+            AutoWidthOption,
             BookTypeOption
         },
         methods: {
             handleDownload(){
-                console.log('导出~')
+                this.downloadLoading = true
+                import ('@/vendor/Export2Excel').then(excel=>{
+                    const tHeader = ['Id','Title','Author','Readings','Date'];
+                    const filterVal = ['id', 'title', 'author', 'pageviews', 'display_time'];
+                    const list = this.list;
+                    const data = this.formatJson(filterVal, list);
+
+                    excel.export_json_to_excel({
+                        header: tHeader,
+                        data,
+                        filename: this.filename,
+                        autoWidth: this.autoWidth,
+                        bookType: this.bookType
+                    });
+
+                    this.downloadLoading = false
+                })
+            },
+            formatJson(filterVal, jsonData) {
+                return jsonData.map(v => filterVal.map(j => {
+                    if (j === 'timestamp') {
+                        return parseTime(v[j])
+                    } else {
+                        return v[j]
+                    }
+                }))
             },
             fetchData(){
                 this.listLoading = true;
@@ -93,8 +122,8 @@
                     setTimeout(()=>{
                         this.list = response.data.items;
                         this.listLoading = false
-                        // console.log('请求列表数据：',this.list)
-                    },1000)
+                        console.log('请求列表数据：',this.list)
+                    },500)
                 })
             }
         },
