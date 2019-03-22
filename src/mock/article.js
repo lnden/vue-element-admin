@@ -30,7 +30,6 @@ for (let i = 0; i < count; i++) {
 
 export default {
     getList: config => {
-        console.log(config)
         //  config 对象有三个参数
         //  1.body: '为post接收参数'
         //  2.type: 'GET'
