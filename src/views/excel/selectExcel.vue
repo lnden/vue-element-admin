@@ -1,5 +1,5 @@
 <template>
-    <section class="selectExcel">
+    <section class="components-container">
         选择 Excel
     </section>
 </template>

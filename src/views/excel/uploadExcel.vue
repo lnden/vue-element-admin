@@ -1,5 +1,5 @@
 <template>
-    <section class="updateExcel">
+    <section class="components-container">
         上传 Excel
     </section>
 </template>
