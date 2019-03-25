@@ -28,7 +28,8 @@ export default {
         selectExcel: 'Export Selected',
         uploadExcel: 'Upload Excel',
         table: '表格',
-        dynamicTable: 'Dynamic Table'
+        dynamicTable: 'Dynamic Table',
+        dragTable: 'Drag Table'
     },
     navbar: {
         screenfull: '全屏',
