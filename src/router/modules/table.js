@@ -9,7 +9,7 @@ const tableRouter = {
     name: 'Table',
     alwaysShow: true,
     meta: {
-        title: 'Table',
+        title: 'table',
         icon: 'nav-table'
     },
     children: [

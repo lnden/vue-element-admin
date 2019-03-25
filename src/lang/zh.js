@@ -26,7 +26,9 @@ export default {
         excel: 'Excel',
         exportExcel: 'Export Excel',
         selectExcel: 'Export Selected',
-        uploadExcel: 'Upload Excel'
+        uploadExcel: 'Upload Excel',
+        table: '表格',
+        dynamicTable: 'Dynamic Table'
     },
     navbar: {
         screenfull: '全屏',
@@ -52,6 +54,32 @@ export default {
         documentation: '文档',
         tinymceTips: '富文本是管理后台一个核心的功能，但同时又是一个有很多坑的地方。在选择富文本的过程中我也走了不少的弯路，市面上常见的富文本都基本用过了，最终权衡了一下选择了Tinymce。更详细的富文本比较和介绍见',
         imageUploadTips: '由于我在使用时它只有vue@1版本，而且和mockjs不兼容，所以自己改造了一下，如果大家要使用的话，优先还是使用官方版本。'
+    },
+    table: {
+        dynamicTips1: '固定表头, 按照表头顺序排序',
+        dynamicTips2: '不固定表头, 按照点击顺序排序',
+        // dragTips1: '默认顺序',
+        // dragTips2: '拖拽后顺序',
+        // title: '标题',
+        // importance: '重要性',
+        // type: '类型',
+        // remark: '点评',
+        // search: '搜索',
+        // add: '添加',
+        // export: '导出',
+        // reviewer: '审核人',
+        // id: '序号',
+        // date: '时间',
+        // author: '作者',
+        // readings: '阅读数',
+        // status: '状态',
+        // actions: '操作',
+        // edit: '编辑',
+        // publish: '发布',
+        // draft: '草稿',
+        // delete: '删除',
+        // cancel: '取 消',
+        // confirm: '确 定'
     },
     guide: {
         description: '引导页对于一些第一次进入项目的人很有用，你可以简单介绍下项目的功能。本 Demo 是基于',

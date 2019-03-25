@@ -26,7 +26,9 @@ export default {
         excel: 'Excel',
         exportExcel: 'Export Excel',
         selectExcel: 'Export Selected',
-        uploadExcel: 'Upload Excel'
+        uploadExcel: 'Upload Excel',
+        table: 'Table',
+        dynamicTable: 'Dynamic Table'
     },
     navbar: {
         screenfull: 'Screenfull',
@@ -52,6 +54,32 @@ export default {
         documentation: 'Documentation',
         tinymceTips: 'Rich text editor is a core part of management system, but at the same time is a place with lots of problems. In the process of selecting rich texts, I also walked a lot of detours. The common rich text editors in the market are basically used, and the finally chose Tinymce. See documentation for more detailed rich text editor comparisons and introductions.',
         imageUploadTips: 'Since I was using only the vue@1 version, and it is not compatible with mockjs at the moment, I modified it myself, and if you are going to use it, it is better to use official version.'
+    },
+    table: {
+        dynamicTips1: 'Fixed header, sorted by header order',
+        dynamicTips2: 'Not fixed header, sorted by click order',
+        // dragTips1: 'The default order',
+        // dragTips2: 'The after dragging order',
+        // title: 'Title',
+        // importance: 'Imp',
+        // type: 'Type',
+        // remark: 'Remark',
+        // search: 'Search',
+        // add: 'Add',
+        // export: 'Export',
+        // reviewer: 'reviewer',
+        // id: 'ID',
+        // date: 'Date',
+        // author: 'Author',
+        // readings: 'Readings',
+        // status: 'Status',
+        // actions: 'Actions',
+        // edit: 'Edit',
+        // publish: 'Publish',
+        // draft: 'Draft',
+        // delete: 'Delete',
+        // cancel: 'Cancel',
+        // confirm: 'Confirm'
     },
     guide: {
         description: 'The guide page is useful for some people who entered the project for the first time. You can briefly introduce the features of the project. Demo is based on ',
