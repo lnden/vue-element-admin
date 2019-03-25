@@ -19,12 +19,12 @@ const tableRouter = {
             name: 'DynamicTable',
             meta: { title: 'dynamicTable' }
         },
-        // {
-        //     path: 'complex-table',
-        //     component: () => import('@/views/table/complexTable'),
-        //     name: 'ComplexTable',
-        //     meta: { title: 'complexTable' }
-        // }
+        {
+            path: 'drag-table',
+            component: () => import('@/views/table/dragTable'),
+            name: 'DragTable',
+            meta: { title: 'dragTable' }
+        }
     ]
 }
 export default tableRouter
