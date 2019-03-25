@@ -56,9 +56,11 @@ export default {
             e.dataTransfer.dropEffect = 'copy'
         },
         handleUpload() {
+            //  console.log('点击浏览器按钮')
             this.$refs['excel-upload-input'].click()
         },
         handleClick(e) {
+            //  console.log('这里也会自动触发')
             const files = e.target.files;
             const rawFile = files[0]; // only use files[0]
             if (!rawFile) return;
