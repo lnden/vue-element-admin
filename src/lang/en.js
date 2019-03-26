@@ -29,7 +29,8 @@ export default {
         uploadExcel: 'Upload Excel',
         table: 'Table',
         dynamicTable: 'Dynamic Table',
-        dragTable: 'Drag Table'
+        dragTable: 'Drag Table',
+        inlineEditTable: 'Inline Edit'
     },
     navbar: {
         screenfull: 'Screenfull',

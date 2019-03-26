@@ -29,7 +29,8 @@ export default {
         uploadExcel: 'Upload Excel',
         table: '表格',
         dynamicTable: '动态 Table',
-        dragTable: '拖拽 Table'
+        dragTable: '拖拽 Table',
+        inlineEditTable: 'Table内编辑'
     },
     navbar: {
         screenfull: '全屏',
