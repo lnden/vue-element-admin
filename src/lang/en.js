@@ -30,7 +30,9 @@ export default {
         table: 'Table',
         dynamicTable: 'Dynamic Table',
         dragTable: 'Drag Table',
-        inlineEditTable: 'Inline Edit'
+        inlineEditTable: 'Inline Edit',
+        complexTable: 'Complex Table'
+
     },
     navbar: {
         screenfull: 'Screenfull',
@@ -62,26 +64,29 @@ export default {
         dynamicTips2: 'Not fixed header, sorted by click order',
         dragTips1: 'The default order',
         dragTips2: 'The after dragging order',
-        // title: 'Title',
-        // importance: 'Imp',
-        // type: 'Type',
-        // remark: 'Remark',
-        // search: 'Search',
-        // add: 'Add',
-        // export: 'Export',
-        // reviewer: 'reviewer',
-        // id: 'ID',
-        // date: 'Date',
-        // author: 'Author',
-        // readings: 'Readings',
-        // status: 'Status',
-        // actions: 'Actions',
-        // edit: 'Edit',
-        // publish: 'Publish',
-        // draft: 'Draft',
-        // delete: 'Delete',
-        // cancel: 'Cancel',
-        // confirm: 'Confirm'
+
+        title: 'Title',
+        importance: 'Imp',
+        type: 'Type',
+        search: 'Search',
+        add: 'Add',
+        export: 'Export',
+        reviewer: 'reviewer',
+
+        id: 'ID',
+        date: 'Date',
+        author: 'Author',
+        readings: 'Readings',
+        status: 'Status',
+        actions: 'Actions',
+        edit: 'Edit',
+        publish: 'Publish',
+        draft: 'Draft',
+        delete: 'Delete',
+
+        remark: 'Remark',
+        cancel: 'Cancel',
+        confirm: 'Confirm'
     },
     guide: {
         description: 'The guide page is useful for some people who entered the project for the first time. You can briefly introduce the features of the project. Demo is based on ',
