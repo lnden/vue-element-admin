@@ -28,8 +28,8 @@ export default {
         selectExcel: 'Export Selected',
         uploadExcel: 'Upload Excel',
         table: '表格',
-        dynamicTable: 'Dynamic Table',
-        dragTable: 'Drag Table'
+        dynamicTable: '动态 Table',
+        dragTable: '拖拽 Table'
     },
     navbar: {
         screenfull: '全屏',
@@ -59,8 +59,8 @@ export default {
     table: {
         dynamicTips1: '固定表头, 按照表头顺序排序',
         dynamicTips2: '不固定表头, 按照点击顺序排序',
-        // dragTips1: '默认顺序',
-        // dragTips2: '拖拽后顺序',
+        dragTips1: '默认顺序',
+        dragTips2: '拖拽后顺序',
         // title: '标题',
         // importance: '重要性',
         // type: '类型',
