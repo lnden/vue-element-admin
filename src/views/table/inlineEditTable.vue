@@ -3,6 +3,7 @@
 
         <el-table
             v-loading="listLoading"
+            element-loading-text="拼命加载中"
             :data="list"
             border
             fit
@@ -91,13 +92,15 @@
             getList() {
                 this.listLoading = true
                 fetchList(this.listQuery).then(response => {
-                    const items = response.data.items
-                    this.list = items.map(v => {
-                        this.$set(v, 'edit', false) // https://vuejs.org/v2/guide/reactivity.html
-                        v.originalTitle = v.title //  will be used when user click the cancel botton
-                        return v
-                    })
-                    this.listLoading = false
+                    setTimeout(()=>{
+                        const items = response.data.items;
+                        this.list = items.map(v => {
+                            this.$set(v, 'edit', false); // https://vuejs.org/v2/guide/reactivity.html
+                            v.originalTitle = v.title;//  will be used when user click the cancel botton
+                            return v
+                        });
+                        this.listLoading = false
+                    },500)
                 })
             },
             cancelEdit(row) {

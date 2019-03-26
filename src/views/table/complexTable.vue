@@ -11,7 +11,7 @@
                 <el-option v-for="item in calendarTypeOptions" :key="item.key" :label="item.display_name+'('+item.key+')'" :value="item.key"/>
             </el-select>
 
-            <el-select v-model="listQuery.sort" style="width: 140px" class="filter-item" @change="handleFilter">
+            <el-select v-model="listQuery.sort" style="width: 140px" class="filter-item"><!-- @change="handleFilter" -->
                 <el-option v-for="item in sortOptions" :key="item.key" :label="item.label" :value="item.key"/>
             </el-select>
 
@@ -24,6 +24,7 @@
 
         <el-table
             v-loading="listLoading"
+            element-loading-text="拼命加载中"
             :key="tableKey"
             :data="list"
             border
@@ -217,15 +218,14 @@
         },
         methods: {
             getList() {
-                this.listLoading = true
+                this.listLoading = true;
                 fetchList(this.listQuery).then(response => {
-                    this.list = response.data.items
-                    this.total = response.data.total
-
                     // Just to simulate the time of the request
                     setTimeout(() => {
+                        this.list = response.data.items;
+                        this.total = response.data.total;
                         this.listLoading = false
-                    }, 1.5 * 1000)
+                    }, 500)
                 })
             },
             handleFilter() {
@@ -340,16 +340,16 @@
                 })
             },
             handleDownload() {
-                this.downloadLoading = true
+                this.downloadLoading = true;
                 import('@/vendor/Export2Excel').then(excel => {
-                    const tHeader = ['timestamp', 'title', 'type', 'importance', 'status']
-                    const filterVal = ['timestamp', 'title', 'type', 'importance', 'status']
-                    const data = this.formatJson(filterVal, this.list)
+                    const tHeader = ['timestamp', 'title', 'type', 'importance', 'status'];
+                    const filterVal = ['timestamp', 'title', 'type', 'importance', 'status'];
+                    const data = this.formatJson(filterVal, this.list);
                     excel.export_json_to_excel({
                         header: tHeader,
                         data,
                         filename: 'table-list'
-                    })
+                    });
                     this.downloadLoading = false
                 })
             },
@@ -365,3 +365,10 @@
         }
     }
 </script>
+
+<style scoped>
+    .filter-container{
+        margin-bottom: 20px;
+    }
+
+</style>
