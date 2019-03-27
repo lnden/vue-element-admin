@@ -33,7 +33,7 @@
             style="width: 100%;"
             @sort-change="sortChange">
 
-            <el-table-column :label="$t('table.id')" prop="id" sortable="custom" align="center" width="65">
+            <el-table-column :label="$t('table.id')" prop="id" sortable="custom" align="center" width="75">
                 <template slot-scope="scope">
                     <span>{{ scope.row.id }}</span>
                 </template>
@@ -379,6 +379,9 @@
 <style scoped>
     .filter-container{
         margin-bottom: 20px;
+    }
+    .el-button{
+        padding:8px 8px;
     }
 
 </style>
