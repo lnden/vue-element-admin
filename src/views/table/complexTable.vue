@@ -85,7 +85,7 @@
 
             <el-table-column :label="$t('table.actions')" align="center" width="230" class-name="small-padding fixed-width">
                 <template slot-scope="scope">
-                    <el-button type="primary" size="mini" @click="handleUpdate(scope.row)">{{ $t('table.edit') }}</el-button>
+                    <el-button type="primary" size="mini" @click="handleUpdate(scope.row)">{{ $t('table.edit') }}1</el-button>
                     <el-button v-if="scope.row.status!='published'" size="mini" type="success" @click="handleModifyStatus(scope.row,'published')">{{ $t('table.publish') }}
                     </el-button>
                     <el-button v-if="scope.row.status!='draft'" size="mini" @click="handleModifyStatus(scope.row,'draft')">{{ $t('table.draft') }}
@@ -282,6 +282,7 @@
                     this.$refs['dataForm'].clearValidate()
                 })
             },
+            // 新创建一个记录
             createData() {
                 this.$refs['dataForm'].validate((valid) => {
                     if (valid) {
@@ -309,6 +310,7 @@
                     this.$refs['dataForm'].clearValidate()
                 })
             },
+            // 编辑弹框更新内容
             updateData() {
                 this.$refs['dataForm'].validate((valid) => {
                     if (valid) {
@@ -343,6 +345,7 @@
                 const index = this.list.indexOf(row)
                 this.list.splice(index, 1)
             },
+            // 点击readings查看弹框详情
             handleFetchPv(pv) {
                 fetchPv(pv).then(response => {
                     this.pvData = response.data.pvData

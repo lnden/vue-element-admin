@@ -57,5 +57,14 @@ export default {
             total: mockList.length,
             items: pageList
         }
-    }
+    },
+    getPv: () => ({
+        pvData: [{ key: 'PC', pv: 1024 }, { key: 'mobile', pv: 1024 }, { key: 'ios', pv: 1024 }, { key: 'android', pv: 1024 }]
+    }),
+    createArticle: () => ({
+        data: 'success'
+    }),
+    updateArticle: () => ({
+        data: 'success'
+    })
 }
