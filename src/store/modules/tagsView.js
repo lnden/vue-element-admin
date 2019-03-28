@@ -74,10 +74,12 @@ const tagsView = {
 
     actions: {
         addView({ dispatch }, view) {
+            // console.log('初始化进入vuex')
             dispatch('addVisitedView', view)
             dispatch('addCachedView', view)
         },
         addVisitedView({ commit }, view) {
+            // console.log('action dispatch 触发 action的内容')
             commit('ADD_VISITED_VIEW', view)
         },
         addCachedView({ commit }, view) {

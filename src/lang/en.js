@@ -115,5 +115,11 @@ export default {
         delete: 'Delete',
         cancel: 'Cancel',
         confirm: 'Confirm'
+    },
+    tagsView: {
+        refresh: 'Refresh',
+        close: 'Close',
+        closeOthers: 'Close Others',
+        closeAll: 'Close All'
     }
 }

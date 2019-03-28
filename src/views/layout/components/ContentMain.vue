@@ -21,8 +21,8 @@
 
 <style ref="stylesheet" lang="scss" scoped>
     .app-main {
-        /*84 = navbar + tags-view = 50 +34 */
-        min-height: calc(100vh - 50px);
+        /*84 = navbar + tags-view = 50为header +34为tagsview */
+        min-height: calc(100vh - 50px - 34px);
         position: relative;
         width: 100%;
         /* 隐藏width滚动条 */

@@ -3,13 +3,14 @@
         <Sidebar class="sidebar-container" />
         <section class="main-container">
             <Headerbar />
+            <tags-view/>
             <ContentMain />
         </section>
     </section>
 </template>
 
 <script>
-    import { Headerbar,Sidebar,ContentMain} from './components'
+    import { Sidebar,Headerbar,TagsView,ContentMain} from './components'
     export default {
         name:"layout",
         data(){
@@ -18,8 +19,9 @@
             }
         },
         components:{
-            Headerbar,
             Sidebar,
+            Headerbar,
+            TagsView,
             ContentMain
         },
         computed: {
