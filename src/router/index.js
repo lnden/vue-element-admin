@@ -95,6 +95,25 @@ export const constantRouterMap = [
         ]
     },
     {
+        path: '/pdf',
+        component: Layout,
+        redirect: '/pdf/index',
+        name: 'Pdf',
+        alwaysShow: false,
+        meta: {
+            title: 'pdf',
+            icon: 'nav-pdf'
+        },
+        children: [
+            {
+                path: 'index',
+                component: () => import('@/views/pdf/index'),
+                name: 'PDF',
+                meta: { title: 'pdf', icon: 'nav-pdf' }
+            }
+        ]
+    },
+    {
         path: '/setting',
         component: Layout,
         redirect: 'setting',

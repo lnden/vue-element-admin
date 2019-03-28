@@ -11,8 +11,8 @@ export default {
         error: '错误页面',
         guide: '引导页',
         log: '错误日志',
-        401: '401页面',
-        404: '404页面',
+        401: '401 页面',
+        404: '404 页面',
         systemset: '系统设置',
         user: '个人中心',
         userManage: '用户管理',
@@ -20,7 +20,7 @@ export default {
         dragSelect: '拖拽选择',
         dragDialog: '拖拽弹框',
         mixin:'Mixin',
-        PDF:'PDF',
+        pdf:'PDF',
         avatarUpload:'Avatar Upload',
         countTo:'Count To',
         excel: 'Excel',
@@ -30,8 +30,8 @@ export default {
         table: '表格',
         dynamicTable: '动态 Table',
         dragTable: '拖拽 Table',
-        inlineEditTable: 'Table内编辑',
-        complexTable: '综合Table'
+        inlineEditTable: 'Table 内编辑',
+        complexTable: '综合 Table'
     },
     navbar: {
         screenfull: '全屏',

@@ -32,12 +32,6 @@ const componentsRouter = {
             meta: { title: 'avatarUpload' }
         },
         {
-            path: 'pdf',
-            component: () => import('@/views/pdf'),
-            name: 'pdf',
-            meta: { title: 'PDF' }
-        },
-        {
             path: 'mixin',
             component: () => import('@/views/components-demo/mixin'),
             name: 'mixin',

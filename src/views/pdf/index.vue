@@ -1,5 +1,5 @@
 <template>
-    <section class="pdf">
+    <section class="app-container">
         <code class="distance">{{$t('pdf.tipsone')}}</code>
         <router-link target="_blank" to="download">
             <el-button type="primary">{{$t('pdf.clickbtn')}}</el-button>
@@ -11,7 +11,7 @@
 </template>
 
 <style ref="stylesheet" lang="scss" scoped>
-    .pdf{
+    .app-container{
         .distance{
             margin-top:20px;
         }
