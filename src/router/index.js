@@ -116,7 +116,7 @@ export const constantRouterMap = [
     {
         path: '/setting',
         component: Layout,
-        redirect: 'setting',
+        redirect: '/setting/user',
         name:'setting',
         meta: {
             title:'systemset',
