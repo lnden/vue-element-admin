@@ -5,7 +5,7 @@ import Layout from '@/views/layout/Layout'
 const tableRouter = {
     path: '/table',
     component: Layout,
-    redirect: '/table/complex-table',
+    redirect: '/table/dynamic-table',
     name: 'Table',
     alwaysShow: true,
     meta: {

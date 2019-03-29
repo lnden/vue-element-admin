@@ -39,7 +39,6 @@ export const constantRouterMap = [
     {
         path: '/guide',
         component: Layout,
-        redirect: 'dashboard',
         children: [
             {
                 path: '',
@@ -54,7 +53,7 @@ export const constantRouterMap = [
         component: Layout,
         children: [
             {
-                path: 'index',
+                path: '',
                 component: () => import('@/views/svg-icons'),
                 name: 'Icons',
                 meta: { title: 'icons', icon: 'nav-icon', noCache: true }
@@ -97,16 +96,15 @@ export const constantRouterMap = [
     {
         path: '/pdf',
         component: Layout,
-        redirect: '/pdf/index',
-        name: 'Pdf',
-        alwaysShow: false,
-        meta: {
-            title: 'pdf',
-            icon: 'nav-pdf'
-        },
+        // name: 'Pdf',
+        // alwaysShow: false,
+        // meta: {
+        //     title: 'pdf',
+        //     icon: 'nav-pdf'
+        // },
         children: [
             {
-                path: 'index',
+                path: '',
                 component: () => import('@/views/pdf/index'),
                 name: 'PDF',
                 meta: { title: 'pdf', icon: 'nav-pdf' }
