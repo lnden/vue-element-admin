@@ -4,9 +4,7 @@
             <svg-icon className="sizeselect-icon" icon-class="head-size" />
         </div>
         <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item :disabled="size==='medium'" command="medium">Medium</el-dropdown-item>
-            <el-dropdown-item :disabled="size==='small'" command="small">Small</el-dropdown-item>
-            <el-dropdown-item :disabled="size==='mini'" command="mini">Mini</el-dropdown-item>
+            <el-dropdown-item v-for="item in sizeOptions" :key="item.value" :disabled="size===item.value" :command="item.value">{{item.label}}</el-dropdown-item>
         </el-dropdown-menu>
     </el-dropdown>
 </template>
@@ -14,6 +12,16 @@
 <script>
     export default {
         name:'size-select',
+        data() {
+            return {
+                sizeOptions: [
+                    { label: 'Default', value: 'default' },
+                    { label: 'Medium', value: 'medium' },
+                    { label: 'Small', value: 'small' },
+                    { label: 'Mini', value: 'mini' }
+                ]
+            }
+        },
         computed: {
             size() {
                 return this.$store.getters.size
@@ -21,6 +29,7 @@
         },
         methods: {
             handleSetSize(size) {
+                console.log(size,111)
                 this.$ELEMENT.size = size
                 this.$store.dispatch('setSize', size)
                 this.refreshView()

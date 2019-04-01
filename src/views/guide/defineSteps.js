@@ -1,5 +1,13 @@
 const steps = [
     {
+        element: '.hamburger',
+        popover: {
+            title: 'Hamburger',
+            description: 'Open && Close sidebar',
+            position: 'button'
+        }
+    },
+    {
         element: '.screenfull-icon',
         popover: {
             title: 'Screenfull',
@@ -30,8 +38,16 @@ const steps = [
             description: 'Custom switch system theme',
             position: 'left'
         }
+    },
+    {
+        element: '.tags-view-container',
+        popover: {
+            title: 'Tags view',
+            description: 'The history of the page you visited',
+            position: 'bottom'
+        },
+        padding: 0
     }
 ]
 
 export default steps
-  
