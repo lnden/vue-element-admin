@@ -3,6 +3,11 @@
         <div class="board-column-header">
             {{headerText}}
         </div>
+        <!--使用:options控制台出现warning-->
+        <!--可以把options对象拆分普通值渲染如下替换:options="options"-->
+        <!--sort=true-->
+        <!--group ='mission'-->
+        <!--animation=150-->
         <draggable
             class="board-column-content"
             :list="list"
