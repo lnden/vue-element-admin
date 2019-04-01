@@ -1,6 +1,6 @@
 <template>
     <section class="app-container">
-        <el-button>我是Element按钮样式</el-button>
+        <el-button type="primary">我是Element按钮样式</el-button>
     </section>
 </template>
 

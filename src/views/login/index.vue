@@ -60,7 +60,7 @@
                     if (valid) {
                         this.loading = true;
                         this.$store.dispatch('LoginByUsername', this.loginForm).then(() => {
-                            this.loading = false
+                            this.loading = false;
                             this.$router.push({ path: '/' })
                         }).catch(() => {
                             this.loading = false
@@ -158,14 +158,14 @@ $cursor: #fff;
       width: 85%;
       input {
         background: transparent;
-        border: 0px;
+        border: 0;
         -webkit-appearance: none;
-        border-radius: 0px;
+        border-radius: 0;
         padding: 12px 5px 12px 15px;
         color: $bg;
         height: 47px;
         &:-webkit-autofill {
-          -webkit-box-shadow: 0 0 0px 1000px $cursor inset !important;
+          -webkit-box-shadow: 0 0 0 1000px $cursor inset !important;
           -webkit-text-fill-color: $bg !important;
         }
       }
