@@ -1,12 +1,29 @@
 <template>
-  <transition :name="transitionName">
-    <div v-show="visible" :style="customStyle" class="back-to-ceiling" @click="backToTop">
-      <svg-icon  class-name="Icon" icon-class="totop"/>
-    </div>
-  </transition>
+    <transition :name="transitionName">
+        <div v-show="visible" :style="customStyle" class="back-to-ceiling" @click="backToTop">
+            <svg-icon  class-name="Icon" icon-class="totop"/>
+        </div>
+    </transition>
 </template>
 
 <script>
+    /**
+     * @desc 返回顶部
+     *
+     * @param 参数信息
+     * 1、visibilityHeight 距离top多少距离显示顶部按钮默认为400
+     * 2、backPosition 点击返回按钮返回top多少默认为200
+     * 3、customStyle样式
+     *      1).right 返回按钮位置默认距右边50px
+     *      2).bottom 返回按钮位置默认距下边50px
+     *      3).width 返回按钮元素宽度默认为40px
+     *      4).height 返回按钮元素默认高度为40px
+     *      5).'border-radius' 返回按钮元素圆角默认为4px
+     *      6).'line-height' 返回按钮元素居中默认为line-height
+     *      7).background 返回按钮背景颜色默认为#e7eaf1
+     * 4、transitionName 返回按钮展示隐藏动画默认为fade
+     */
+
     export default {
         name: 'BackToTop',
         props: {
@@ -16,7 +33,7 @@
             },
             backPosition: {
                 type: Number,
-                default: 0
+                default: 200
             },
             customStyle: {
                 type: Object,
