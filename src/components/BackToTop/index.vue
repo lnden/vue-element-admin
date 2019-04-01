@@ -11,8 +11,8 @@
      * @desc 返回顶部
      *
      * @param 参数信息
-     * 1、visibilityHeight 距离top多少距离显示顶部按钮默认为400
-     * 2、backPosition 点击返回按钮返回top多少默认为200
+     * 1、visibilityHeight 离开top多少距离显示顶部按钮默认为400
+     * 2、backPosition 点击返回按钮返回top多少距离默认为200
      * 3、customStyle样式
      *      1).right 返回按钮位置默认距右边50px
      *      2).bottom 返回按钮位置默认距下边50px

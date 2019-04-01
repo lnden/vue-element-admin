@@ -1,12 +1,11 @@
 <template>
-  <div class="app-container">
-    <p class="warn-content">
-      {{ $t('guide.description') }}
-      <a href="https://github.com/kamranahmedse/driver.js" target="_blank">driver.js.
-      </a>
-    </p>
-    <el-button icon="el-icon-question" type="primary" @click.prevent.stop="guide">{{ $t('guide.button') }}</el-button>
-  </div>
+    <div class="app-container">
+        <p class="warn-content">
+            {{ $t('guide.description') }}
+            <a href="https://github.com/kamranahmedse/driver.js" target="_blank">driver.js.</a>
+        </p>
+        <el-button icon="el-icon-question" type="primary" @click.prevent.stop="guide">{{ $t('guide.button') }}</el-button>
+    </div>
 </template>
 
 <script>
@@ -26,7 +25,7 @@
         },
         methods: {
             guide() {
-                this.driver.defineSteps(steps)
+                this.driver.defineSteps(steps);
                 this.driver.start()
             }
         }
