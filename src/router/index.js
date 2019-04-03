@@ -111,6 +111,7 @@ export const constantRouterMap = [
             }
         ]
     },
+
     {
         path: '/setting',
         component: Layout,
@@ -131,24 +132,19 @@ export const constantRouterMap = [
                 path: 'personalsetting',
                 component: () => import('@/views/usermanage/personalSetting'),
                 name: 'userManage',
-                meta: { title: 'userManage' },
-                // children: [
-                //     {
-                //         path: 'basics',
-                //         component: () => import('@/views/usermanage/components/basics'),
-                //         name: 'basics',
-                //         meta: { title: 'basics' }
-                //     },
-                //     {
-                //         path: 'security',
-                //         component: () => import('@/views/usermanage/components/security'),
-                //         name: 'security',
-                //         meta: { title: 'security' },
-                //
-                //     }
-                // ]
+                meta: { title: 'userManage' }
             }
         ]
+    },
+    {
+        path: '/setting/personalsetting/basics',
+        component: () => import('@/views/usermanage/components/basics'),
+        hidden: true
+    },
+    {
+        path: '/setting/personalsetting/security',
+        component: () => import('@/views/usermanage/components/security'),
+        hidden: true
     }
 ]
 

@@ -10,10 +10,10 @@
                 text-color="#fff"
                 active-text-color="#ffd04b">
                 <el-menu-item index="1">
-                    <router-link to="/setting/basic">基本设置</router-link>
+                    <router-link to="/basic">基本设置</router-link>
                 </el-menu-item>
                 <el-menu-item index="2">
-                    <router-link to="/setting/security">安全设置</router-link>
+                    <router-link to="/security">安全设置</router-link>
                 </el-menu-item>
                 <el-menu-item index="3">
                     <router-link to="/setting/binding">账号绑定</router-link>
@@ -40,10 +40,18 @@
      */
 
     export default {
-        name: "personalSetting"
+        name: "personalSetting",
+        methods:{
+            handleOpen(){},
+            handleClose(){}
+        }
     }
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-
+    .personalSetting{
+        border:1px solid #f00;
+        width:100%;
+        overflow: auto;
+    }
 </style>
