@@ -6,8 +6,6 @@
 
 <script>
     /**
-     * @author  lnden
-     * @date    2019/2/19
      * @desc    该组件使用sortablejs
      *          addredd：https://segmentfault.com/a/1190000008209715?utm_source=tag-newest
      * @param   options

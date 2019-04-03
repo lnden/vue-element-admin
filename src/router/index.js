@@ -122,16 +122,31 @@ export const constantRouterMap = [
         },
         children: [
             {
-                path: 'user',
+                path: 'personalcenter',
                 component: () => import('@/views/home/Home'),
                 name: 'user',
                 meta: { title: 'user' }
             },
             {
-                path: 'manageuser',
-                component: () => import('@/views/home/Home'),
+                path: 'personalsetting',
+                component: () => import('@/views/usermanage/personalSetting'),
                 name: 'userManage',
-                meta: { title: 'userManage' }
+                meta: { title: 'userManage' },
+                // children: [
+                //     {
+                //         path: 'basics',
+                //         component: () => import('@/views/usermanage/components/basics'),
+                //         name: 'basics',
+                //         meta: { title: 'basics' }
+                //     },
+                //     {
+                //         path: 'security',
+                //         component: () => import('@/views/usermanage/components/security'),
+                //         name: 'security',
+                //         meta: { title: 'security' },
+                //
+                //     }
+                // ]
             }
         ]
     }
