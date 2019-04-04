@@ -36,6 +36,7 @@ export default {
         exportZip:'Export Zip'
     },
     navbar: {
+        search: 'input router title',
         screenfull: 'Screenfull',
         size: 'Globalsize',
         lang: 'Language',

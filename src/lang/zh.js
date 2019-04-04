@@ -36,6 +36,7 @@ export default {
         exportZip:'Export Zip'
     },
     navbar: {
+        search: '输入路由的标题',
         screenfull: '全屏',
         size: '布局大小',
         lang: '语言切换',

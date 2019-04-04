@@ -1,6 +1,7 @@
 <template>
     <div :class="{'show':show}" class="header-search">
-        <svg-icon class-name="search-icon" icon-class="search" @click="click" />
+         <svg-icon class-name="search-icon" icon-class="search" v-on:click.stop="clickbtn" />
+
         <el-select
             ref="headerSearchSelect"
             v-model="search"
@@ -8,7 +9,8 @@
             filterable
             default-first-option
             remote
-            placeholder="Search"
+
+            :placeholder="$t('navbar.search')"
             class="header-search-select"
             @change="change">
             <el-option v-for="item in options" :key="item.path" :value="item" :label="item.title.join(' > ')"/>
@@ -28,7 +30,7 @@
                 search: '',
                 options: [],
                 searchPool: [],
-                show: false,
+                show: false ,
                 fuse: undefined
             }
         },
@@ -59,10 +61,13 @@
             }
         },
         mounted() {
+            console.log('进入~')
             this.searchPool = this.generateRouters(this.routers)
+            console.log(this.searchPool,1)
         },
         methods: {
-            click() {
+            clickbtn() {
+                console.log(11111111111)
                 this.show = !this.show
                 if (this.show) {
                     this.$refs.headerSearchSelect && this.$refs.headerSearchSelect.focus()
@@ -148,7 +153,7 @@
 
 <style lang="scss" scoped>
     .header-search {
-        font-size: 0 !important;
+        /*font-size: 0 !important;*/
 
         .search-icon {
             cursor: pointer;

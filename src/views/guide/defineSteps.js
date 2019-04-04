@@ -32,14 +32,6 @@ const steps = [
         }
     },
     {
-        element: '.el-color-picker__trigger',
-        popover: {
-            title: 'Theme Switch',
-            description: 'Custom switch system theme',
-            position: 'left'
-        }
-    },
-    {
         element: '.tags-view-container',
         popover: {
             title: 'Tags view',

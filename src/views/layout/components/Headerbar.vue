@@ -1,8 +1,8 @@
 <template>
     <header class="al-headerInner">
         <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container"/>
-
         <breadcrumb class="breadcrumb-container" />
+
         <section class="header-item">
             <header-search class="right-menu-item"/>
             <el-tooltip :content="$t('navbar.screenfull')" effect="dark" placement="bottom">

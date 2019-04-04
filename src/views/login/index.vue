@@ -34,8 +34,8 @@
             return {
                 showLogin:false,
                 loginForm:{
-                    username:'',
-                    password:''
+                    username:'admin',
+                    password:'123456'
                 },
                  rules:{
                     username: [{ required: true, trigger: 'blur', validator: checkUsername }],

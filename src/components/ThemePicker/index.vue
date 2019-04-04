@@ -57,6 +57,7 @@
                     message: 'Switch Theme Success',
                     type: 'success'
                 })
+                this.$emit('change', val)
             }
         },
         methods: {
