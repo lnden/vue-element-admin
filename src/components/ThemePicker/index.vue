@@ -9,19 +9,30 @@
 <script>
     const version = require('element-ui/package.json').version // element-ui version from node_modules
     const ORIGINAL_THEME = '#409EFF' // default color
+    import defaultSettings from '@/settings'
     export default {
         data() {
             return {
                 chalk: '', // content of theme-chalk css
-                theme: ORIGINAL_THEME
+                theme: defaultSettings.theme
             }
         },
         watch: {
             theme(val) {
-                const oldVal = this.theme
+                const oldVal = this.chalk ? this.theme : ORIGINAL_THEME
                 if (typeof val !== 'string') return
                 const themeCluster = this.getThemeCluster(val.replace('#', ''))
                 const originalCluster = this.getThemeCluster(oldVal.replace('#', ''))
+
+
+                const $message = this.$message({
+                    message: '  Compiling the theme',
+                    customClass: 'theme-message',
+                    type: 'success',
+                    duration: 0,
+                    iconClass: 'el-icon-loading'
+                })
+
                 const getHandler = (variable, id) => {
                     return () => {
                         const originalCluster = this.getThemeCluster(ORIGINAL_THEME.replace('#', ''))
@@ -35,13 +46,15 @@
                         styleTag.innerText = newStyle
                     }
                 }
-                const chalkHandler = getHandler('chalk', 'chalk-style')
+
                 if (!this.chalk) {
                     const url = `https://unpkg.com/element-ui@${version}/lib/theme-chalk/index.css`
                     this.getCSSString(url, chalkHandler, 'chalk')
-                } else {
-                    chalkHandler()
                 }
+
+                const chalkHandler = getHandler('chalk', 'chalk-style')
+                chalkHandler()
+
                 const styles = [].slice.call(document.querySelectorAll('style'))
                     .filter(style => {
                     const text = style.innerText
@@ -52,10 +65,10 @@
                     if (typeof innerText !== 'string') return
                     style.innerText = this.updateStyle(innerText, originalCluster, themeCluster)
                 })
-                this.$message({
-                    message: 'Switch Theme Success',
-                    type: 'success'
-                })
+
+                this.$emit('change', val)
+
+                $message.close()
             }
         },
         methods: {
@@ -118,6 +131,10 @@
 </script>
 
 <style>
+    .theme-message,
+    .theme-picker-dropdown {
+        z-index: 99999 !important;
+    }
     .theme-picker .el-color-picker__trigger {
         height: 26px !important;
         width: 26px !important;

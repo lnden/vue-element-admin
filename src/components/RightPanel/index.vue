@@ -13,6 +13,13 @@
 </template>
 
 <script>
+    /**
+     * @desc 主屏左侧居中设置按钮
+     * @param  参数
+     *      clickNotClose 点击关闭，默认为 false
+     *      buttonTop 设置按钮为屏幕的顶部距离多少默认为250
+     *
+     */
     import { addClass, removeClass } from '@/utils'
 
     export default {
@@ -86,10 +93,11 @@
 </style>
 
 <style lang="scss" scoped>
+    //  遮罩样式
     .rightPanel-background {
         opacity: 0;
         transition: opacity .3s cubic-bezier(.7, .3, .1, 1);
-        background: rgba(0, 0, 0, .2);
+        background: rgba(0, 0, 0, .4);
         width: 0;
         height: 0;
         top: 0;
@@ -97,27 +105,25 @@
         position: fixed;
         z-index: -1;
     }
-
+    //  左侧容器
     .rightPanel {
         background: #fff;
-        z-index: 3000;
         position: fixed;
         height: 100vh;
         width: 100%;
         max-width: 260px;
-        top: 0px;
-        left: 0px;
-        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .05);
+        top: 0;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, .05);
         transition: all .25s cubic-bezier(.7, .3, .1, 1);
         transform: translate(100%);
         z-index: 40000;
         left: auto;
-        right: 0px;
+        right: 0;
     }
 
+    //  展示左侧容器
     .show {
         transition: all .3s cubic-bezier(.7, .3, .1, 1);
-
         .rightPanel-background {
             z-index: 20000;
             opacity: 1;
@@ -130,24 +136,23 @@
         }
     }
 
+    //  setting and close btn
     .handle-button {
         position: absolute;
-        left: -48px;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        color: #fff;
         border-radius: 6px 0 0 6px !important;
-        width: 48px;
-        height: 48px;
-        pointer-events: auto;
-        z-index: 0;
         cursor: pointer;
         pointer-events: auto;
+        left: -42px;
         font-size: 24px;
         text-align: center;
-        color: #fff;
-        line-height: 48px;
-
+        z-index: 0;
         i {
             font-size: 24px;
-            line-height: 48px;
+            line-height: 42px;
         }
     }
 </style>

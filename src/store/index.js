@@ -11,13 +11,15 @@ import app from './modules/app'
 import user from './modules/user'
 import permission from './modules/permission'
 import tagsView from './modules/tagsView'
+import settings from './modules/settings'
 
 export default new Vuex.Store ({
     modules:{
         app,
         user,
         permission,
-        tagsView
+        tagsView,
+        settings
     },
     state,
     getters,

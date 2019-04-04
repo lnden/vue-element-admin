@@ -18,9 +18,9 @@
             </el-tooltip>
 
 
-            <el-tooltip :content="$t('navbar.theme')" effect="dark" placement="bottom">
-                <theme-picker class="right-menu-item"/>
-            </el-tooltip>
+            <!--<el-tooltip :content="$t('navbar.theme')" effect="dark" placement="bottom">-->
+                <!--<theme-picker class="right-menu-item"/>-->
+            <!--</el-tooltip>-->
 
             <el-dropdown class="avatar-container right-menu-item" trigger="click">
                 <div class="avatar-wrapper">

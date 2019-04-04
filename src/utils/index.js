@@ -292,7 +292,14 @@ export function isExternal(path) {
 }
 
 
-
+/**
+ * @desc 判断元素class是否存在
+ * @param：
+ *      ^  是开始
+ *      \s 是空格
+ *      |  是或者
+ *      &  是结尾
+ */
 export function hasClass(ele, cls) {
     return !!ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'))
 }
