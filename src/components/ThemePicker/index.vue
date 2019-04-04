@@ -23,16 +23,6 @@
                 if (typeof val !== 'string') return
                 const themeCluster = this.getThemeCluster(val.replace('#', ''))
                 const originalCluster = this.getThemeCluster(oldVal.replace('#', ''))
-
-
-                const $message = this.$message({
-                    message: '  Compiling the theme',
-                    customClass: 'theme-message',
-                    type: 'success',
-                    duration: 0,
-                    iconClass: 'el-icon-loading'
-                })
-
                 const getHandler = (variable, id) => {
                     return () => {
                         const originalCluster = this.getThemeCluster(ORIGINAL_THEME.replace('#', ''))
@@ -46,15 +36,13 @@
                         styleTag.innerText = newStyle
                     }
                 }
-
+                const chalkHandler = getHandler('chalk', 'chalk-style')
                 if (!this.chalk) {
                     const url = `https://unpkg.com/element-ui@${version}/lib/theme-chalk/index.css`
                     this.getCSSString(url, chalkHandler, 'chalk')
+                } else {
+                    chalkHandler()
                 }
-
-                const chalkHandler = getHandler('chalk', 'chalk-style')
-                chalkHandler()
-
                 const styles = [].slice.call(document.querySelectorAll('style'))
                     .filter(style => {
                     const text = style.innerText
@@ -65,10 +53,10 @@
                     if (typeof innerText !== 'string') return
                     style.innerText = this.updateStyle(innerText, originalCluster, themeCluster)
                 })
-
-                this.$emit('change', val)
-
-                $message.close()
+                this.$message({
+                    message: 'Switch Theme Success',
+                    type: 'success'
+                })
             }
         },
         methods: {

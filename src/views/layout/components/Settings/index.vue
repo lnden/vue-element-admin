@@ -89,8 +89,8 @@
 
         .drawer-title {
             margin-bottom: 12px;
-            color: rgba(0, 0, 0, .85);
-            font-size: 14px;
+            color: rgba(50, 50, 50, .85);
+            font-size: 18px;
             line-height: 22px;
         }
 
