@@ -10,7 +10,7 @@
                 text-color="#fff"
                 active-text-color="#ffd04b">
                 <el-menu-item index="1">
-                    <router-link to="/basic">基本设置</router-link>
+                    <router-link to="/setting/personalsetting/basics">基本设置</router-link>
                 </el-menu-item>
                 <el-menu-item index="2">
                     <router-link to="/security">安全设置</router-link>
@@ -25,7 +25,7 @@
         </el-col>
         <el-col :span="19">
             <section style="border:1px solid #f00;width:100%;height:500px;">
-                <router-view></router-view>
+                <router-view name="user">asasa</router-view>
             </section>
         </el-col>
     </section>

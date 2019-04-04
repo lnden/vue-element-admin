@@ -100,9 +100,9 @@ $cursor: #fff;
         position: absolute;
         left: 50%;
         top: 50%;
-        margin-left: -170px;
+        margin-left: -190px;
         margin-top: -180px;
-        width: 360px;
+        width: 380px;
         height: 360px;
         padding: 40px;
         background:#f6f8fa;
@@ -137,7 +137,7 @@ $cursor: #fff;
         .show-pwd{
             position: absolute;
             right: 10px;
-            top: 7px;
+            top: 2px;
             font-size: 16px;
             color: #889aa4;
             cursor: pointer;
@@ -154,7 +154,7 @@ $cursor: #fff;
   .login-container {
     .el-input {
       display: inline-block;
-      height: 47px;
+      height: 36px;
       width: 85%;
       input {
         background: transparent;
@@ -163,7 +163,7 @@ $cursor: #fff;
         border-radius: 0;
         padding: 12px 5px 12px 15px;
         color: $bg;
-        height: 47px;
+        height: 36px;
         &:-webkit-autofill {
           -webkit-box-shadow: 0 0 0 1000px $cursor inset !important;
           -webkit-text-fill-color: $bg !important;

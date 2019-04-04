@@ -31,8 +31,9 @@ export default {
         dynamicTable: 'Dynamic Table',
         dragTable: 'Drag Table',
         inlineEditTable: 'Inline Edit',
-        complexTable: 'Complex Table'
-
+        complexTable: 'Complex Table',
+        zip:'Zip',
+        exportZip:'Export Zip'
     },
     navbar: {
         screenfull: 'Screenfull',

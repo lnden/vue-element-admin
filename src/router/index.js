@@ -8,6 +8,8 @@ import componentsRouter from './modules/components'
 import errorsRouter from './modules/errors'
 import tableRouter from './modules/table'
 
+import User from '@/views/usermanage/components/basics'
+
 export const constantRouterMap = [
     { path: '/login', component: () => import('@/views/login/index'), hidden: true},
     { path: '/401', component: () => import('@/views/error/401'),hidden: true },
@@ -111,6 +113,21 @@ export const constantRouterMap = [
             }
         ]
     },
+    {
+        path: '/zip',
+        component: Layout,
+        redirect: '/zip/download',
+        alwaysShow: true,
+        meta: { title: 'zip', icon: 'zip' },
+        children: [
+            {
+                path: 'download',
+                component: () => import('@/views/zip/index'),
+                name: 'ExportZip',
+                meta: { title: 'exportZip' }
+            }
+        ]
+    },
 
     {
         path: '/setting',
@@ -138,7 +155,10 @@ export const constantRouterMap = [
     },
     {
         path: '/setting/personalsetting/basics',
-        component: () => import('@/views/usermanage/components/basics'),
+        components: {
+            default:User,
+            user:User
+        },
         hidden: true
     },
     {
