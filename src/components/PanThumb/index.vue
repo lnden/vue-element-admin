@@ -64,17 +64,17 @@
         overflow: hidden;
         position: absolute;
         /*注释部分为掘金由慢到快转59S*/
-        transform-origin: 50% 50%;
-        /*transform-origin: 95% 40%;*/
-        transition: all 0.3s ease-in-out;
+        transform-origin: 50% 50%;/*2*/
+        /*transform-origin: 95% 40%;!*1*!*/
+        transition: all 0.3s ease-in-out;/*1-2*/
 
     }
 
 
     .pan-item:hover .pan-thumb {
-        transition-duration: 59s;
-        transform:  rotate(666turn);
-        /*transform:  rotate(-110deg);*/
+        transition-duration: 59s;/*2*/
+        transform:  rotate(666turn);/*2*/
+        /*transform:  rotate(-110deg);!*1*!*/
     }
 
 
