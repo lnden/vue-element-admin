@@ -118,7 +118,7 @@ export const constantRouterMap = [
         component: Layout,
         redirect: '/zip/download',
         alwaysShow: true,
-        meta: { title: 'zip', icon: 'zip' },
+        meta: { title: 'zip', icon: 'nav-zip' },
         children: [
             {
                 path: 'download',

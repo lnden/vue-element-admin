@@ -8,6 +8,14 @@ const steps = [
         }
     },
     {
+        element: '.search-icon',
+        popover: {
+            title: 'Search',
+            description: 'Search the router',
+            position: 'left'
+        }
+    },
+    {
         element: '.screenfull-icon',
         popover: {
             title: 'Screenfull',
