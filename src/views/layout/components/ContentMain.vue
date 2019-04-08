@@ -31,4 +31,23 @@
         /* 隐藏width滚动条 */
         overflow: hidden;
     }
+
+
+    // 隐藏tagsview 固定头部BUG
+    .fixed-header+.app-main {
+        padding-top: 50px;
+    }
+
+
+    // 该样式为SEETING TAGSVIEW
+    .hasTagsView {
+        .app-main {
+            /* 84 = navbar + tags-view = 50 + 34 */
+            min-height: calc(100vh - 84px);
+        }
+
+        .fixed-header+.app-main {
+            padding-top: 84px;
+        }
+    }
 </style>

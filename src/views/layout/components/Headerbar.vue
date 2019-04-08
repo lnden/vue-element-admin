@@ -90,6 +90,8 @@
         height:50px;
         line-height: 50px;
         border-bottom: 1px solid #E9F1F3;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0,21,41,.08);
         /*font-size: 0;*/
         user-select:none;
         .hamburger-container {
