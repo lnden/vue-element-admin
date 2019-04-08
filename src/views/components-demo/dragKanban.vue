@@ -26,7 +26,7 @@
 
 <script>
     /**
-     * @author  lnden
+     * @author  Ding
      * @date    2019/2/19
      * @desc    该拖动组件使用 vuedraggable
      *          cnpm install vuedraggable -S

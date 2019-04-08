@@ -27,8 +27,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 vue2.0 + elementui + vuex + vue-router + ES6/7 + axios + svg + mockjs
 
-[预览地址](https://lnden.github.io/vue-element-admin)
-
 注：该项目需要配置到github page
 
 1.打包发布修改 config/index.js 文件下,46-52 line details remarks

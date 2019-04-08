@@ -27,11 +27,6 @@
 </template>
 
 <script>
-    /**
-     * @author Lnden
-     * @date 2019/01/21
-     * @desc 401页面
-     */
 
     import errGif from '@/assets/401.gif'
 

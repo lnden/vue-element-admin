@@ -1,6 +1,4 @@
-/**
- * Created by lnden on 19/03/22.
- */
+
 
 export function parseTime(time, cFormat) {
     if (arguments.length === 0) {

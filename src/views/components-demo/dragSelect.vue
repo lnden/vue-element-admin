@@ -34,12 +34,7 @@
 </template>
 
 <script>
-    /**
-     * @author lnden
-     * @date 2019/2/19
-     * @desc 组件描述
-     * @param {Object} [title]  - 参数说明
-     */
+
     import ElDragSelect from '@/components/DragSelect'
     import Sortable from 'sortablejs'
 

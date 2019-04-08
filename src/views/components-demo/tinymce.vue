@@ -2,7 +2,7 @@
     <div class="components-container">
         <code>
             {{ $t('components.tinymceTips') }}
-            <a target="_blank" class="link-type" href="https://lnden.github.io/vue-element-admin"> {{ $t('components.documentation') }}</a>
+            <a target="_blank" class="link-type" href="https://dinglindong.github.io/vue-element-admin/"> {{ $t('components.documentation') }}</a>
         </code>
         <div>
             <tinymce :height="300" v-model="content"/>

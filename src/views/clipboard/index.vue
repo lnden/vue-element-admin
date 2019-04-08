@@ -25,7 +25,7 @@
         data(){
             return {
                 activeName: 'directly',
-                inputData: 'https://github.com/lnden/vue-element-admin'
+                inputData: 'https://dinglindong.github.io/vue-element-admin/'
             }
         },
         methods: {

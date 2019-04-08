@@ -34,7 +34,7 @@
                     <router-link to="/setting/user">
                         <el-dropdown-item>{{$t('navbar.user')}}</el-dropdown-item>
                     </router-link>
-                    <a target="_blank" href="https://github.com/lnden/vue-element-admin/">
+                    <a target="_blank" href="https://dinglindong.github.io/vue-element-admin/">
                         <el-dropdown-item>{{$t('navbar.github')}}</el-dropdown-item>
                     </a>
                     <el-dropdown-item divided>
