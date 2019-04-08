@@ -107,7 +107,7 @@
                     setTimeout(()=>{
                         this.list = response.data.items;
                         this.listLoading = false
-                        console.log('请求列表数据：',this.list)
+                        //console.log('请求列表数据：',this.list)
                     },500)
                 })
             },

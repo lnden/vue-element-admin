@@ -74,9 +74,9 @@
         methods:{
             handleClick(){
                 // 可以实时获取当前数组的值
-                console.log(this.list1)
-                console.log(this.list2)
-                console.log(this.list3)
+                //console.log(this.list1)
+                //console.log(this.list2)
+                //console.log(this.list3)
             }
         }
     }

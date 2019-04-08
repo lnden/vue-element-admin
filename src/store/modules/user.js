@@ -1,13 +1,18 @@
 import { loginByUsername, logout } from '@/api/login'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 const user = {
+    namespaced: true,
     state:{
-         token:getToken()
+        token:getToken(),
+        roles: []
     },
 
     mutations:{
         SET_TOKEN: (state, token) => {
             state.token = token
+        },
+        SET_ROLES: (state, roles) => {
+            state.roles = roles
         }
     },
 
@@ -21,13 +26,13 @@ const user = {
                     commit('SET_TOKEN', data.token)
                     setToken(data.token)
                     resolve()
-                }).catch(error => { 
+                }).catch(error => {
                     reject(error)
                 })
             })
         },
         // 系统登出
-        LogOut({ commit, state }) {
+        logout({ commit, state }) {
             return new Promise((resolve, reject) => {
                 logout(state.token).then(() => {
                     commit('SET_TOKEN', '')

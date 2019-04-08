@@ -178,7 +178,7 @@
         },
         methods: {
             handleModelInput(event) {
-                console.log('输入内容触发')
+                //console.log('输入内容触发')
                 const value = event.target.value
                 this.$emit('input', value)
                 if (this.$parent.$options.componentName === 'ElFormItem') {
@@ -189,7 +189,7 @@
                 this.$emit('change', value)
             },
             handleMdFocus(event) {
-                console.log('获取焦点')
+                //console.log('获取焦点')
                 this.focus = true
                 this.$emit('focus', event)
                 if (this.placeholder && this.placeholder !== '') {
@@ -197,7 +197,7 @@
                 }
             },
             handleMdBlur(event) {
-                console.log('失去焦点')
+                //console.log('失去焦点')
                 this.focus = false
                 this.$emit('blur', event)
                 this.fillPlaceHolder = null

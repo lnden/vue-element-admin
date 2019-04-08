@@ -29,7 +29,6 @@
         },
         methods: {
             handleSetSize(size) {
-                console.log(size,111)
                 this.$ELEMENT.size = size
                 this.$store.dispatch('setSize', size)
                 this.refreshView()

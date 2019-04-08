@@ -1,6 +1,9 @@
 <template>
     <header class="al-headerInner">
-        <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container"/>
+        <!--<hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container"/>-->
+        <!--可以换一种方式-->
+        <hamburger @toggleClick="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container" />
+
         <breadcrumb class="breadcrumb-container" />
 
         <section class="header-item">
@@ -72,10 +75,15 @@
             Breadcrumb
         },
         methods:{
-            logout(){
-                this.$store.dispatch('FedLogOut').then(() => {
-                    location.reload()
-                })
+            // logout(){
+            //     this.$store.dispatch('FedLogOut').then(() => {
+            //         location.reload()
+            //     })
+            // },
+            async logout() {
+                // user/***  namespaced: true,
+                await this.$store.dispatch('user/logout');
+                this.$router.push(`/login?redirect=${this.$route.fullPath}`)
             },
             toggleSideBar() {
                 this.$store.dispatch('toggleSideBar')
@@ -97,6 +105,14 @@
         .hamburger-container {
             float: left;
             padding: 0 15px;
+            line-height: 46px;
+            height: 100%;
+            cursor: pointer;
+            transition: background .3s;
+            -webkit-tap-highlight-color:transparent;
+            &:hover {
+                background: rgba(0, 0, 0, .025)
+            }
         }
         .header-item{
             float:right;

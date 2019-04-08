@@ -225,68 +225,48 @@ xlsx依赖 file-saver -S  and  script-loader -D
 ### 目标
 基础功能
 - [x] 登录/登出
-- [ ] Dashboard
-- [x] 404/401
-- [ ] 面包屑导航
-- [ ] Tag标签导航
-- [ ] 图表
-- [ ] 表单
-- [ ] 表格
-- [ ] Tab选项卡
-- [ ] 图片拖拽/裁剪上传
-- [ ] 权限测试
-- [ ] 个人中心
-- [ ] 消息中心
+- [x] 错误
+&emsp;&emsp;- [x] 404/401
+&emsp;&emsp;- [x] 错误日志
+- [x] Dashboard
+- [x] 引导页
+- [x] 图标
+- [x] 组件
+&emsp;&emsp;- [x] 富文本编辑器
+&emsp;&emsp;- [x] Markdown
+&emsp;&emsp;- [x] 头像上传
+&emsp;&emsp;- [x] 数字滚动
+&emsp;&emsp;- [x] 剪贴面板
+&emsp;&emsp;- [x] 粘贴顶部
+&emsp;&emsp;- [x] 返回顶部
+&emsp;&emsp;- [x] 拖拽看板
+&emsp;&emsp;- [x] 拖拽选择
+&emsp;&emsp;- [x] 拖拽弹框
+- [x] 表格
+- [x] EXCEL
+- [x] PDF
+- [x] ZIP
+- [x] 用户管理
+&emsp;&emsp;- [x] 个人中心
+&emsp;&emsp;- [x] 个人设置
+
+
+扩展功能
+- [x] 面包屑导航
+- [x] Tags-View标签导航
 
 辅助功能
 - [x] 收缩侧边栏
-- [x] 换皮肤
+- [x] 路由Title搜索
 - [x] 全屏展示
+- [x] 布局大小切换
 - [x] 多语言切换
 
-扩展功能
-- [x] 富文本编辑器
-- [x] Markdown编辑器
-
-### 目录结构
-src:
-│  App.vue
-│  main.js
-│  permission.js
-│
-├─api
-│
-├─assets
-│
-├─components
-│
-├─directive
-│
-├─icons
-│
-├─lang
-│
-├─mock
-│
-├─router
-│
-├─store
-│
-├─styles
-│
-├─utils
-│
-└─views
-    │
-    ├─dashboard
-    │
-    ├─layout
-    │
-    │─login
-    │
-    └─components-demo
-
-
+布局设置
+- [x] 切换主题颜色
+- [x] 开启 Tags-View
+- [x] 固定 Header
+- [x] 侧边栏 Logo
 
 **注释**：
 
@@ -297,3 +277,5 @@ src:
 install     ==>  i
 
 SVG在线编辑    https://editor.method.ac/
+
+项目中学习到的东西

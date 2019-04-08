@@ -173,7 +173,7 @@
                 const offsetLeft = this.$el.getBoundingClientRect().left // container margin left
                 const offsetWidth = this.$el.offsetWidth // container width
                 const maxLeft = offsetWidth - menuMinWidth // left boundary
-                console.log(maxLeft)
+                //console.log(maxLeft)
                 const left = e.clientX - offsetLeft + 15 // 15: margin right
 
                 if (left > maxLeft) {

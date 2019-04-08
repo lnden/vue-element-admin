@@ -1,5 +1,7 @@
 <template>
-    <div>
+    <!--<div>-->
+    <!--可以换一种方式-->
+    <div @click="toggleClick">
         <svg
             :class="{'is-active':isActive}"
             class="hamburger"
@@ -21,9 +23,16 @@
                 type: Boolean,
                 default: false
             },
-            toggleClick: {
-                type: Function,
-                default: null
+            // 可以换一种方式  隐藏
+            // toggleClick: {
+            //     type: Function,
+            //     default: null
+            // }
+        },
+        // 可以换一种方式
+        methods:{
+            toggleClick() {
+                this.$emit('toggleClick')
             }
         }
     }

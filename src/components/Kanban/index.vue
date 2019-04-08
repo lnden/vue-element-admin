@@ -52,12 +52,12 @@
         },
         methods: {
             getdata (evt) {
-                console.log(evt.draggedContext.element.id)
+                //console.log(evt.draggedContext.element.id)
             },
             datadragEnd (evt) {
-                console.log('拖动前的索引 :' + evt.oldIndex)
-                console.log('拖动后的索引 :' + evt.newIndex)
-                console.log(this.tags)
+                //console.log('拖动前的索引 :' + evt.oldIndex)
+                //console.log('拖动后的索引 :' + evt.newIndex)
+                //console.log(this.tags)
             }
         }
     }

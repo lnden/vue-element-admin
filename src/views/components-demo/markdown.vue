@@ -66,7 +66,7 @@ const content = `
         methods: {
             getHtml() {
                 this.html = this.$refs.markdownEditor.getHtml()
-                console.log(this.html)
+                //console.log(this.html)
             }
         }
     }

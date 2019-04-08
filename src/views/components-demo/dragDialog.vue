@@ -51,7 +51,7 @@
         },
         methods:{
             handleDrag(){
-                console.log('可以检测拖动事件');
+                //console.log('可以检测拖动事件');
             }
         }
     }

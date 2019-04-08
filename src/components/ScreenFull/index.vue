@@ -36,7 +36,7 @@
             let _this = this;
             window.onresize = function(){
                 if(!checkFull()){
-                    console.log(11111111111)
+                    //console.log(11111111111)
                 }else{
                     _this.fullscreen = !_this.fullscreen;
                 }
