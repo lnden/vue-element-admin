@@ -63,6 +63,17 @@
       .is-active>.el-submenu__title {
           color: #f4f4f5 !important;
       }
+
+      // 滚动盒子100%;
+      .el-scrollbar {
+          height: 100%;
+      }
+      // logo show
+      &.has-logo {
+          .el-scrollbar {
+              height: calc(100% - 50px);
+          }
+      }
   }
 }
 

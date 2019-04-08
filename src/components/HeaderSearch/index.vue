@@ -9,7 +9,6 @@
             filterable
             default-first-option
             remote
-
             :placeholder="$t('navbar.search')"
             class="header-search-select"
             @change="change">
@@ -179,13 +178,15 @@
                 padding-right: 0;
                 box-shadow: none !important;
                 border-bottom: 1px solid #d9d9d9;
+                height:30px;
+                line-height: 30px;
                 vertical-align: middle;
             }
         }
 
         &.show {
             .header-search-select {
-                width: 210px;
+                width: 140px;
                 margin-left: 10px;
             }
         }
