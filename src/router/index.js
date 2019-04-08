@@ -114,6 +114,11 @@ export const constantRouterMap = [
         ]
     },
     {
+        path: '/pdf/download',
+        component: () => import('@/views/pdf/download'),
+        hidden: true
+    },
+    {
         path: '/zip',
         component: Layout,
         redirect: '/zip/download',
