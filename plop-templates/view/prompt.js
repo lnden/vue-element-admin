@@ -4,8 +4,14 @@ module.exports = {
     description: 'generate a view',
     prompts: [{
             type: 'input',
-            name: 'name',
+            name: 'cname',
             message: 'view name please',
+            validate: notEmpty('name')
+        },
+        {
+            type: 'input',
+            name: 'uname',
+            message: 'Please enter your name!',
             validate: notEmpty('name')
         },
         {
@@ -36,7 +42,7 @@ module.exports = {
         }
     ],
     actions: data => {
-        const name = '{{name}}';
+        const name = '{{cname}}';
         const actions = [{
             type: 'add',
             path: `src/views/${name}/index.vue`,
@@ -45,7 +51,8 @@ module.exports = {
                 name: name,
                 template: data.blocks.includes('template'),
                 script: data.blocks.includes('script'),
-                style: data.blocks.includes('style')
+                style: data.blocks.includes('style'),
+                date: new Date()
             }
         }];
         return actions
