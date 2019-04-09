@@ -4,7 +4,7 @@ module.exports = {
     description: 'generate vue component',
     prompts: [{
             type: 'input',
-            name: 'cname',
+            name: 'name',
             message: 'component name please',
             validate: notEmpty('name')
         },
@@ -42,7 +42,8 @@ module.exports = {
         }
     ],
     actions: data => {
-        const name = '{{properCase cname}}';
+        const name = '{{properCase name}}';
+        const date = new Date();
         const actions = [{
             type: 'add',
             path: `src/components/${name}/index.vue`,
@@ -52,7 +53,7 @@ module.exports = {
                 template: data.blocks.includes('template'),
                 script: data.blocks.includes('script'),
                 style: data.blocks.includes('style'),
-                date: new Date()
+                date: `${date.getFullYear()}-${(date.getMonth()+1)}-${date.getDate()}`
             }
         }];
         return actions

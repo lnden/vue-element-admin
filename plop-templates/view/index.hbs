@@ -1,20 +1,20 @@
 {{#if template}}
 <template>
-    <section class="{{ properCase name }}"></section>
+    <section class="{{ lowerCase name }}"></section>
 </template>
 {{/if}}
 
 {{#if script}}
 <script>
     /**
-     * Author：{{ properCase name }}
-     * Date：{{ properCase date }}
+     * Author：{{ properCase uname }}
+     * Date：{{ dashCase date }}
      * Desc: 描述信息
      * Params: 参数信息
      */
 
     export default {
-        name: '{{ properCase name }}',
+        name: '{{ lowerCase name }}',
         props: {},
         data() {
             return {}
@@ -27,6 +27,6 @@
 
 {{#if style}}
 <style rel="stylesheet/scss" lang="scss" scoped>
-    .{{ properCase name }}{}
+    .{{ lowerCase name }}{}
 </style>
 {{/if}}
