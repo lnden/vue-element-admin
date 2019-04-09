@@ -5,14 +5,14 @@ module.exports = {
     prompts: [{
             type: 'input',
             name: 'name',
-            message: 'view name please',
-            validate: notEmpty('name')
+            message: 'Please enter the component name!',
+            validate: notEmpty('component name')
         },
         {
             type: 'input',
             name: 'uname',
             message: 'Please enter your name!',
-            validate: notEmpty('name')
+            validate: notEmpty('you name')
         },
         {
             type: 'checkbox',

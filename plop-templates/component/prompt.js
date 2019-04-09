@@ -5,7 +5,7 @@ module.exports = {
     prompts: [{
             type: 'input',
             name: 'name',
-            message: 'component name please',
+            message: 'Please enter the component name!',
             validate: notEmpty('name')
         },
         {
