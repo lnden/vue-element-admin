@@ -2,12 +2,12 @@ import { loginByUsername, logout } from '@/api/login'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 const user = {
     namespaced: true,
-    state:{
-        token:getToken(),
+    state: {
+        token: getToken(),
         roles: []
     },
 
-    mutations:{
+    mutations: {
         SET_TOKEN: (state, token) => {
             state.token = token
         },
@@ -16,7 +16,7 @@ const user = {
         }
     },
 
-    actions:{
+    actions: {
         // 用户名登录
         LoginByUsername({ commit }, userInfo) {
             const username = userInfo.username.trim()
@@ -55,4 +55,4 @@ const user = {
     }
 }
 
-export default user;
+export default user

@@ -2,7 +2,7 @@ export default {
     route: {
         dashboard: 'Panel de control',
         icons: 'Iconos',
-        components: 'Componentes' 
+        components: 'Componentes'
     },
     navbar: {
         logOut: 'Salir',
@@ -15,6 +15,6 @@ export default {
         title: 'Formulario de acceso',
         logIn: 'Acceso',
         username: 'Usuario',
-        password: 'Contraseña',
+        password: 'Contraseña'
     }
 }

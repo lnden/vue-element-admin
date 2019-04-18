@@ -1,6 +1,5 @@
 /** When your routing table is too long, you can split it into small modules**/
 
-
 import Layout from '@/views/layout/Layout'
 
 const componentsRouter = {
@@ -9,7 +8,7 @@ const componentsRouter = {
     redirect: 'noredirect',
     name: 'ComponentDemo',
     meta: {
-        title:'components',
+        title: 'components',
         icon: 'nav-component'
     },
     children: [
@@ -89,4 +88,4 @@ const componentsRouter = {
     ]
 }
 
-export default componentsRouter;
+export default componentsRouter

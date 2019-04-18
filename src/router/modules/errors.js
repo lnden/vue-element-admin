@@ -28,8 +28,8 @@ const errorsRouter = {
             component: () => import('@/views/error/401'),
             name: 'log',
             meta: { title: 'log', noCache: true }
-        },
+        }
     ]
 }
 
-export default errorsRouter;
+export default errorsRouter

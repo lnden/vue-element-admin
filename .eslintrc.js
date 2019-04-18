@@ -53,7 +53,7 @@ module.exports = {
       'after': true
     }],
     'handle-callback-err': [2, '^(err|error)$'],
-    'indent': [2, 2, {
+    'indent': [2, 4, {
       'SwitchCase': 1
     }],
     'jsx-quotes': [2, 'prefer-single'],
@@ -65,7 +65,7 @@ module.exports = {
       'before': true,
       'after': true
     }],
-    'new-cap': [2, {
+    'new-cap': [1, {
       'newIsCap': true,
       'capIsNew': false
     }],
@@ -121,7 +121,7 @@ module.exports = {
     'no-octal-escape': 2,
     'no-path-concat': 2,
     'no-proto': 2,
-    'no-redeclare': 2,
+    'no-redeclare': 1,
     'no-regex-spaces': 2,
     'no-return-assign': [2, 'except-parens'],
     'no-self-assign': 2,
@@ -166,7 +166,7 @@ module.exports = {
       'avoidEscape': true,
       'allowTemplateLiterals': true
     }],
-    'semi': [2, 'never'],
+    'semi': [1, 'never'],
     'semi-spacing': [2, {
       'before': false,
       'after': true

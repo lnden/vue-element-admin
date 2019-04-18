@@ -159,6 +159,6 @@ const tagsView = {
             commit('UPDATE_VISITED_VIEW', view)
         }
     }
-};
+}
 
 export default tagsView

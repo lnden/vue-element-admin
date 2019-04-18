@@ -1,1 +1,1 @@
-export { parseTime,formatTime } from '@/utils'
+export { parseTime, formatTime } from '@/utils'

@@ -6,19 +6,18 @@ import {
     SET_LANGUAGE
 } from './mutation-types.js'
 
-
 const mutations = {
-    [COUNT](state,data){
+    [COUNT](state, data) {
         state.count = data
     },
-    [SET_SIZE](state,data){
+    [SET_SIZE](state, data) {
         state.size = data
         Cookies.set('size', data)
     },
-    [SET_LANGUAGE](state, language){
+    [SET_LANGUAGE](state, language) {
         state.language = language
         Cookies.set('language', language)
     }
 }
 
-export default mutations;
+export default mutations

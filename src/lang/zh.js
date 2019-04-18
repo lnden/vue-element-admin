@@ -19,10 +19,10 @@ export default {
         dragKanban: '拖拽看板',
         dragSelect: '拖拽选择',
         dragDialog: '拖拽弹框',
-        mixin:'Mixin',
-        pdf:'PDF',
-        avatarUpload:'Avatar Upload',
-        countTo:'Count To',
+        mixin: 'Mixin',
+        pdf: 'PDF',
+        avatarUpload: 'Avatar Upload',
+        countTo: 'Count To',
         excel: 'Excel',
         exportExcel: 'Export Excel',
         selectExcel: 'Export Selected',
@@ -32,8 +32,8 @@ export default {
         dragTable: '拖拽 Table',
         inlineEditTable: 'Table 内编辑',
         complexTable: '综合 Table',
-        zip:'Zip',
-        exportZip:'Export Zip'
+        zip: 'Zip',
+        exportZip: 'Export Zip'
     },
     navbar: {
         search: '输入路由的标题',

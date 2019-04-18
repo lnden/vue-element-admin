@@ -51,7 +51,7 @@ export default {
         //  容错处理
         //      1.判断当前展示的值是否 小于 < (limit[20] * page[1])，  20true  80false
         //      2.判断当前展示的值是否 大于等于 >= (limit[2] * (page[1]-1)), true 0
-        const pageList = mockList.filter((item, index) =>index < limit * page && index >= limit * (page - 1))
+        const pageList = mockList.filter((item, index) => index < limit * page && index >= limit * (page - 1))
 
         return {
             total: mockList.length,

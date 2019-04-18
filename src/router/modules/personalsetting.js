@@ -26,8 +26,8 @@ const PersonalSetting = {
             component: () => import('@/views/error/401'),
             name: 'log',
             meta: { title: 'log', noCache: true }
-        },
+        }
     ]
 }
 
-export default PersonalSetting;
+export default PersonalSetting

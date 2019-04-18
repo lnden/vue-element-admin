@@ -15,4 +15,4 @@ const permission = {
     }
 }
 
-export default permission;
+export default permission

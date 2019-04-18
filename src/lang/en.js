@@ -11,8 +11,8 @@ export default {
         error: 'Error',
         guide: 'Guide',
         log: 'Error Log',
-        401:'401 Page',
-        404:'404 Page',
+        401: '401 Page',
+        404: '404 Page',
         systemset: 'System Setting',
         user: 'Personal Center',
         userManage: 'Personal Setting',
@@ -32,8 +32,8 @@ export default {
         dragTable: 'Drag Table',
         inlineEditTable: 'Inline Edit',
         complexTable: 'Complex Table',
-        zip:'Zip',
-        exportZip:'Export Zip'
+        zip: 'Zip',
+        exportZip: 'Export Zip'
     },
     navbar: {
         search: 'input router title',
@@ -50,7 +50,7 @@ export default {
         title: 'Login Form',
         logIn: 'Log in',
         username: 'Username',
-        password: 'Password',
+        password: 'Password'
     },
     components: {
         backToTopTips1: 'When the page is scrolled to the specified position, the Back to Top button appears in the lower right corner',
