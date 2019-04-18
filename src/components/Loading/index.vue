@@ -1,9 +1,9 @@
 <template>
     <section class="loading-container">
         <section class="al-middleTipsModal">
-            <figure class="al-loading">
+            <div class="al-loading">
                 <img src="@/assets/loading.png" alt="加载中···">
-            </figure>
+            </div>
         </section>
     </section>
 </template>
