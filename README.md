@@ -1,6 +1,13 @@
 # vue-element-admin
+* [简介](#简介)
 
-### 简介
+* [1.1图片](#1.1)
+
+* [1.2换行](#1.2)
+
+* [1.3强调](#1.3)
+
+<h3 id="简介">简介</3>
 
 &emsp;&emsp;该项目使用 vue cli 构建生成简单的目录结构
 
@@ -57,7 +64,7 @@ build:{
 - [x] 侧边栏 Logo
 
 ### 安装
-
+<a href="#安装使用 vue-router">安装使用</a>
 #### 安装使用 vuex
 
 ```
@@ -187,6 +194,13 @@ npm install mockjs -S
 ```
 1.使用mockjs模拟请求数据
 
+#### 安装  xlsx
+
+```js
+cnpm install xlsx -S
+```
+xlsx依赖 file-saver -S  and  script-loader -D
+
 ### 配置
 
 &emsp;&emsp;配置一些全局的信息，比如styles、request、icons、一些开发规范等文档内容！
@@ -232,13 +246,6 @@ rules: [
 ```
 npm install nprogress -S
 ```
-
-#### 安装  xlsx
-
-```js
-cnpm install xlsx -S
-```
-xlsx依赖 file-saver -S  and  script-loader -D
 
 **注释**：
 
