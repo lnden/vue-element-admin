@@ -1,41 +1,60 @@
 # vue-element-admin
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-
 ### 简介
 
 &emsp;&emsp;该项目使用 vue cli 构建生成简单的目录结构
 
-vue2.0 + elementui + vuex + vue-router + ES6/7 + axios + svg + mockjs
+Vue2.0 + ElementUi + Vuex + vue-router + ES6/7 + axios + svg + mockjs + plop + Eslint
 
 注：该项目需要配置到github page
 
-1.打包发布修改 config/index.js 文件下,46-52 line details remarks
+1.打包发布修改 config/index.js 文件下
 
 ```
 build:{
     assetsPublicPath: '/vue-element-admin/',
 }
 ```
+### 目标
+基础功能
+- [x] 登录/登出
+- [x] 错误
+- [x] Dashboard
+- [x] 引导页
+- [x] 图标
+- [x] 组件
+- [x] 组件-富文本编辑器
+- [x] 组件-Markdown
+- [x] 组件-头像上传
+- [x] 组件-数字滚动
+- [x] 组件-剪贴面板
+- [x] 组件-粘贴顶部
+- [x] 组件-返回顶部
+- [x] 组件-拖拽看板
+- [x] 组件-拖拽选择
+- [x] 组件-拖拽弹框
+- [x] 表格
+- [x] EXCEL
+- [x] PDF
+- [x] ZIP
+- [x] 用户管理
+
+扩展功能
+- [x] 面包屑导航
+- [x] Tags-View标签导航
+
+辅助功能
+- [x] 收缩侧边栏
+- [x] 路由Title搜索
+- [x] 全屏展示
+- [x] 布局大小切换
+- [x] 多语言切换
+
+布局设置
+- [x] 切换主题颜色
+- [x] 开启 Tags-View
+- [x] 固定 Header
+- [x] 侧边栏 Logo
 
 ### 安装
 
@@ -221,53 +240,6 @@ cnpm install xlsx -S
 ```
 xlsx依赖 file-saver -S  and  script-loader -D
 
-
-### 目标
-基础功能
-- [x] 登录/登出
-- [x] 错误
-&emsp;&emsp;- [x] 404/401
-&emsp;&emsp;- [x] 错误日志
-- [x] Dashboard
-- [x] 引导页
-- [x] 图标
-- [x] 组件
-&emsp;&emsp;- [x] 富文本编辑器
-&emsp;&emsp;- [x] Markdown
-&emsp;&emsp;- [x] 头像上传
-&emsp;&emsp;- [x] 数字滚动
-&emsp;&emsp;- [x] 剪贴面板
-&emsp;&emsp;- [x] 粘贴顶部
-&emsp;&emsp;- [x] 返回顶部
-&emsp;&emsp;- [x] 拖拽看板
-&emsp;&emsp;- [x] 拖拽选择
-&emsp;&emsp;- [x] 拖拽弹框
-- [x] 表格
-- [x] EXCEL
-- [x] PDF
-- [x] ZIP
-- [x] 用户管理
-&emsp;&emsp;- [x] 个人中心
-&emsp;&emsp;- [x] 个人设置
-
-
-扩展功能
-- [x] 面包屑导航
-- [x] Tags-View标签导航
-
-辅助功能
-- [x] 收缩侧边栏
-- [x] 路由Title搜索
-- [x] 全屏展示
-- [x] 布局大小切换
-- [x] 多语言切换
-
-布局设置
-- [x] 切换主题颜色
-- [x] 开启 Tags-View
-- [x] 固定 Header
-- [x] 侧边栏 Logo
-
 **注释**：
 
 --save-dev  ==>  -D
@@ -278,7 +250,6 @@ install     ==>  i
 
 SVG在线编辑    https://editor.method.ac/
 
-项目中学习到的东西
 
 ## Eslint
 
