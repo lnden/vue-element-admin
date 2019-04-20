@@ -279,3 +279,63 @@ install     ==>  i
 SVG在线编辑    https://editor.method.ac/
 
 项目中学习到的东西
+
+## Eslint
+
+如果是现在新建一个项目，通过vue-cli的问答就可以轻松初始化ESLint的配置。
+
+这里说一下怎样在老项目里新添加ESLint。
+
+1、首先全局安装Eslint
+```
+cnpm install -g eslint
+```
+
+2、其次需要初始化一个eslint配置文件.eslintrc.js
+```
+eslint --init
+```
+3、然后我们来看看配置文件的内容
+```
+module.exports = {
+    'desc': 'root为false查找父级目录下所有的配置文件进行检索，为true它就会停止在父级目录中寻找'
+    root: true,
+    parser: 'babel-eslint',
+    parserOptions: {
+        sourceType: 'module'
+    },
+    env: {
+        browser: true,
+        node: true,
+        es6: true,
+    },
+    extends: 'eslint:recommended',
+    plugins: [
+        'html'
+    ],
+    'settings': {
+        'import/resolver': {
+            'webpack': {
+                'config': 'build/webpack.base.conf.js'
+            }
+        }
+    },
+    'rules': {
+        'indent': [2, 4, {
+            'SwitchCase': 1
+        }]
+    }
+}
+```
+vue 项目引入 Eslint相关内容
+
+检测项目中不符合定义的Eslint要求
+```
+ "lint": "eslint --ext .js,.vue src"
+```
+检测并且修改项目中不符合定义的Eslint要求
+```
+ "lint": "eslint --fix --ext .js,.vue src"
+```
+
+
