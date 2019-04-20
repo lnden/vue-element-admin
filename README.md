@@ -327,7 +327,34 @@ module.exports = {
     }
 }
 ```
-vue 项目引入 Eslint相关内容
+
+4、配置webpack.base.conf.js文件
+```
+const createLintingRule = () => ({
+    test: /\.(js|vue)$/,
+    loader: 'eslint-loader',
+    enforce: 'pre',
+    include: [resolve('src'), resolve('test')],
+    options: {
+        formatter: require('eslint-friendly-formatter'),
+        emitWarning: !config.dev.showEslintErrorsInOverlay
+    }
+})
+
+// 当前目录 module => rules 规则下添加如下配置
+   ...(config.dev.useEslint ? [createLintingRule()] : []),
+```
+
+5、安装下载相关依赖包package.json
+```
+cnpm install eslint -D
+cnpm install babel-eslint -D
+cnpm install eslint-friendly-formatter -D
+cnpm install eslint-loader -D
+cnpm install eslint-plugin-html -D
+cnpm install eslint-plugin-vue -D
+```
+6、设置"script"执行文件
 
 检测项目中不符合定义的Eslint要求
 ```
@@ -337,5 +364,7 @@ vue 项目引入 Eslint相关内容
 ```
  "lint": "eslint --fix --ext .js,.vue src"
 ```
+
+至此Eslint已经安装完毕
 
 
