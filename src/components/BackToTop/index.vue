@@ -66,7 +66,7 @@
         },
         beforeDestroy() {
             window.removeEventListener('scroll', this.handleScroll)
-            if(this.interval) {
+            if (this.interval) {
                 clearInterval(this.interval)
             }
         },

@@ -34,34 +34,33 @@
 </template>
 
 <script>
-
     import ElDragSelect from '@/components/DragSelect'
     import Sortable from 'sortablejs'
 
     export default {
-        name: "dragSelect",
+        name: 'dragSelect',
         data() {
             return {
-                value: ['Apple','Banana','Orange'],
+                value: ['Apple', 'Banana', 'Orange'],
                 options: [
-                    { value:'Apple',lable:'Apple' },
-                    { value:'Banana',lable:'Banana' },
-                    { value:'Orange',lable:'Orange' },
-                    { value:'Pear',lable:'Pear' },
-                    { value:'Strawberry',lable:'Strawberry' }
+                    { value: 'Apple', lable: 'Apple' },
+                    { value: 'Banana', lable: 'Banana' },
+                    { value: 'Orange', lable: 'Orange' },
+                    { value: 'Pear', lable: 'Pear' },
+                    { value: 'Strawberry', lable: 'Strawberry' }
                 ]
             }
         },
-        components:{
+        components: {
             ElDragSelect
         },
-        mounted(){
+        mounted() {
             // Grid demo
             new Sortable(gridDemo, {
                 animation: 150,
                 ghostClass: 'blue-background-class'
-            });
-        }
+            })
+    }
     }
 </script>
 

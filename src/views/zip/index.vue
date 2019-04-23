@@ -54,12 +54,12 @@
         },
         methods: {
             async fetchData() {
-                this.listLoading = true;
-                const { data } = await fetchList();
-                setTimeout(()=>{
-                    this.list = data.items;
+                this.listLoading = true
+                const { data } = await fetchList()
+                setTimeout(() => {
+                    this.list = data.items
                     this.listLoading = false
-                },500);
+                }, 500)
             },
             handleDownload() {
                 this.downloadLoading = true

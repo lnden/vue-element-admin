@@ -28,7 +28,7 @@
 </template>
 
 <script>
-const defaultFormThead = ['apple', 'banana'];
+const defaultFormThead = ['apple', 'banana']
 
 export default {
     data() {

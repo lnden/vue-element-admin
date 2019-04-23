@@ -12,7 +12,7 @@
      */
     import Sortable from 'sortablejs'
     export default {
-        name: "index",
+        name: 'index',
         props: {
             value: {
                 type: Array,
@@ -25,16 +25,16 @@
                     return [...this.value]
                 },
                 set(val) {
-                    this.$emit('input',[...val])
+                    this.$emit('input', [...val])
                 }
             }
         },
-        mounted(){
-            this.setSort();
-        },
-        methods:{
-            setSort(){
-                const el = this.$refs.dragSelect.$el.querySelectorAll('.el-select__tags > span')[0];
+        mounted() {
+            this.setSort()
+    },
+        methods: {
+            setSort() {
+                const el = this.$refs.dragSelect.$el.querySelectorAll('.el-select__tags > span')[0]
                 this.sortable = Sortable.create(el, {
                     ghostClass: 'sortable-ghost', // Class name for the drop placeholder,
                     setData: function(dataTransfer) {

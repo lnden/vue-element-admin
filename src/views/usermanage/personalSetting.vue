@@ -40,10 +40,10 @@
      */
 
     export default {
-        name: "personalSetting",
-        methods:{
-            handleOpen(){},
-            handleClose(){}
+        name: 'personalSetting',
+        methods: {
+            handleOpen() {},
+            handleClose() {}
         }
     }
 </script>

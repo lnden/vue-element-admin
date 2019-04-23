@@ -25,8 +25,8 @@
     import SidebarItem from './SidebarItem'
     import Logo from './Logo'
     export default {
-        name:'sidebar',
-        components:{
+        name: 'sidebar',
+        components: {
             SidebarItem,
             Logo
         },

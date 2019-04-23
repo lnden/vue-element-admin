@@ -44,32 +44,32 @@ const content = `
 * webpack
 
 `
-    export default {
-        name: 'MarkdownDemo',
-        components: { MarkdownEditor },
-        data() {
-            return {
-                content: content,
-                html: '',
-                languageTypeList: {
-                    'en': 'en_US',
-                    'zh': 'zh_CN',
-                    'es': 'es_ES'
-                }
-            }
-        },
-        computed: {
-            language() {
-                return this.languageTypeList[this.$store.getters.language]
-            }
-        },
-        methods: {
-            getHtml() {
-                this.html = this.$refs.markdownEditor.getHtml()
-                //console.log(this.html)
+export default {
+    name: 'MarkdownDemo',
+    components: { MarkdownEditor },
+    data() {
+        return {
+            content: content,
+            html: '',
+            languageTypeList: {
+                'en': 'en_US',
+                'zh': 'zh_CN',
+                'es': 'es_ES'
             }
         }
+    },
+    computed: {
+        language() {
+            return this.languageTypeList[this.$store.getters.language]
+        }
+    },
+    methods: {
+        getHtml() {
+            this.html = this.$refs.markdownEditor.getHtml()
+            // console.log(this.html)
+        }
     }
+}
 </script>
 
 <style scoped>

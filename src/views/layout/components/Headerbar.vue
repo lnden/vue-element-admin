@@ -61,11 +61,11 @@
     import Breadcrumb from '@/components/Breadcrumb'
     import { mapGetters } from 'vuex'
     export default {
-        name:'headerbar',
+        name: 'headerbar',
         computed: {
             ...mapGetters(['sidebar'])
         },
-        components:{
+        components: {
             HeaderSearch,
             ScreenFull,
             SizeSelect,
@@ -74,7 +74,7 @@
             Hamburger,
             Breadcrumb
         },
-        methods:{
+        methods: {
             // logout(){
             //     this.$store.dispatch('FedLogOut').then(() => {
             //         location.reload()
@@ -82,7 +82,7 @@
             // },
             async logout() {
                 // user/***  namespaced: true,
-                await this.$store.dispatch('user/logout');
+                await this.$store.dispatch('user/logout')
                 this.$router.push(`/login?redirect=${this.$route.fullPath}`)
             },
             toggleSideBar() {

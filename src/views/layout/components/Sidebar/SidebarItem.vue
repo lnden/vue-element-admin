@@ -34,14 +34,13 @@
 </template>
 
 <script>
-
     import path from 'path'
     import { generateTitle } from '@/utils/i18n'
     import { isExternal } from '@/utils'
     import Item from './Item'
     import AppLink from './Link'
     export default {
-        name:'sidebaritem',
+        name: 'sidebaritem',
         props: {
             item: {
                 type: Object,
@@ -56,9 +55,9 @@
                 default: ''
             }
         },
-        data(){
+        data() {
             return {
-                onlyOneChild: null   
+                onlyOneChild: null
             }
         },
         components: {
@@ -94,7 +93,7 @@
                 if (this.isExternalLink(routePath)) {
                     return routePath
                 }
-                    return path.resolve(this.basePath, routePath)
+                return path.resolve(this.basePath, routePath)
             },
             isExternalLink(routePath) {
                 return isExternal(routePath)

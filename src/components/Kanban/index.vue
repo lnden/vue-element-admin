@@ -28,7 +28,7 @@
     import draggable from 'vuedraggable'
 
     export default {
-        name: "index",
+        name: 'index',
         props: {
             headerText: {
                 type: String,
@@ -36,13 +36,13 @@
             },
             options: {
                 type: Object,
-                default(){
+                default() {
                     return {}
                 }
             },
             list: {
                 type: Array,
-                default:function(){
+                default: function() {
                     return []
                 }
             }
@@ -51,13 +51,13 @@
             draggable
         },
         methods: {
-            getdata (evt) {
-                //console.log(evt.draggedContext.element.id)
+            getdata(evt) {
+                // console.log(evt.draggedContext.element.id)
             },
-            datadragEnd (evt) {
-                //console.log('拖动前的索引 :' + evt.oldIndex)
-                //console.log('拖动后的索引 :' + evt.newIndex)
-                //console.log(this.tags)
+            datadragEnd(evt) {
+                // console.log('拖动前的索引 :' + evt.oldIndex)
+                // console.log('拖动后的索引 :' + evt.newIndex)
+                // console.log(this.tags)
             }
         }
     }

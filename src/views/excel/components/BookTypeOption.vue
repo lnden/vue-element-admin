@@ -20,7 +20,7 @@
      */
 
     export default {
-        name: "BookTypeOption",
+        name: 'BookTypeOption',
         props: {
             value: {
                 type: String,

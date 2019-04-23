@@ -10,12 +10,12 @@
 
 <script>
     export default {
-        name:'contentmain',
-        computed:{
+        name: 'contentmain',
+        computed: {
             cachedViews() {
                 return this.$store.state.tagsView.cachedViews
             },
-            key(){
+            key() {
                 return this.$route.fullPath
             }
         }

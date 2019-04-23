@@ -17,19 +17,19 @@
     import UploadExcelComponent from '@/components/UploadExcel'
 
     export default {
-        name: "updateExcel",
-        data(){
+        name: 'updateExcel',
+        data() {
             return {
-                tableData:[],
-                tableHeader:[]
+                tableData: [],
+                tableHeader: []
             }
         },
-        components:{
+        components: {
             UploadExcelComponent
         },
-        methods:{
+        methods: {
             beforeUpload(file) {
-                const isLt1M = file.size / 1024 / 1024 < 1;
+                const isLt1M = file.size / 1024 / 1024 < 1
 
                 if (isLt1M) {
                     return true
@@ -42,7 +42,7 @@
                 return false
             },
             handleSuccess({ results, header }) {
-                this.tableData = results;
+                this.tableData = results
                 this.tableHeader = header
             }
         }

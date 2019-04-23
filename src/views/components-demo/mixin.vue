@@ -111,7 +111,7 @@
     import Mallki from '@/components/TextHoverEffect/Mallki'
     import DropdownMenu from '@/components/Share/dropdownMenu'
     export default {
-        name: "mixin",
+        name: 'mixin',
         data() {
             const validate = (rule, value, callback) => {
                 if (value.length !== 6) {

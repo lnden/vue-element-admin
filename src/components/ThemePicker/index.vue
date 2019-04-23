@@ -45,8 +45,8 @@
                 }
                 const styles = [].slice.call(document.querySelectorAll('style'))
                     .filter(style => {
-                    const text = style.innerText
-                    return new RegExp(oldVal, 'i').test(text) && !/Chalk Variables/.test(text)
+                        const text = style.innerText
+                        return new RegExp(oldVal, 'i').test(text) && !/Chalk Variables/.test(text)
                     })
                 styles.forEach(style => {
                     const { innerText } = style
@@ -72,11 +72,11 @@
                 const xhr = new XMLHttpRequest()
                 xhr.onreadystatechange = () => {
                     if (xhr.readyState === 4 && xhr.status === 200) {
-                    this[variable] = xhr.responseText.replace(/@font-face{[^}]+}/, '')
+                        this[variable] = xhr.responseText.replace(/@font-face{[^}]+}/, '')
                         callback()
                     }
                 }
-                xhr.open('GET', url,true)
+                xhr.open('GET', url, true)
                 xhr.send()
             },
             getThemeCluster(theme) {

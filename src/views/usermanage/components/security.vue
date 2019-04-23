@@ -13,7 +13,7 @@
      */
 
     export default {
-        name: "security"
+        name: 'security'
     }
 </script>
 

@@ -11,7 +11,7 @@
 
 <script>
     export default {
-        name:'size-select',
+        name: 'size-select',
         data() {
             return {
                 sizeOptions: [
@@ -42,7 +42,7 @@
                 const { fullPath } = this.$route
                 this.$nextTick(() => {
                     this.$router.replace({
-                         path: '/redirect' + fullPath
+                        path: '/redirect' + fullPath
                     })
                 })
             }

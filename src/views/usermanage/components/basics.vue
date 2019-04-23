@@ -13,7 +13,7 @@
      */
 
     export default {
-        name: "basics"
+        name: 'basics'
     }
 </script>
 

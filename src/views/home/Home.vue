@@ -8,13 +8,13 @@
 <script>
     import Loading from '@/components/Loading'
     export default {
-        name:'home',
-        data(){
+        name: 'home',
+        data() {
             return {
-                name:'主页'
+                name: '主页'
             }
         },
-        components:{
+        components: {
             Loading
         }
     }

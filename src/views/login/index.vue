@@ -26,60 +26,59 @@
 </template>
 
 <script>
-    import { checkUsername,checkPassword } from '@/utils/validate/login'
+    import { checkUsername, checkPassword } from '@/utils/validate/login'
 
     export default {
-        name:'login',
-        data(){
+        name: 'login',
+        data() {
             return {
-                showLogin:false,
-                loginForm:{
-                    username:'admin',
-                    password:'123456'
+                showLogin: false,
+                loginForm: {
+                    username: 'admin',
+                    password: '123456'
                 },
-                 rules:{
+                rules: {
                     username: [{ required: true, trigger: 'blur', validator: checkUsername }],
-                    password: [{ required: true, trigger: 'blur', validator: checkPassword }],
+                    password: [{ required: true, trigger: 'blur', validator: checkPassword }]
                 },
-                userstate:false,
-                passwordstate:false,
-                loading:false,
-                passwordType:'password'
+                userstate: false,
+                passwordstate: false,
+                loading: false,
+                passwordType: 'password'
             }
         },
-        methods:{
-            showPwd(){
+        methods: {
+            showPwd() {
                 if (this.passwordType === 'password') {
                     this.passwordType = ''
                 } else {
                     this.passwordType = 'password'
                 }
             },
-            handleLogin(){
+            handleLogin() {
                 this.$refs.loginForm.validate(valid => {
                     if (valid) {
-                        this.loading = true;
+                        this.loading = true
                         this.$store.dispatch('user/LoginByUsername', this.loginForm).then(() => {
-                            this.loading = false;
+                            this.loading = false
                             this.$router.push({ path: '/' })
                         }).catch(() => {
                             this.loading = false
                         })
-
                     } else {
-                        console.log('error submit!!');
+                        console.log('error submit!!')
                         return false
                     }
                 })
             },
-            focus(val){
-                val == 'user' ? this.userstate = true:this.passwordstate = true
+            focus(val) {
+                val == 'user' ? this.userstate = true : this.passwordstate = true
             },
-            blurs(val){
-                val == 'user' ? this.userstate = false:this.passwordstate = false
+            blurs(val) {
+                val == 'user' ? this.userstate = false : this.passwordstate = false
             }
         },
-        mounted(){
+        mounted() {
             this.showLogin = true
         }
     }

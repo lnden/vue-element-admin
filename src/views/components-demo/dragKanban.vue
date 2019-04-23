@@ -39,44 +39,44 @@
     import Kanban from '@/components/Kanban'
 
     export default {
-        name: "dragKanban",
-        components:{
+        name: 'dragKanban',
+        components: {
             Kanban
         },
-        data(){
+        data() {
             return {
-                options:{
-                    sort:true,          //是否可以组内拖拽排序
-                    group: 'mission',   //是否可以跨组拖拽
+                options: {
+                    sort: true, // 是否可以组内拖拽排序
+                    group: 'mission', // 是否可以跨组拖拽
                     // delay:10,
-                    animation:150,      //切换动画，可使用transition-group代替
+                    animation: 150 // 切换动画，可使用transition-group代替
                     // handle: '.handle',  //选择移动的元素
                     // ilter: '.filtered', //指定类名的元素不允许拖动
                 },
-                list1:[
-                    {name:'Mission',id:1},
-                    {name:'Mission',id:2},
-                    {name:'Mission',id:3},
-                    {name:'Mission',id:4}
+                list1: [
+                    { name: 'Mission', id: 1 },
+                    { name: 'Mission', id: 2 },
+                    { name: 'Mission', id: 3 },
+                    { name: 'Mission', id: 4 }
                 ],
-                list2:[
-                    {name:'Mission',id:5},
-                    {name:'Mission',id:6},
-                    {name:'Mission',id:7}
+                list2: [
+                    { name: 'Mission', id: 5 },
+                    { name: 'Mission', id: 6 },
+                    { name: 'Mission', id: 7 }
                 ],
-                list3:[
-                    {name:'Mission',id:8},
-                    {name:'Mission',id:9},
-                    {name:'Mission',id:10}
+                list3: [
+                    { name: 'Mission', id: 8 },
+                    { name: 'Mission', id: 9 },
+                    { name: 'Mission', id: 10 }
                 ]
             }
         },
-        methods:{
-            handleClick(){
+        methods: {
+            handleClick() {
                 // 可以实时获取当前数组的值
-                //console.log(this.list1)
-                //console.log(this.list2)
-                //console.log(this.list3)
+                // console.log(this.list1)
+                // console.log(this.list2)
+                // console.log(this.list3)
             }
         }
     }

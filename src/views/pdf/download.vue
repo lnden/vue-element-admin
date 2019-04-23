@@ -11,27 +11,27 @@
 <script>
     export default {
         name: 'download',
-        data(){
+        data() {
             return {
                 article: '',
                 fullscreenLoading: true
             }
         },
-        mounted(){
-            this.fetchData();
-        },
-        methods:{
+        mounted() {
+            this.fetchData()
+    },
+        methods: {
             fetchData() {
                 import('./content.js').then(res => {
-                    const { title } = res.default;
-                    document.title = title;
-                    this.article = res.default;
+                    const { title } = res.default
+                    document.title = title
+                    this.article = res.default
                     setTimeout(() => {
-                        this.fullscreenLoading = false;
-                        this.$nextTick(()=>{
+                        this.fullscreenLoading = false
+                        this.$nextTick(() => {
                             window.print()
                         })
-                    },3000)
+                    }, 3000)
                 })
             }
         }

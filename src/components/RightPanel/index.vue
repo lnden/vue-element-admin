@@ -77,7 +77,7 @@
             //  使用js获取当前元素添加到body
             insertToBody() {
                 const elx = this.$refs.rightPanel
-                const body = document.querySelector('body');
+                const body = document.querySelector('body')
                 body.insertBefore(elx, body.firstChild)
             }
         }

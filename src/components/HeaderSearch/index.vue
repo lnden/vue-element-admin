@@ -29,7 +29,7 @@
                 search: '',
                 options: [],
                 searchPool: [],
-                show: false ,
+                show: false,
                 fuse: undefined
             }
         },
@@ -61,11 +61,11 @@
         },
         mounted() {
             this.searchPool = this.generateRouters(this.routers)
-            //console.log(this.searchPool,1)
+            // console.log(this.searchPool,1)
         },
         methods: {
             clickbtn() {
-                //console.log(11111111111)
+                // console.log(11111111111)
                 this.show = !this.show
                 if (this.show) {
                     this.$refs.headerSearchSelect && this.$refs.headerSearchSelect.focus()

@@ -25,7 +25,7 @@
         },
         methods: {
             guide() {
-                this.driver.defineSteps(steps);
+                this.driver.defineSteps(steps)
                 this.driver.start()
             }
         }

@@ -20,17 +20,17 @@
 
 <script>
     import RightPanel from '@/components/RightPanel'
-    import { Sidebar,Headerbar,TagsView,ContentMain,Settings } from './components'
+    import { Sidebar, Headerbar, TagsView, ContentMain, Settings } from './components'
     import { mapState } from 'vuex'
 
     export default {
-        name:"layout",
-        data(){
+        name: 'layout',
+        data() {
             return {
-                name:'布局'
+                name: '布局'
             }
         },
-        components:{
+        components: {
             Sidebar,
             Headerbar,
             TagsView,
@@ -42,10 +42,10 @@
             sidebar() {
                 return this.$store.state.app.sidebar
             },
-            showSettings(){
+            showSettings() {
                 return this.$store.state.settings.showSettings
             },
-            needTagsView(){
+            needTagsView() {
                 return this.$store.state.settings.tagsView
             },
             ...mapState({

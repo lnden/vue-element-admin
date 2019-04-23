@@ -18,7 +18,7 @@
     import elDragDialog from '@/directive/el-dragDialog' // base on element-ui
 
     export default {
-        name: "dragDialog",
+        name: 'dragDialog',
         directives: { elDragDialog },
         data() {
             return {
@@ -49,9 +49,9 @@
                 }]
             }
         },
-        methods:{
-            handleDrag(){
-                //console.log('可以检测拖动事件');
+        methods: {
+            handleDrag() {
+                // console.log('可以检测拖动事件');
             }
         }
     }

@@ -23,7 +23,7 @@
             isActive: {
                 type: Boolean,
                 default: false
-            },
+            }
             // 可以换一种方式  隐藏
             // toggleClick: {
             //     type: Function,
@@ -31,7 +31,7 @@
             // }
         },
         // 可以换一种方式
-        methods:{
+        methods: {
             toggleClick() {
                 this.$emit('toggleClick')
             }

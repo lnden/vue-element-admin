@@ -19,7 +19,6 @@
 </template>
 
 <script>
-
     import img_404 from '@/assets/404.png'
     import img_404_cloud from '@/assets/404_cloud.png'
 

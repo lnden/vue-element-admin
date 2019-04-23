@@ -14,7 +14,7 @@
      */
 
     export default {
-        name: "FileNameOption",
+        name: 'FileNameOption',
         props: {
             value: {
                 type: String,

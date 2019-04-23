@@ -82,7 +82,7 @@ export default {
                 published: 'success',
                 draft: 'info',
                 deleted: 'danger'
-            };
+            }
             return statusMap[status]
         }
     },
@@ -105,18 +105,18 @@ export default {
     },
     methods: {
         getList() {
-            this.listLoading = true;
+            this.listLoading = true
             fetchList(this.listQuery).then(response => {
-                setTimeout(()=>{
-                    this.list = response.data.items;
-                    this.total = response.data.total;
-                    this.listLoading = false;
-                    this.oldList = this.list.map(v => v.id);
-                    this.newList = this.oldList.slice();
+                setTimeout(() => {
+                    this.list = response.data.items
+                    this.total = response.data.total
+                    this.listLoading = false
+                    this.oldList = this.list.map(v => v.id)
+                    this.newList = this.oldList.slice()
                     this.$nextTick(() => {
                         this.setSort()
                     })
-                },500)
+                }, 500)
             })
         },
         setSort() {

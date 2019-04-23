@@ -60,40 +60,40 @@
     import { fetchList } from '@/api/article'
 
     export default {
-        name: "selectExcel",
-        data(){
+        name: 'selectExcel',
+        data() {
             return {
-                filename:'',
-                downloadLoading:false,
-                listLoading:true,
-                list:null,
-                multipleSelection:null
+                filename: '',
+                downloadLoading: false,
+                listLoading: true,
+                list: null,
+                multipleSelection: null
             }
         },
-        components:{
+        components: {
             FileNameOption
         },
-        methods:{
-            handleSelectionChange(val){
+        methods: {
+            handleSelectionChange(val) {
                 this.multipleSelection = val
             },
-            handleDownload(){
-                this.downloadLoading = true;
+            handleDownload() {
+                this.downloadLoading = true
                 if (this.multipleSelection.length) {
-                    this.downloadLoading = true;
-                    import('@/vendor/Export2Excel').then(excel => {
-                        const tHeader = ['Id', 'Title', 'Author', 'Readings', 'Date'];
-                        const filterVal = ['id', 'title', 'author', 'pageviews', 'display_time'];
-                        const list = this.multipleSelection;
-                        const data = this.formatJson(filterVal, list);
-                        excel.export_json_to_excel({
-                            header: tHeader,
-                            data,
-                            filename: this.filename
-                        });
-                        this.$refs.multipleTable.clearSelection();
-                        this.downloadLoading = false
+                    this.downloadLoading = true
+                import('@/vendor/Export2Excel').then(excel => {
+                    const tHeader = ['Id', 'Title', 'Author', 'Readings', 'Date']
+                    const filterVal = ['id', 'title', 'author', 'pageviews', 'display_time']
+                    const list = this.multipleSelection
+                    const data = this.formatJson(filterVal, list)
+                    excel.export_json_to_excel({
+                        header: tHeader,
+                        data,
+                        filename: this.filename
                     })
+                    this.$refs.multipleTable.clearSelection()
+                    this.downloadLoading = false
+                })
                 } else {
                     this.$message({
                         message: 'Please select at least one item',
@@ -102,22 +102,22 @@
                 }
             },
             fetchData() {
-                this.listLoading = true;
+                this.listLoading = true
                 fetchList().then(response => {
-                    setTimeout(()=>{
-                        this.list = response.data.items;
+                    setTimeout(() => {
+                        this.list = response.data.items
                         this.listLoading = false
-                        //console.log('请求列表数据：',this.list)
-                    },500)
+                        // console.log('请求列表数据：',this.list)
+                    }, 500)
                 })
             },
             formatJson(filterVal, jsonData) {
                 return jsonData.map(v => filterVal.map(j => v[j]))
             }
         },
-        mounted(){
-            this.fetchData();
-        }
+        mounted() {
+            this.fetchData()
+    }
     }
 </script>
 

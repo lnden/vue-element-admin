@@ -16,7 +16,7 @@
      * @param {Object} [title]  - 参数说明
      */
     export default {
-        name: "AutoWidthOption",
+        name: 'AutoWidthOption',
         props: {
             value: {
                 type: Boolean,

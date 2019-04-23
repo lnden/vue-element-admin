@@ -11,7 +11,7 @@
 
 <script>
     export default {
-        name:'lang-select',
+        name: 'lang-select',
         data() {
             return {
                 languageOptions: [
@@ -31,8 +31,8 @@
         },
         methods: {
             handleSetLanguage(lang) {
-                this.$i18n.locale = lang;
-                this.$store.dispatch('setLanguage', lang);
+                this.$i18n.locale = lang
+                this.$store.dispatch('setLanguage', lang)
                 this.$message({
                     message: 'Switch Language Success',
                     type: 'success'

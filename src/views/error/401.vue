@@ -27,7 +27,6 @@
 </template>
 
 <script>
-
     import errGif from '@/assets/401.gif'
 
     export default {

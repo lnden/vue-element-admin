@@ -14,23 +14,23 @@
 </template>
 
 <script>
-    import clip from '@/utils/clipboard'    // use clipboard directly
-    import clipboard from '@/directive/clipboard/index.js'  // use clipboard by v-directive
+    import clip from '@/utils/clipboard' // use clipboard directly
+    import clipboard from '@/directive/clipboard/index.js' // use clipboard by v-directive
 
     export default {
         name: 'clipboard',
         directives: {
             clipboard
         },
-        data(){
+        data() {
             return {
                 activeName: 'directly',
                 inputData: 'https://dinglindong.github.io/vue-element-admin/'
             }
         },
         methods: {
-            handleCopy(text,event){
-                clip(text,event)
+            handleCopy(text, event) {
+                clip(text, event)
             },
             clipboardSuccess() {
                 this.$message({

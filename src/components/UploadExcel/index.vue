@@ -61,9 +61,9 @@ export default {
         },
         handleClick(e) {
             //  console.log('这里也会自动触发')
-            const files = e.target.files;
-            const rawFile = files[0]; // only use files[0]
-            if (!rawFile) return;
+            const files = e.target.files
+            const rawFile = files[0] // only use files[0]
+            if (!rawFile) return
             this.upload(rawFile)
         },
         upload(rawFile) {

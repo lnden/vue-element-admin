@@ -62,24 +62,24 @@
     import { parseTime } from '@/utils'
 
     export default {
-        name: "exportExcel",
+        name: 'exportExcel',
         data() {
             return {
-                filename: '',       //  导出文件名称
-                autoWidth: true,    //  导出文件表格宽度
-                bookType: 'xlsx',   //  导出文件类型
-                downloadLoading: false,     //  导出等待loading
-                listLoading:true,           //  table请求 loading效果
-                requestParams:{
+                filename: '', //  导出文件名称
+                autoWidth: true, //  导出文件表格宽度
+                bookType: 'xlsx', //  导出文件类型
+                downloadLoading: false, //  导出等待loading
+                listLoading: true, //  table请求 loading效果
+                requestParams: {
                     desc: '该对象为请求参数',
                     importance: '',
                     type: '',
                     title: '',
                     page: 1,
                     limit: 20,
-                    sort: ''        // 正序默认值，倒序为'-id'
+                    sort: '' // 正序默认值，倒序为'-id'
                 },
-                list:null           //  页面回显数据
+                list: null //  页面回显数据
             }
         },
         components: {
@@ -88,13 +88,13 @@
             BookTypeOption
         },
         methods: {
-            handleDownload(){
+            handleDownload() {
                 this.downloadLoading = true
-                import ('@/vendor/Export2Excel').then(excel=>{
-                    const tHeader = ['Id','Title','Author','Readings','Date'];
-                    const filterVal = ['id', 'title', 'author', 'pageviews', 'display_time'];
-                    const list = this.list;
-                    const data = this.formatJson(filterVal, list);
+                import('@/vendor/Export2Excel').then(excel => {
+                    const tHeader = ['Id', 'Title', 'Author', 'Readings', 'Date']
+                    const filterVal = ['id', 'title', 'author', 'pageviews', 'display_time']
+                    const list = this.list
+                    const data = this.formatJson(filterVal, list)
 
                     excel.export_json_to_excel({
                         header: tHeader,
@@ -102,7 +102,7 @@
                         filename: this.filename,
                         autoWidth: this.autoWidth,
                         bookType: this.bookType
-                    });
+                    })
 
                     this.downloadLoading = false
                 })
@@ -116,20 +116,20 @@
                     }
                 }))
             },
-            fetchData(){
-                this.listLoading = true;
+            fetchData() {
+                this.listLoading = true
                 fetchList().then(response => {
-                    setTimeout(()=>{
-                        this.list = response.data.items;
+                    setTimeout(() => {
+                        this.list = response.data.items
                         this.listLoading = false
-                        //console.log('请求列表数据：',this.list)
-                    },500)
+                        // console.log('请求列表数据：',this.list)
+                    }, 500)
                 })
             }
         },
         mounted() {
-            this.fetchData();
-        }
+            this.fetchData()
+    }
     }
 </script>
 

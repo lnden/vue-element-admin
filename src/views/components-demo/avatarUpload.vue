@@ -24,7 +24,7 @@
     import PanThumb from '@/components/PanThumb'
     import ImageCropper from '@/components/ImageCropper'
     export default {
-        name:'avatarUpload',
+        name: 'avatarUpload',
         components: {
             PanThumb,
             ImageCropper
