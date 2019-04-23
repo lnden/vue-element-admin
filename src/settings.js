@@ -1,6 +1,7 @@
 import variables from '@/styles/element-variables.scss'
 
 export default {
+    title: 'Vue Element Admin',
     theme: variables.theme,
 
     /**

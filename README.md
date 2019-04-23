@@ -336,6 +336,8 @@ cnpm install eslint-plugin-html -D
 检测并且修改项目中不符合定义的Eslint要求
 ```
  "lint": "eslint --fix --ext .js,.vue src"
+
+ npm run lint -- --fix
 ```
 7、最后一步非常重要设置config/index.js控制台显示报错信息
 ```

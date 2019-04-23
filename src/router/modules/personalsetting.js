@@ -1,3 +1,4 @@
+import Layout from '@/views/layout/Layout'
 
 const PersonalSetting = {
     path: '/error',
