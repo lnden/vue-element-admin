@@ -273,7 +273,6 @@ eslint --init
 3、然后我们来看看配置文件的内容
 ```
 module.exports = {
-    'desc': 'root为false查找父级目录下所有的配置文件进行检索，为true它就会停止在父级目录中寻找'
     root: true,
     parser: 'babel-eslint',
     parserOptions: {
@@ -327,7 +326,6 @@ cnpm install babel-eslint -D
 cnpm install eslint-friendly-formatter -D
 cnpm install eslint-loader -D
 cnpm install eslint-plugin-html -D
-cnpm install eslint-plugin-vue -D
 ```
 6、设置"script"执行文件
 
@@ -339,7 +337,10 @@ cnpm install eslint-plugin-vue -D
 ```
  "lint": "eslint --fix --ext .js,.vue src"
 ```
-
+7、最后一步非常重要设置config/index.js控制台显示报错信息
+```
+useEslint: true
+```
 至此Eslint已经安装完毕
 
 
