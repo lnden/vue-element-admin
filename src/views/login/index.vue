@@ -72,10 +72,10 @@
                 })
             },
             focus(val) {
-                val == 'user' ? this.userstate = true : this.passwordstate = true
+                val === 'user' ? this.userstate = true : this.passwordstate = true
             },
             blurs(val) {
-                val == 'user' ? this.userstate = false : this.passwordstate = false
+                val === 'user' ? this.userstate = false : this.passwordstate = false
             }
         },
         mounted() {

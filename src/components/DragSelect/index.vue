@@ -31,7 +31,7 @@
         },
         mounted() {
             this.setSort()
-    },
+        },
         methods: {
             setSort() {
                 const el = this.$refs.dragSelect.$el.querySelectorAll('.el-select__tags > span')[0]

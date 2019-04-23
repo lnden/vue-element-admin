@@ -9,31 +9,31 @@
 </template>
 
 <script>
-    export default {
-        name: 'download',
-        data() {
-            return {
-                article: '',
-                fullscreenLoading: true
-            }
-        },
-        mounted() {
-            this.fetchData()
+export default {
+    name: 'download',
+    data() {
+        return {
+            article: '',
+            fullscreenLoading: true
+        }
     },
-        methods: {
-            fetchData() {
-                import('./content.js').then(res => {
-                    const { title } = res.default
-                    document.title = title
-                    this.article = res.default
-                    setTimeout(() => {
-                        this.fullscreenLoading = false
-                        this.$nextTick(() => {
-                            window.print()
-                        })
-                    }, 3000)
-                })
-            }
+    mounted() {
+        this.fetchData()
+    },
+    methods: {
+        fetchData() {
+import('./content.js').then(res => {
+    const { title } = res.default
+    document.title = title
+    this.article = res.default
+    setTimeout(() => {
+        this.fullscreenLoading = false
+        this.$nextTick(() => {
+            window.print()
+        })
+    }, 3000)
+})
         }
     }
+}
 </script>

@@ -34,34 +34,35 @@
 </template>
 
 <script>
-    import ElDragSelect from '@/components/DragSelect'
-    import Sortable from 'sortablejs'
+import ElDragSelect from '@/components/DragSelect'
+import Sortable from 'sortablejs'
 
-    export default {
-        name: 'dragSelect',
-        data() {
-            return {
-                value: ['Apple', 'Banana', 'Orange'],
-                options: [
-                    { value: 'Apple', lable: 'Apple' },
-                    { value: 'Banana', lable: 'Banana' },
-                    { value: 'Orange', lable: 'Orange' },
-                    { value: 'Pear', lable: 'Pear' },
-                    { value: 'Strawberry', lable: 'Strawberry' }
-                ]
-            }
-        },
-        components: {
-            ElDragSelect
-        },
-        mounted() {
-            // Grid demo
-            new Sortable(gridDemo, {
-                animation: 150,
-                ghostClass: 'blue-background-class'
-            })
+export default {
+    name: 'dragSelect',
+    data() {
+        return {
+            value: ['Apple', 'Banana', 'Orange'],
+            options: [
+                { value: 'Apple', lable: 'Apple' },
+                { value: 'Banana', lable: 'Banana' },
+                { value: 'Orange', lable: 'Orange' },
+                { value: 'Pear', lable: 'Pear' },
+                { value: 'Strawberry', lable: 'Strawberry' }
+            ]
+        }
+    },
+    components: {
+        ElDragSelect
+    },
+    mounted() {
+        // Grid demo
+        const el = document.getElementById('gridDemo')
+        new Sortable(el, {
+            animation: 150,
+            ghostClass: 'blue-background-class'
+        })
     }
-    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -76,6 +77,7 @@
             border: solid 1px rgba(0,0,0,0.2);
             padding: 10px;
             margin: 12px;
+            cursor: pointer;
         }
         .blue-background-class {
             background-color: #C8EBFB;
