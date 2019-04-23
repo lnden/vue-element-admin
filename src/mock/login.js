@@ -14,7 +14,7 @@
 //     )
 // }
 
-const userMap = {
+const users = {
     admin: {
         roles: ['admin'],
         token: 'admin',
@@ -32,9 +32,25 @@ const userMap = {
 }
 
 export default {
-    loginByUsername: config => {
+    login: config => {
         const { username } = JSON.parse(config.body)
-        return userMap[username]
+        return users[username]
     },
-    logout: () => 'success'
+    logout: () => 'success',
+    getInfo: config => {
+        const { token } = config.query
+        const info = users[token]
+        // mock error
+        if (!info) {
+            return {
+                code: 50008,
+                message: 'Login failed, unable to get user details.'
+            }
+        }
+
+        return {
+            code: 20000,
+            data: info
+        }
+    }
 }

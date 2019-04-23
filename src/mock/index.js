@@ -17,7 +17,8 @@ Mock.XHR.prototype.send = function() {
 // })
 
 // 登录相关
-Mock.mock(/\/login\/login/, 'post', loginAPI.loginByUsername)
+Mock.mock(/\/login\/login/, 'post', loginAPI.login)
+Mock.mock(/\/login\/info/, 'post', loginAPI.getInfo)
 Mock.mock(/\/login\/logout/, 'post', loginAPI.logout)
 
 // 文章相关
