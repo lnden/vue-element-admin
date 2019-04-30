@@ -28,8 +28,7 @@ import loginApi from './login'
 import articleApi from './article'
 
 // Mock.mock(url,methods,data)
-Mock.mock(/\/getLogin/,'get',loginApi.getUserInfo)
-
+Mock.mock(/\/user\/getLogin/,'get',loginApi.getUserInfo)
 export default Mock
 ```
 
