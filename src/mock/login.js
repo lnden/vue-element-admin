@@ -38,7 +38,7 @@ export default {
     },
     logout: () => 'success',
     getInfo: config => {
-        const { token } = config.query
+        const { token } = JSON.parse(config.body)
         const info = users[token]
         // mock error
         if (!info) {
