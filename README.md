@@ -85,7 +85,7 @@ build:{
 <h4 id="vuex">安装使用 vuex</h4>
 
 ```
-  npm install vuex -S
+npm install vuex -S
 ```
 vuex我们按照官方推荐方式书写
 
@@ -191,6 +191,7 @@ rules: [
 
 <h4 id="element">安装使用 ElementUI</h4>
 该流程可以按照[ElemenUI](http://element-cn.eleme.io/#/zh-CN)来使用安装
+
 ```
 npm install element-ui -S
 
@@ -200,20 +201,22 @@ Vue.use(ElementUI);
 ```
 
 <h4 id="normalize">安装使用 normalize</h4>
+
 ```
 npm install normalize.css --S
 ```
-1.在main.js中i直接引入重置样式
+在main.js中i直接引入重置样式
 ```
 import 'normalize.css'
 ```
 
 
 <h4 id="mockjs">安装使用 mockjs</h4>
+
 ```
 npm install mockjs -S
 ```
-1.使用mockjs模拟请求数据
+使用mockjs模拟请求数据
 
 <h4 id="xlsx">安装使用 xlsx</h4>
 
