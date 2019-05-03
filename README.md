@@ -129,39 +129,40 @@ Vue.use(Router)
 
 const constantRouterMap = [
     {
-        path:'',
-        component:()=>import('@/views/login/Login'),
-        name:'home',
-        meta:{
-          title:'首页',
-          icon:'nav-home',
-          roles:['admin']
+        path: '',
+        component: () => import('@/views/login/Login'),
+        name: 'home',
+        meta: {
+          title: '首页',
+          icon: 'nav-home',
+          roles: ['admin']
         }
     }
 ]
 
 export default new Router({
-    routes:constantRouterMap
+    routes: constantRouterMap
 })
 
 ```
 3.在main.js内引入router并且应用
 
 ```
-import store from './store'
 import router from './router'
 new Vue({
     el:'#app',
-    store,
     router,
     components:{ App }
 })
 ```
+**注释：** 如果页面路由复杂，还可以在src/router文件下新增modules文件夹，提取各模块路由最后在引入./index.js内使用
+
 <h4 id="axios">安装使用 axios</h4>
 
 ```
 npm install axios -S
 ```
+安装完成后在src目录下创建utils文件夹内存放request.js，用于页面的所有请求。在request内添加全局请求的逻辑并且配置相应拦截器interceptors
 
 <h4 id="scss">安装使用 scss</h4>
 
