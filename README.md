@@ -1,10 +1,26 @@
-[toc]
-
 # vue-element-admin
-* [简介](#简介)
+- [简介](#introduce)
+- [目标](#target)
+- [安装](#install)
+    - [vuex](#vuex)
+    - [vueRouter](#vuerouter)
+    - [axios](#axios)
+    - [scss](#scss)
+    - [elementUi](#element)
+    - [normalize](#normalize)
+    - [mockjs](#mockjs)
+    - [xlsx](#xlsx)
+- [配置](#config)
+    - [style](#style)
+    - [icons](#icons)
+    - [nprogress](#nprogress)
+    - [plop](#plop)
+    - [eslint](#eslint)
 
 
-<h3 id="简介">简介</h3>
+------------------------------------------------------------------------
+
+<h3 id="introduce">Introduce</h3>
 
 &emsp;&emsp;该项目使用 vue cli 构建生成简单的目录结构
 
@@ -12,14 +28,16 @@ Vue2.0 + ElementUi + Vuex + vue-router + ES6/7 + axios + svg + mockjs + plop + E
 
 注：该项目需要配置到github page
 
-1.打包发布修改 config/index.js 文件下
+打包发布需要修改 config/index.js 文件如下
 
 ```
 build:{
     assetsPublicPath: '/vue-element-admin/',
 }
 ```
-### 目标
+
+<h3 id="target">Target</h3>
+
 基础功能
 - [x] 登录/登出
 - [x] 错误
@@ -60,9 +78,11 @@ build:{
 - [x] 固定 Header
 - [x] 侧边栏 Logo
 
-### 安装
-<a href="#安装使用 vue-router">安装使用</a>
-#### 安装使用 vuex
+------------------------------------------------------------------------
+
+<h3 id="install">Install</h3>
+
+<h4 id="vuex">安装使用 vuex</h4>
 
 ```
   npm install vuex -S
@@ -89,7 +109,8 @@ new Vue({
   components:{ App }
 })
 ```
-#### 安装使用 vue-router
+
+<h4 id="vuerouter">安装使用 vue-router</h4>
 
 ```
 npm install vue-router -S
@@ -136,13 +157,14 @@ new Vue({
     components:{ App }
 })
 ```
-#### 安装使用 axios
+<h4 id="axios">安装使用 axios</h4>
 
 ```
 npm install axios -S
 ```
 
-#### 安装使用 scss
+<h4 id="scss">安装使用 scss</h4>
+
 ```
 npm install node-sass -D
 npm install sass-loader -D
@@ -167,7 +189,7 @@ rules: [
 </style>
 ```
 
-#### 安装使用 ElementUI
+<h4 id="element">安装使用 ElementUI</h4>
 该流程可以按照[ElemenUI](http://element-cn.eleme.io/#/zh-CN)来使用安装
 ```
 npm install element-ui -S
@@ -177,7 +199,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 ```
 
-#### 安装使用 normalize
+<h4 id="normalize">安装使用 normalize</h4>
 ```
 npm install normalize.css --S
 ```
@@ -185,31 +207,35 @@ npm install normalize.css --S
 ```
 import 'normalize.css'
 ```
-#### 安装使用 mockjs
+
+
+<h4 id="mockjs">安装使用 mockjs</h4>
 ```
 npm install mockjs -S
 ```
 1.使用mockjs模拟请求数据
 
-#### 安装  xlsx
+<h4 id="xlsx">安装使用 xlsx</h4>
 
 ```js
 cnpm install xlsx -S
 ```
 xlsx依赖 file-saver -S  and  script-loader -D
 
-### 配置
+------------------------------------------------------------------------
+
+<h3 id="config">Config</h3>
 
 &emsp;&emsp;配置一些全局的信息，比如styles、request、icons、一些开发规范等文档内容！
 
-#### 全局 styles
+<h4 id="style">Global styles</h4>
 1.src目录下新建style文件夹
 
 内建public目录，存放响全局样式、过度动画和elementui重置信息等。
 
 可内建对应页面scss文件进行样式抽离，如果UI改动不大可在当前页面添加
 
-#### 全局 icons
+<h4 id="icons">Global icons</h4>
 
 1.在components文件内创建全局svg-icon组件
 
@@ -238,24 +264,14 @@ rules: [
 ]
 ```
 
-#### 全局 nprogress
+<h4 id="nprogress">Global nprogress</h4>
+
 1.路由跳转全局添加进度条
 ```
 npm install nprogress -S
 ```
 
-**注释**：
-
---save-dev  ==>  -D
-
---save      ==>  -S
-
-install     ==>  i
-
-SVG在线编辑    https://editor.method.ac/
-
-
-## Eslint
+<h4 id="eslint">Global Eslint</h4>
 
 如果是现在新建一个项目，通过vue-cli的问答就可以轻松初始化ESLint的配置。
 
@@ -344,5 +360,17 @@ cnpm install eslint-plugin-html -D
 useEslint: true
 ```
 至此Eslint已经安装完毕
+
+
+**注释**：
+
+--save-dev  ==>  -D
+
+--save      ==>  -S
+
+install     ==>  i
+
+SVG在线编辑    https://editor.method.ac/
+
 
 
