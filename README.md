@@ -100,7 +100,6 @@ vuex我们按照官方推荐方式书写
 -  store(index)
 
 3.在main.js内引入store并且应用
-
 ```
 import store from './store'
 new Vue({
@@ -109,6 +108,7 @@ new Vue({
   components:{ App }
 })
 ```
+![avatar](./src/assets/readme/vuex.png)
 
 <h4 id="vuerouter">安装使用 vue-router</h4>
 
