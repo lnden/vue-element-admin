@@ -1,14 +1,14 @@
-### mockjs的使用方式
+### Mockjs Use
 
 &emsp;&emsp;首先Mockjs这个东西我在这里就不展开的讲解了，如果你稍微了解一点mock假数据就知道这个具体是干什么用的，这里我们只是讨论使用的方式。
 
-#### 安装 mockjs
+#### Install Mockjs
 
 ```
 npm install mockjs -S
 ```
 
-#### 直接引入使用
+#### Direct Use Mock
 
 - 目录结构
 ```
@@ -70,4 +70,4 @@ export default {
 // src/main.js
 import './mock'
 ```
-#### 启用 Mock Server
+#### Run Mock Server

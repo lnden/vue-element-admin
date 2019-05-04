@@ -217,7 +217,7 @@ import 'normalize.css'
 ```
 npm install mockjs -S
 ```
-使用mockjs模拟请求数据
+使用mockjs模拟请求数据,具体使用方式查看./MOCK.md
 
 <h4 id="xlsx">安装使用 xlsx</h4>
 
@@ -363,7 +363,7 @@ cnpm install eslint-plugin-html -D
 ```
 useEslint: true
 ```
-至此Eslint已经安装完毕
+至此Eslint已经安装完毕,ESlint规则查看./ESLINT.md
 
 
 **注释**：
