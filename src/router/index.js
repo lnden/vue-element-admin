@@ -146,7 +146,7 @@ export const constantRoutes = [
         children: [
             {
                 path: 'personalcenter',
-                component: () => import('@/views/home/Home'),
+                component: () => import('@/views/home/Parent'),
                 name: 'user',
                 meta: { title: 'user' }
             },
